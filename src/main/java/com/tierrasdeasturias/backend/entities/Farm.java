@@ -1,4 +1,4 @@
-package com.tierrasdeasturias.backend.farm;
+package com.tierrasdeasturias.backend.entities;
 
 import jakarta.persistence.*;
 import java.util.HashSet;
