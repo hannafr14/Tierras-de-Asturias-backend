@@ -59,4 +59,28 @@ public class Farm {
     public Set<FarmCategory> getCategories() {
         return categories;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
 }
