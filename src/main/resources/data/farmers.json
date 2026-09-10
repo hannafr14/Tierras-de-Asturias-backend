@@ -1,0 +1,962 @@
+[
+  {
+    "externalId": "la_saregana",
+    "slug": "la-saregana",
+    "name": "La Saregana",
+    "description": "Pequeña empresa familiar de Miyares, Sariego, que elabora yogures, mantequilla y quesos frescos y curados con leche de su propia ganadería, con una apuesta creciente por la vaca Jersey.",
+    "address": "Miyares, Asturias",
+    "fullAddress": "Miyares, 33518 Sariego, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.41855,
+    "longitude": -5.586095,
+    "categories": [
+      "Yogures",
+      "Leche",
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_rey_silo",
+    "slug": "queseria-rey-silo",
+    "name": "Quesería Rey Silo",
+    "description": "Quesería artesana de Pravia que elabora quesos tradicionales con leche cruda de vaca, afinados con cuidado en bodega subterránea.",
+    "address": "Pravia, Asturias",
+    "fullAddress": "Plg. Salcedo 2, 33120 Pravia, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4905568,
+    "longitude": -6.1081776,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_la_peral",
+    "slug": "queseria-la-peral",
+    "name": "Quesería La Peral",
+    "description": "Quesería familiar de Illas que elabora el queso azul La Peral y otros quesos madurados con una larga tradición artesana.",
+    "address": "Illas, Asturias",
+    "fullAddress": "C/ Forcón, 60, La Peral, 33414 Illas, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4887873,
+    "longitude": -5.9912897,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_temia",
+    "slug": "queseria-temia",
+    "name": "Quesería Temia",
+    "description": "Quesería artesana de Grado especializada en Afuega'l Pitu y otros quesos tradicionales de leche de vaca, con una tradición familiar quesera.",
+    "address": "Grado, Asturias",
+    "fullAddress": "Lgar. Temia, 33820 Rañeces, Grado, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.330501,
+    "longitude": -6.075586,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_ca_sanchu",
+    "slug": "queseria-ca-sanchu",
+    "name": "Quesería Ca Sanchu",
+    "description": "Pequeña quesería familiar de Ambás conocida por su Afuega'l Pitu artesano y por las visitas centradas en su proceso tradicional de elaboración.",
+    "address": "Grado, Asturias",
+    "fullAddress": "La Pumariega, 15, Ambás, 33826 Grado, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.31695,
+    "longitude": -6.131658,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_picurriellu",
+    "slug": "queseria-picurriellu",
+    "name": "Quesería Picurriellu",
+    "description": "Quesería artesana de Llanes que elabora quesos asturianos y ofrece visitas guiadas a sus instalaciones.",
+    "address": "Llanes, Asturias",
+    "fullAddress": "Pié de la Sierra, S/N, 33500 Llanes, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4051858,
+    "longitude": -4.6620506,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_el_cabriteru",
+    "slug": "queseria-el-cabriteru",
+    "name": "Quesería El Cabriteru",
+    "description": "Quesería artesana de Arenas de Cabrales que elabora quesos azules con leche cruda de oveja y cabra procedente de su propia ganadería.",
+    "address": "Cabrales, Asturias",
+    "fullAddress": "Ctra. Gral de Arangas AS-345, 33554 Arenas de Cabrales, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3140512,
+    "longitude": -4.8074208,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_main",
+    "slug": "queseria-main",
+    "name": "Quesería Maín",
+    "description": "Quesería de Sotres centrada en la elaboración tradicional de Cabrales, con visitas guiadas que muestran el proceso artesano y la maduración en cueva.",
+    "address": "Sotres, Asturias",
+    "fullAddress": "Bª La Ería, 33554 Sotres, Cabrales, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.2334587,
+    "longitude": -4.7464992,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "quesos_taramundi",
+    "slug": "quesos-de-taramundi",
+    "name": "Quesos de Taramundi",
+    "description": "Quesería artesana de Taramundi que elabora varias especialidades tradicionales y requesón, con visita centrada en el proceso de elaboración y degustación.",
+    "address": "Taramundi, Asturias",
+    "fullAddress": "Parque de Empresas Artesanales de Taramundi, 33775 Taramundi, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.360754,
+    "longitude": -7.1167338,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_asiegu",
+    "slug": "queseria-asiegu",
+    "name": "Quesería Asiegu",
+    "description": "Quesería artesana ecológica de Asiegu que elabora Cabrales DOP y quesos de autor, con visitas guiadas a la quesería y a la cueva de maduración.",
+    "address": "Asiegu, Asturias",
+    "fullAddress": "Lg. Asiegu, 129, 33555 Asiegu, Cabrales, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3249982,
+    "longitude": -5.564609,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "vega_de_ario",
+    "slug": "queseria-vega-de-ario",
+    "name": "Quesería Vega de Ario",
+    "description": "Productor de Benia especializado en Gamonéu del Valle DOP, elaborado de forma artesana con mezcla de leches y conocido por su perfil ahumado y afinado.",
+    "address": "Benia, Asturias",
+    "fullAddress": "Bº San Roque, 33556 Benia de Onís, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3360194,
+    "longitude": -4.9697517,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "los_caserinos",
+    "slug": "queseria-los-caserinos",
+    "name": "Quesería Los Caserinos",
+    "description": "Ganadería y quesería familiar de Villaviciosa que produce quesos, yogures y otros elaborados lácteos, con visitas centradas en la explotación y la transformación propia.",
+    "address": "Grases, Asturias",
+    "fullAddress": "Maoxu, 7, 33313 Grases, Villaviciosa, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.468115,
+    "longitude": -5.4697813,
+    "categories": [
+      "Yogures",
+      "Leche",
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "la_penona",
+    "slug": "queseria-la-penona",
+    "name": "Quesería La Peñona",
+    "description": "Quesería familiar de Somáu que elabora Afuega'l Pitu con leche de Asturias y ofrece visitas con cata centradas en este queso tradicional protegido.",
+    "address": "Somáu, Asturias",
+    "fullAddress": "Somáu, 148, 33139 Somáu, Pravia, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.5295336,
+    "longitude": -6.1208816,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "leche_leche",
+    "slug": "leche-leche",
+    "name": "Leche Leche",
+    "description": "Explotación lechera moderna de Porrúa que elabora productos como queso, yogur y arroz con leche, con visitas guiadas a su ganadería robotizada.",
+    "address": "Porrúa, Asturias",
+    "fullAddress": "Covalayu, 33509 Porrúa, Llanes, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4176037,
+    "longitude": -4.8037489,
+    "categories": [
+      "Yogures",
+      "Leche",
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "vega_de_tordin",
+    "slug": "queseria-vega-de-tordin",
+    "name": "Quesería Vega de Tordín",
+    "description": "Quesería familiar de Arenas de Cabrales que ofrece visitas centradas en la elaboración tradicional del Cabrales DOP, la ganadería y la maduración en cueva.",
+    "address": "Arenas de Cabrales, Asturias",
+    "fullAddress": "Bº de la Ería, 33554 Arenas de Cabrales, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3029703,
+    "longitude": -4.8110846,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_demues",
+    "slug": "queseria-demues",
+    "name": "Quesería Demués",
+    "description": "Pequeño productor de Demués centrado en el Gamonéu, elaborado con leche de vaca, oveja y cabra mientras combina la quesería con el cuidado del ganado en semilibertad.",
+    "address": "Demués, Asturias",
+    "fullAddress": "Subida Demués, S/N, 33556 Onís, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3216986,
+    "longitude": -4.9897657,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "rebollin",
+    "slug": "quesos-artesanos-rebollin",
+    "name": "Quesos Artesanos Rebollín",
+    "description": "Quesería de La Espina que elabora Afuega'l Pitu y otros quesos asturianos con leche local de vaca, con fuerte atención al control de calidad y a los métodos tradicionales.",
+    "address": "La Espina, Asturias",
+    "fullAddress": "Polígono Industrial Zarín, S/N, 33891 La Espina, Salas, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3903701,
+    "longitude": -6.3269681,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_la_collada",
+    "slug": "queseria-la-collada",
+    "name": "Quesería La Collada",
+    "description": "Quesería artesana familiar de Amieva que elabora Los Beyos y otros quesos de montaña con leche de vaca, cabra y oveja mediante métodos tradicionales.",
+    "address": "Amieva, Asturias",
+    "fullAddress": "Cirieño, Sebarga, 33557 Amieva, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.2683201,
+    "longitude": -5.1684988,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_ca_llechi",
+    "slug": "queseria-ca-llechi",
+    "name": "Quesería Ca Llechi",
+    "description": "Pequeña quesería artesana de Piloña que produce lotes limitados de quesos de vaca y de oveja en temporada, incluida una línea inspirada en la tradición del Casín.",
+    "address": "Piloña, Asturias",
+    "fullAddress": "Moruxones, 1, Pintueles, 33534 Piloña, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3743963,
+    "longitude": -5.363487,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_la_borbolla",
+    "slug": "queseria-la-borbolla",
+    "name": "Quesería La Borbolla",
+    "description": "Quesería de larga trayectoria en Grado centrada en el Afuega'l Pitu artesano, elaborado con leche local de vaca y muy ligada a la tradición quesera asturiana.",
+    "address": "Grado, Asturias",
+    "fullAddress": "La Borbolla, 9, 33820 Grado, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3885512,
+    "longitude": -6.081873,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_ovin",
+    "slug": "queseria-ovin",
+    "name": "Quesería Ovin",
+    "description": "Quesería artesana de Nava que produce quesos de vaca, cabra y oveja, además de variedades ecológicas vinculadas a uno de los primeros proyectos queseros ecológicos de Asturias.",
+    "address": "Nava, Asturias",
+    "fullAddress": "Ovín s/n, 33529 Nava, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3500765,
+    "longitude": -5.4997417,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_el_viso",
+    "slug": "queseria-el-viso",
+    "name": "Quesería El Viso",
+    "description": "Quesería de leche de vaca en Salas que elabora Afuega'l Pitu artesano y otros quesos propios con leche de su propia ganadería y un manejo ligado al pastoreo local.",
+    "address": "Salas, Asturias",
+    "fullAddress": "San Martín, 7, 33860 Salas, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.412613,
+    "longitude": -6.2529195,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "alejandro_casielles_1913",
+    "slug": "queseria-alejandro-casielles-1913",
+    "name": "Quesería Alejandro Casielles 1913",
+    "description": "Pequeña quesería artesana de Vega de Poja que produce quesos limitados de cabra, vaca y oveja, con especial atención a la maduración y al trato directo.",
+    "address": "Vega de Poja, Asturias",
+    "fullAddress": "Vega de Poja, 19, 33519 Siero, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4013317,
+    "longitude": -5.6370259,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "queseria_collera",
+    "slug": "queseria-collera",
+    "name": "Quesería Collera",
+    "description": "Quesería familiar tradicional de Vidiago conocida por sus quesos artesanos de vaca, incluido el estilo local de Vidiago y piezas curadas maceradas en aceite de oliva.",
+    "address": "Vidiago, Asturias",
+    "fullAddress": "Carretera Nacional 634, km 294, Vidiago, Llanes, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3952299,
+    "longitude": -4.6792902,
+    "categories": [
+      "Quesos"
+    ]
+  },
+  {
+    "externalId": "olaya_miel",
+    "slug": "olaya-miel-aller",
+    "name": "Olaya Miel",
+    "description": "Apicultores familiares de tercera generación en Aller que elaboran miel ecológica asturiana, incluidas mieles monoflorales y en crema, con colmenas trashumantes por costa, centro y montaña.",
+    "address": "Felechosa, Asturias",
+    "fullAddress": "Planta de envasado en Felechosa, 33688 Aller, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.0923282,
+    "longitude": -5.4764834,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_la_calduya",
+    "slug": "miel-la-calduya-pesoz",
+    "name": "Miel La Calduya",
+    "description": "Productor de miel artesana en Sanzo, Pesoz, que trabaja con abeja negra ibérica y tradición apícola familiar en el entorno del Parque Histórico del Navia.",
+    "address": "Pesoz, Asturias",
+    "fullAddress": "Sanzo, s/n, 33736 Pesoz, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.2510037,
+    "longitude": -6.8661389,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "eria_de_valles",
+    "slug": "eria-de-valles-oviedo",
+    "name": "Ería de Valles",
+    "description": "Pequeña empresa apícola de Mabel y Gonzalo que produce miel natural asturiana y productos de la colmena con colmenas propias repartidas por costa, bosques y montaña.",
+    "address": "Brañes, Oviedo, Asturias",
+    "fullAddress": "Brañes, 25, Ca'l Regueru, 33194 Oviedo, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.408571,
+    "longitude": -5.91181,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "reinastur",
+    "slug": "reinastur-grado",
+    "name": "ReinAstur",
+    "description": "Empresa apícola familiar en Grado con más de 40 años de trabajo, que produce mieles tradicionales asturianas con colmenas situadas en distintos paisajes locales.",
+    "address": "Grado, Asturias",
+    "fullAddress": "Parque Empresarial La Cardosa, Parcela 19, 33820 Grado, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3922464,
+    "longitude": -6.0691616,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_el_caxiellu",
+    "slug": "miel-el-caxiellu-grado",
+    "name": "Miel El Caxiellu",
+    "description": "Pequeña explotación apícola familiar en Villagarcía, Grado, que produce miel ecológica asturiana cruda con ciclo completo desde el cuidado de colmenas hasta el envasado.",
+    "address": "Grado, Asturias",
+    "fullAddress": "Villagarcía nº24, 33820 Grado, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": null,
+    "longitude": null,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "la_solana_de_allande",
+    "slug": "la-solana-de-allande",
+    "name": "La Solana de Allande",
+    "description": "Proyecto familiar en Allande que elabora miel artesana y ecológica con colmenas locales de los valles del suroccidente asturiano, junto a setas shiitake.",
+    "address": "Allande, Asturias",
+    "fullAddress": "Fresnedo Nº1, C.P. 33880 Allande, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.2255289,
+    "longitude": -6.6139804,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "el_tio_angel_miel_de_asturias",
+    "slug": "el-tio-angel-miel-de-asturias",
+    "name": "El Tío Ángel Miel de Asturias",
+    "description": "Proyecto apícola familiar en Penlés, Cangas del Narcea, que elabora miel artesana, polen, jabones y otros productos de la colmena con enfoque de emprendimiento rural.",
+    "address": "Cangas del Narcea, Asturias",
+    "fullAddress": "Penlés 4, 33814 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.1516966,
+    "longitude": -6.5780499,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_outurelos",
+    "slug": "miel-outurelos-ibias",
+    "name": "Miel Outurelos",
+    "description": "Proyecto apícola tradicional de la zona de Ibias, vinculado a El País del Abeyeiro, que produce mieles crudas, polen y miel ligada al patrimonio de los cortinos y la biodiversidad.",
+    "address": "Lugo, Galicia",
+    "fullAddress": "27113 Pena Da Nogueira, Lugo, Galicia",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.0804941,
+    "longitude": -6.9502465,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_fuentes_del_narcea",
+    "slug": "miel-fuentes-del-narcea",
+    "name": "Miel Fuentes del Narcea",
+    "description": "Productor artesano de miel y polen en Moncó, Cangas del Narcea, con métodos tradicionales y colmenas ubicadas entre bosques y montes de Fuentes del Narcea.",
+    "address": "Cangas del Narcea, Asturias",
+    "fullAddress": "Moncó 8, 33811 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": null,
+    "longitude": null,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_lapuela",
+    "slug": "miel-lapuela-cangas-del-narcea",
+    "name": "Miel LAPUELA",
+    "description": "Productor apícola asturiano en Cangas del Narcea que elabora mieles naturales, polen, propóleo y cera con colmenas en el entorno de montaña local.",
+    "address": "Cangas del Narcea, Asturias",
+    "fullAddress": "Pol. Ind. de Tebongo, 15, 33816 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.2389691,
+    "longitude": -6.5119666,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_casa_el_campo",
+    "slug": "miel-casa-el-campo-valdes",
+    "name": "Miel Casa El Campo",
+    "description": "Proyecto apícola familiar en Fontoria, Valdés, que produce miel asturiana, polen, miel en panal y enjambres de colmenas propias, con extracción artesanal en frío.",
+    "address": "Fontoria, Valdés, Asturias",
+    "fullAddress": "Lg. Fontoria s/n, 33787 Luarca, Valdés, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.5208937,
+    "longitude": -6.5308743,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "miel_la_boalesa",
+    "slug": "miel-la-boalesa-boal",
+    "name": "Miel La Boalesa",
+    "description": "Productor apícola Boal Apícola en Llaviada, Boal, que elabora miel asturiana y licores derivados de la miel con colmenas locales en una zona de tradición apícola.",
+    "address": "Llaviada, Boal, Asturias",
+    "fullAddress": "Llaviada s/n, 33720 Boal, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4193482,
+    "longitude": -6.8120204,
+    "categories": [
+      "Miel"
+    ]
+  },
+  {
+    "externalId": "llagar_sidra_jr",
+    "slug": "llagar-sidra-jr-cabuenes",
+    "name": "Llagar Sidra JR",
+    "description": "Llagar familiar en Cabueñes con tradición sidrera desde 1910, con visitas por la pumarada, el llagar, la bodega y degustación de sidra natural espichada directamente del tonel.",
+    "address": "Cabueñes, Gijón, Asturias",
+    "fullAddress": "CN632, Nº 5321, 33294 Cabueñes, Gijón, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.520948,
+    "longitude": -5.588318,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_sidra_crespo",
+    "slug": "llagar-sidra-crespo-sales",
+    "name": "Llagar Sidra Crespo",
+    "description": "Llagar de Sales, Colunga, que elabora Sidra Crespo y Sidra Sueve, con visitas gratuitas sobre el proceso de elaboración y degustación desde toneles de madera.",
+    "address": "Sales, Colunga, Asturias",
+    "fullAddress": "33320 Sales, Colunga, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.488472,
+    "longitude": -5.282038,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "sidra_fran",
+    "slug": "sidra-fran-lugones",
+    "name": "Sidra Fran",
+    "description": "Productor de sidra de Lugones activo desde 1918, elaborador de sidra natural tradicional y espumosa DOP, con visitas guiadas y catas en el llagar.",
+    "address": "Lugones, Asturias",
+    "fullAddress": "Avenida Conde Santa Bárbara, 37, 33420 Lugones, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4074656,
+    "longitude": -5.8129561,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_sidra_menendez",
+    "slug": "llagar-sidra-menendez-fano",
+    "name": "Llagar Sidra Menéndez",
+    "description": "Llagar de Fano, Gijón, elaborador de Sidra Menéndez y Val d'Ornon, con visitas guiadas por las instalaciones y degustación de sidra natural directamente del tonel.",
+    "address": "Fano, Gijón, Asturias",
+    "fullAddress": "Ctra. AS-248, Nº 8695, 33391 Fano, Gijón, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4611432,
+    "longitude": -5.621382,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_bernueces",
+    "slug": "llagar-bernueces-castiello",
+    "name": "Llagar Bernueces",
+    "description": "Llagar y restaurante familiar cerca de Gijón, activo desde 1881, que elabora sidra propia, sidra dulce y sangría de sidra, con visitas al llagar bajo reserva.",
+    "address": "Castiello de Bernueces, Gijón, Asturias",
+    "fullAddress": "Camino de la Nisal, 1104, 33394 Castiello de Bernueces, Gijón, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.5085086,
+    "longitude": -5.6231091,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "sidra_cortina",
+    "slug": "sidra-cortina-amandi",
+    "name": "Sidra Cortina",
+    "description": "Productor familiar de Amandi, Villaviciosa, fundado en 1952, elaborador de sidra natural, DOP, ecológica y de hielo, con visitas de sidraturismo y catas.",
+    "address": "Amandi, Villaviciosa, Asturias",
+    "fullAddress": "San Juan, 44, 33311 Amandi, Villaviciosa, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4657539,
+    "longitude": -5.4461201,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_herminio",
+    "slug": "llagar-herminio-colloto",
+    "name": "Llagar Herminio",
+    "description": "Llagar tradicional de Colloto fundado por Herminio Alonso Buznego, elaborador de Sidra Herminio y Zythos DOP, con visitas sobre recepción de manzana, prensado, fermentación y cata.",
+    "address": "Colloto, Oviedo, Asturias",
+    "fullAddress": "Camino Real, 11, 33010 Colloto, Oviedo, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3767032,
+    "longitude": -5.8037803,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_sidra_pamirandi",
+    "slug": "llagar-sidra-pamirandi-asiegu",
+    "name": "Llagar Sidra Pamirandi",
+    "description": "Pequeño llagar de Asiegu vinculado a Ruta'l Quesu y la Sidra, con una visita rural centrada en la cultura gastronómica de Cabrales y el proceso local de elaboración de sidra.",
+    "address": "Asiegu, Cabrales, Asturias",
+    "fullAddress": "La Caleya, 33555 Asiegu, Cabrales, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.325958,
+    "longitude": -4.862952,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_castanon",
+    "slug": "llagar-castanon-quintueles",
+    "name": "Llagar Castañón",
+    "description": "Llagar familiar de cuatro generaciones en Quintueles, fundado en 1938, elaborador de sidra natural tradicional, Val de Boides DOP y productos de sidra, con visitas de sidraturismo.",
+    "address": "Quintueles, Villaviciosa, Asturias",
+    "fullAddress": "Ctra. San Miguel, 90-103, 33314 Quintueles, Villaviciosa, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.514167,
+    "longitude": -5.569444,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "llagar_alonso",
+    "slug": "llagar-alonso-cianu",
+    "name": "Llagar Alonso",
+    "description": "Llagar tradicional ubicado en Ciañu, Langreo, fundado en 1939 y elaborador de sidra natural tradicional y sidra DOP, con visitas y chigre-tienda anexo.",
+    "address": "Ciañu, Langreo, Asturias",
+    "fullAddress": "Puente Carbón, 38, 33909 Ciañu, Langreo, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.2796412,
+    "longitude": -5.6761965,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "sidra_viuda_de_angelon",
+    "slug": "sidra-viuda-de-angelon-nava",
+    "name": "Sidra Viuda de Angelón",
+    "description": "Productor familiar de Nava fundado en 1947 y regentado por los hijos de Alfredo Ordóñez Onís, elaborador de sidras naturales, DOP y espumosas en plena Comarca de la Sidra.",
+    "address": "Nava, Asturias",
+    "fullAddress": "La Teyera s/n, 33520 Nava, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3675455,
+    "longitude": -5.5239788,
+    "categories": [
+      "Sidra"
+    ]
+  },
+  {
+    "externalId": "finca_casomera",
+    "slug": "finca-casomera-casomera",
+    "name": "Finca Casomera",
+    "description": "Finca sostenible de arándanos en la montaña de Aller, con arándanos ecológicos, manzanas DOP y visitas de autorecolección durante la temporada de verano.",
+    "address": "Casomera, Asturias",
+    "fullAddress": "Casomera, Aller, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.081125,
+    "longitude": -5.577153,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "finca_el_ribeiro",
+    "slug": "finca-el-ribeiro",
+    "name": "Finca El Ribeiro",
+    "description": "Finca agroecológica familiar que produce arándanos, manzana de mesa, aguacate, faba, mermeladas y zumos, con visitas guiadas y tienda online de productos asturianos.",
+    "address": "San Martín de Luiña, Asturias",
+    "fullAddress": "San Cosme, 87, 33150 San Martín de Luiña, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.544794,
+    "longitude": -6.235781,
+    "categories": [
+      "Frutos",
+      "Legumbres"
+    ]
+  },
+  {
+    "externalId": "arandanos_la_pena",
+    "slug": "arandanos-la-pena-salas",
+    "name": "Arándanos La Peña",
+    "description": "Productor ecológico de arándanos en Salas, activo desde 2011, que recoge y envasa la fruta en la propia finca y elabora zumo y mermelada extra de arándanos.",
+    "address": "Salas, Asturias",
+    "fullAddress": "La Peña s/n, 33891 Salas, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4219680188,
+    "longitude": -6.3047664073,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "arandanos_y_manzanas_de_muno",
+    "slug": "arandanos-y-manzanas-de-muno-siero",
+    "name": "Arándanos y Manzanas de Muñó",
+    "description": "Finca familiar en Muñó con pumarada y plantación de arándanos, que ofrece fruta de temporada, zumos naturales, mermeladas artesanas y visitas guiadas con degustación.",
+    "address": "Muñó, Siero, Asturias",
+    "fullAddress": "La Cantera, 9, 33519 Muñó, Siero, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.424824895878,
+    "longitude": -5.661041847641546,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "arandanos_el_caleyu",
+    "slug": "arandanos-el-caleyu-picos-de-europa",
+    "name": "Arándanos El Caleyu",
+    "description": "Finca familiar de arándanos cerca de los Picos de Europa donde se pueden recoger arándanos ecológicos directamente del arbusto en un entorno de montaña.",
+    "address": "Campo los Prunos, 33555 Inguanzo, Asturias",
+    "fullAddress": "",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.30009383718635,
+    "longitude": -4.870896214925306,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "picaran",
+    "slug": "picaran-finca-ecologica-picaroso-grado",
+    "name": "Picarán",
+    "description": "Pequeño proyecto ecológico de frutos rojos en Picaroso, Grado, centrado en arándano, frambuesa, mora y grosella, con elaborados como mermeladas.",
+    "address": "Picaroso, Grado, Asturias",
+    "fullAddress": "Localidad de Picaroso nº 16A, 33828 Grado, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.40837325422304,
+    "longitude": -6.082157273431944,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "los_arandanos",
+    "slug": "los-arandanos-taramundi",
+    "name": "Los Arándanos",
+    "description": "Finca familiar de Taramundi que cultiva frutos rojos ecológicos, kiwi, manzana, castaña, cereza y otros productos, con venta directa en mercados y tiendas.",
+    "address": "Armallos, Taramundi, Asturias",
+    "fullAddress": "Armallos, 33775 Taramundi, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.337127832375984,
+    "longitude": -7.081481823999763,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "finca_el_cabillon",
+    "slug": "finca-el-cabillon-tapia-de-casariego",
+    "name": "Finca El Cabillón",
+    "description": "Proyecto agroecológico en Tapia de Casariego con venta directa de fruta y verdura de temporada, creado para generar oportunidades laborales en el medio rural.",
+    "address": "Tapia de Casariego, Asturias",
+    "fullAddress": "El Cabillón s/n, 33747 Tapia de Casariego, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.536071383191576,
+    "longitude": -6.909139154828267,
+    "categories": [
+      "Frutos",
+      "Verduras"
+    ]
+  },
+  {
+    "externalId": "oles_gourmet",
+    "slug": "oles-gourmet-granja-fitories-villaviciosa",
+    "name": "Oles Gourmet",
+    "description": "Iniciativa familiar de Granja Fitories en Oles, Villaviciosa, que usa arándanos de su propia plantación para fruta fresca, zumos, mermeladas y conservas artesanas.",
+    "address": "Oles, Villaviciosa, Asturias",
+    "fullAddress": "Barrio La Lloraza, 44, 33315 Oles, Villaviciosa, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.52168440268192,
+    "longitude": -5.44985062123934,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "berries_nature_park",
+    "slug": "berries-nature-park-santa-marina-siero",
+    "name": "Berries Nature Park",
+    "description": "Proyecto ecológico de arándanos vinculado a la plantación El Paseo de los Curas en Siero, con fruta fresca y mermelada extra elaborada con arándano asturiano ecológico.",
+    "address": "Oviedo, Asturias",
+    "fullAddress": "Calle Alonso de Quintanilla 3, 1ºJ 33002 Oviedo (Asturias)",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.3542604864,
+    "longitude": -5.7336308352,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "arandanos_el_cierron",
+    "slug": "arandanos-el-cierron-fuentes-villaviciosa",
+    "name": "Arándanos El Cierrón",
+    "description": "Vivero y productor de frutos rojos en Villaviciosa con décadas de experiencia en arándanos, frambuesas, fresas, moras, grosellas y mini kiwi.",
+    "address": "Fuentes, Villaviciosa, Asturias",
+    "fullAddress": "Les Vegues, 33311 Fuentes, Villaviciosa, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.4567594568747,
+    "longitude": -5.423119232885036,
+    "categories": [
+      "Frutos"
+    ]
+  },
+  {
+    "externalId": "bodega_senorio_de_ibias",
+    "slug": "bodega-senorio-de-ibias",
+    "name": "Bodega Señorío de Ibias",
+    "description": "Bodega artesana de Ibias impulsada por Adrián Fernández, con viñedo propio y variedades locales como albarín blanco, carrasquín, verdejo negro y albarín tinto.",
+    "address": "Ibias, Asturias",
+    "fullAddress": "Plaza de Cecos, 2, 33810 Ibias, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.02326675739351,
+    "longitude": -6.853868934202076,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "bodega_martinez_parrondo",
+    "slug": "bodega-martinez-parrondo-cangas",
+    "name": "Bodega Martínez Parrondo",
+    "description": "Bodega y viñedo familiar en Las Barzaniellas, con tres generaciones de tradición vitícola y vinos de montaña de variedades autóctonas vendimiadas a mano.",
+    "address": "Cangas del Narcea, Asturias",
+    "fullAddress": "Las Barzaniellas, 33817 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.15851824087219,
+    "longitude": -6.542407068610717,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "bodega_las_danzas",
+    "slug": "bodega-las-danzas-cangas",
+    "name": "Bodega Las Danzas",
+    "description": "Pequeña bodega canguesa fundada por Carmen Martínez tras años como viticultora, con viñedo de montaña vendimiado a mano para elaborar La Media Vuelta y La Danza Prima.",
+    "address": "Las Mestas, Cangas del Narcea, Asturias",
+    "fullAddress": "Calle Las Mestas, 30, 33817 Las Mestas, Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.1247939078909,
+    "longitude": -6.523637620557667,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "bodega_la_verdea",
+    "slug": "bodega-la-verdea-puenticiella",
+    "name": "Bodega La Verdea",
+    "description": "Proyecto familiar en Puenticiella creado para recuperar la tradición vinícola local, con pequeños viñedos antiguos en laderas de montaña y vinos DOP Cangas.",
+    "address": "Puenticiella, Cangas del Narcea, Asturias",
+    "fullAddress": "Puenticiella, 33, 33817 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.1389273076791,
+    "longitude": -6.526660280545759,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "bodega_monasterio_de_corias",
+    "slug": "bodega-monasterio-de-corias",
+    "name": "Bodega Monasterio de Corias",
+    "description": "Bodega junto al histórico Monasterio de Corias que recupera la tradición vinícola benedictina con vinos DOP Cangas de viñedos de montaña y visitas con cata.",
+    "address": "Corias, Cangas del Narcea, Asturias",
+    "fullAddress": "Monasterio de Corias s/n, 33800 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.19617473501511,
+    "longitude": -6.542540575148889,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "siluvio_bodegas_y_vinedos",
+    "slug": "siluvio-bodegas-y-vinedos-ibias",
+    "name": "Siluvio Bodegas y Viñedos",
+    "description": "Bodega familiar de finca en Cecos, Ibias, con variedades autóctonas y bodega al pie del viñedo, orientada a recuperar la tradición vinícola local.",
+    "address": "Cecos, Ibias, Asturias",
+    "fullAddress": "Cecos, 33811 Ibias, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.0209772656945,
+    "longitude": -6.855314805805581,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "bodega_vina_cuedo",
+    "slug": "bodega-vina-cuedo-ibias",
+    "name": "Bodega Viña Cuedo",
+    "description": "Bodega de San Antolín de Ibias que elabora únicamente vino blanco de la variedad local Blanco Verdín, combinando trabajo tradicional y técnicas modernas de vinificación.",
+    "address": "San Antolín de Ibias, Asturias",
+    "fullAddress": "Barrio del Sol, s/n, 33810 San Antolín de Ibias, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.03734722778811,
+    "longitude": -6.872060220918027,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "bodega_vidas",
+    "slug": "bodega-vidas-cangas",
+    "name": "Bodega VidAs",
+    "description": "Bodega asturiana de Cangas del Narcea fundada en 2012, con vinos DOP Cangas de viticultura heroica de montaña bajo marcas como 7 Vidas y Vive la Vida.",
+    "address": "Cangas del Narcea, Asturias",
+    "fullAddress": "Carrascal, 7, 33800 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": 43.18494746034398,
+    "longitude": -6.551575994951327,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "casa_manunca",
+    "slug": "casa-manunca-cangas",
+    "name": "Casa Manunca",
+    "description": "Pequeño proyecto vinícola de Cangas del Narcea con cuatro hectáreas repartidas en dieciséis parcelas en Tremao de Carballo, Obanca y Limés, trabajadas de forma sostenible.",
+    "address": "Limés, Cangas del Narcea, Asturias",
+    "fullAddress": "Galiana 88, Limés, 33800 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": null,
+    "longitude": null,
+    "categories": [
+      "Vinos"
+    ]
+  },
+  {
+    "externalId": "escolinas",
+    "slug": "escolinas-cangas",
+    "name": "Escolinas",
+    "description": "Proyecto de vinos de Cangas iniciado en 2012 en torno a microfincas del paraje de Escolinas, con vinos de montaña de variedades asturianas y mezclas locales tradicionales.",
+    "address": "Cangas del Narcea, Asturias",
+    "fullAddress": "Monasterio de Corias, s/n, 33800 Cangas del Narcea, Asturias",
+    "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+    "latitude": null,
+    "longitude": null,
+    "categories": [
+      "Vinos"
+    ]
+  }
+]
