@@ -11,7 +11,9 @@ public class Product {
     private Long id;
 
     private String name;
+    @Column(columnDefinition = "TEXT")
     private String description;
+    @Column(length = 1000)
     private String image;
     private Integer quantity;
     private Double price;

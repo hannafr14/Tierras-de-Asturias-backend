@@ -13,8 +13,10 @@ public class Farm {
     private Long id;
 
     private String name;
+    @Column(columnDefinition = "TEXT")
     private String description;
     private String address;
+    @Column(length = 1000)
     private String image;
 
     private Double latitude;
