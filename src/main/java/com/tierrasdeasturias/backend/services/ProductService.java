@@ -32,6 +32,7 @@ public class ProductService {
                 product.getQuantity(),
                 product.getPrice(),
                 product.getCategory().getName(),
+                product.getFarm().getId(),
                 product.getFarm().getName(),
                 product.getFarm().getAddress()
         );

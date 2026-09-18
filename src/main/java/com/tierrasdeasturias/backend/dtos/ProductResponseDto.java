@@ -8,6 +8,7 @@ public record ProductResponseDto(
         Integer quantity,
         Double price,
         String category,
+        Long farmId,
         String farmName,
         String farmAddress
 ) {
