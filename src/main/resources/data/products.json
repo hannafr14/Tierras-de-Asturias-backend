@@ -67,17 +67,6 @@
   },
   {
     "farmExternalId": "la_saregana",
-    "name": "Quesu del duernu",
-    "description": "Queso fresco cremoso artesano elaborado con leche de las vacas de La Saregana, apto para combinaciones dulces o saladas.",
-    "price": 4.2,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "la_saregana",
     "name": "Quesu del duernu a las finas hierbas",
     "description": "Queso fresco cremoso del duernu con finas hierbas, elaborado con leche de vaca, fermentos lácticos y cuajo.",
     "price": 4.5,
@@ -151,7 +140,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://www.reysilo.es/uploads/fotos/57b8S8X4DbLpJ8VwhmdmybxRiSdgyEpj.jpg",
-    "category": "Sidra"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "queseria_rey_silo",
@@ -242,39 +231,6 @@
     "category": "Quesos"
   },
   {
-    "farmExternalId": "queseria_temia",
-    "name": "Queso Afuega'l Pitu Temia",
-    "description": "Queso asturiano tradicional Afuega'l Pitu de Quesería Temia, elaborado con leche de vaca en la zona de Grado dentro del estilo protegido de este queso láctico de pasta blanda.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_temia",
-    "name": "Queso Afuega'l Pitu Don Gonzalo",
-    "description": "Queso Afuega'l Pitu de la marca Don Gonzalo de Quesería Temia, un queso asturiano de leche de vaca que puede ser tierno o madurado y sigue el estilo tradicional de la DOP.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_ca_sanchu",
-    "name": "Queso Afuega'l Pitu Ca Sanchu",
-    "description": "Queso asturiano artesano Afuega'l Pitu de Quesería Ca Sanchu en Ambás, Grado, elaborado en el estilo tradicional de la DOP con leche de vaca.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Quesos"
-  },
-  {
     "farmExternalId": "queseria_picurriellu",
     "name": "Queso de Vaca Madurado",
     "description": "Queso madurado elaborado con leche entera pasteurizada de vaca por Quesería Picurriellu, envasado al vacío para envíos.",
@@ -309,17 +265,6 @@
   },
   {
     "farmExternalId": "queseria_picurriellu",
-    "name": "Queso Picón Picurriellu",
-    "description": "Queso elaborado con 40% de leche cruda de vaca y 60% de leche cruda de cabra de los pastos del Valle Oscuru, vendido en piezas de unos 500 g.",
-    "price": 14.5,
-    "quantity": 1,
-    "sizeValue": 500,
-    "sizeUnit": "g",
-    "image": "",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_picurriellu",
     "name": "Queso Mezcla de Vaca y Cabra",
     "description": "Queso mezcla elaborado con 80% de leche entera pasteurizada de vaca y 20% de leche entera pasteurizada de cabra, vendido en piezas de unos 500 g envasadas al vacío.",
     "price": 13.7,
@@ -327,17 +272,6 @@
     "sizeValue": 500,
     "sizeUnit": "g",
     "image": "https://queseriapicurriellu.com/wp-content/uploads/2020/05/queso-mezcla-300x300.png",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_picurriellu",
-    "name": "Queso Mezcla Ahumado de Vaca y Cabra",
-    "description": "Queso mezcla ahumado elaborado con 80% de leche entera pasteurizada de vaca y 20% de leche entera pasteurizada de cabra, con suaves notas aromáticas de ahumado.",
-    "price": 14,
-    "quantity": 1,
-    "sizeValue": 500,
-    "sizeUnit": "g",
-    "image": "",
     "category": "Quesos"
   },
   {
@@ -679,7 +613,7 @@
     "sizeValue": 550,
     "sizeUnit": "g",
     "image": "https://loscaserinos.com/wp-content/uploads/Art_0000000176_1-1.jpg",
-    "category": "Sidra"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "los_caserinos",
@@ -954,7 +888,7 @@
     "sizeValue": 0.5,
     "sizeUnit": "kg",
     "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto37-scaled.jpg",
-    "category": "Sidra"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "rebollin",
@@ -1009,7 +943,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto13-scaled.jpg",
-    "category": "Sidra"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "rebollin",
@@ -1020,7 +954,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto12-scaled.jpg",
-    "category": "Sidra"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "queseria_la_collada",
@@ -1053,39 +987,6 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-1/305292459_507813894677962_3304182232253769531_n.jpg?stp=dst-jpg_tt6&cstp=mx540x540&ctp=s540x540&_nc_cat=102&ccb=1-7&_nc_sid=3ab345&_nc_ohc=_TYiiVcZ9hUQ7kNvwHTuOZz&_nc_oc=Adoet1vmj7DmXVKbC1vaugvCah4giD6MuPkXNQNBIBBkWTOgBvafO-GB7KFqfdCM_hc&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=Ih244lLuwjOVjolfSkNm4A&_nc_ss=7f20f&oh=00_AQCtoYRLXPmm7l2gcfZe-mK7Z_DLwtv_Vb-Gsm9Avb6KYQ&oe=6A55ED9B",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_la_collada",
-    "name": "Queso Artesano de Cabra",
-    "description": "Queso artesano de leche de cabra vinculado a la elaboración tradicional de La Collada en Cirieño.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_la_collada",
-    "name": "Queso Artesano de Oveja",
-    "description": "Queso artesano de leche de oveja de Quesería La Collada, uno de los tipos de leche indicados públicamente por la productora.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Quesos"
-  },
-  {
-    "farmExternalId": "queseria_la_collada",
-    "name": "Queso Artesano de Mezcla",
-    "description": "Queso artesano de mezcla de La Collada, basado en la descripción pública de la productora sobre quesos de vaca, cabra, oveja y sus mezclas.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
     "category": "Quesos"
   },
   {
@@ -1606,39 +1507,6 @@
     "category": "Miel"
   },
   {
-    "farmExternalId": "olaya_miel",
-    "name": "Pack de miel ecológica",
-    "description": "Pack de selección de variedades de miel ecológica producidas y envasadas por Olaya Miel en Asturias.",
-    "price": 12,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "olaya_miel",
-    "name": "Mermelada de fresa y miel",
-    "description": "Preparado de fruta que combina fresa con miel Olaya, perteneciente a la gama Fruta & Miel del productor.",
-    "price": 6,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "olaya_miel",
-    "name": "Polen Miel Río Aller",
-    "description": "Polen de abeja comercializado por Olaya Miel dentro de su gama Miel Río Aller.",
-    "price": 7.5,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
     "farmExternalId": "miel_la_calduya",
     "name": "Miel cruda de castaño y brezo",
     "description": "Miel artesana pura y sin filtrar de Asturias, procedente de floraciones de castaño y brezo.",
@@ -1768,116 +1636,6 @@
     "sizeValue": 30,
     "sizeUnit": "ml",
     "image": "https://eriadevalles.es/wp-content/uploads/2024/02/propoleo-30ml.jpg",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel ecológica de calluna",
-    "description": "Miel ecológica cremosa de brezo Calluna vulgaris, cosechada entre julio y agosto en el entorno del Puerto de San Isidro, por encima de 1.500 metros.",
-    "price": 13.2,
-    "quantity": 1,
-    "sizeValue": 1,
-    "sizeUnit": "kg",
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel de bosque",
-    "description": "Miel asturiana de bosque basada en mielatos de roble, acompañados por notas florales de tomillo, jara y cantueso.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": 800,
-    "sizeUnit": "g",
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel de brezo",
-    "description": "Miel tradicional asturiana de brezo producida en colmenas propias de ReinAstur situadas en paisajes locales de montaña.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel de castaño",
-    "description": "Miel tradicional de castaño cosechada por ReinAstur en sus colmenares asturianos.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel de eucalipto",
-    "description": "Miel asturiana de eucalipto producida por ReinAstur siguiendo su tradición apícola familiar.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel de mil flores",
-    "description": "Miel multifloral asturiana que refleja la variedad de flores silvestres del entorno de las colmenas de ReinAstur.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Miel de roble",
-    "description": "Miel asturiana oscura de roble producida en las colmenas propias de ReinAstur.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Polen fresco de castaño",
-    "description": "Polen fresco de flor de castaño recolectado por las abejas de ReinAstur como producto natural de la colmena.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Bálsamo labial natural",
-    "description": "Bálsamo labial natural ofrecido por ReinAstur dentro de su gama de productos derivados de la colmena.",
-    "price": 5,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "reinastur",
-    "name": "Lote de productos asturianos",
-    "description": "Lote de regalo con productos asturianos preparado y vendido por ReinAstur en su tienda oficial.",
-    "price": 40,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
     "category": "Miel"
   },
   {
@@ -2222,28 +1980,6 @@
     "category": "Miel"
   },
   {
-    "farmExternalId": "miel_la_boalesa",
-    "name": "Miel artesana asturiana",
-    "description": "Miel tradicional producida en Boal en colmenares locales rodeados principalmente de vegetación de brezo y castaño.",
-    "price": 10.4,
-    "quantity": 1,
-    "sizeValue": 750,
-    "sizeUnit": "g",
-    "image": "",
-    "category": "Miel"
-  },
-  {
-    "farmExternalId": "miel_la_boalesa",
-    "name": "Miel artesana en envase antigoteo",
-    "description": "Miel de Boal elaborada tradicionalmente y presentada en un práctico envase antigoteo.",
-    "price": 4.77,
-    "quantity": 1,
-    "sizeValue": 350,
-    "sizeUnit": "g",
-    "image": "",
-    "category": "Miel"
-  },
-  {
     "farmExternalId": "llagar_sidra_jr",
     "name": "Sidra natural JR Tradicional – 6 botellas",
     "description": "Caja de seis botellas de sidra natural fresca y fácil de beber, de color dorado claro, aroma limpio y final suavemente seco.",
@@ -2296,17 +2032,6 @@
     "sizeValue": 700,
     "sizeUnit": "ml",
     "image": "https://i0.wp.com/chorizoyquesolachoriceria.com/wp-content/uploads/2018/07/sidra-crespo.jpeg",
-    "category": "Sidra"
-  },
-  {
-    "farmExternalId": "llagar_sidra_crespo",
-    "name": "Sidra natural Sierra del Sueve",
-    "description": "Sidra natural elaborada con manzana asturiana de cosecha propia del llagar y vendida exclusivamente en su tienda de Sales, Colunga.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
     "category": "Sidra"
   },
   {
@@ -2395,50 +2120,6 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://www.sidramenendez.com/system/cms_multimedia/cms_medias/files/000/000/066/original/Sidran-natural-Llagar-Quintana.jpg?1526496645",
-    "category": "Sidra"
-  },
-  {
-    "farmExternalId": "llagar_bernueces",
-    "name": "Sidra natural Bernueces",
-    "description": "Sidra natural tradicional elaborada en el histórico llagar familiar de Castiello de Bernueces, activo desde 1881.",
-    "price": 2.19,
-    "quantity": 1,
-    "sizeValue": 750,
-    "sizeUnit": "ml",
-    "image": "",
-    "category": "Sidra"
-  },
-  {
-    "farmExternalId": "llagar_bernueces",
-    "name": "Sidra dulce sin alcohol Bernueces",
-    "description": "Sidra dulce de manzana sin alcohol producida y embotellada en el Llagar Bernueces.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Sidra"
-  },
-  {
-    "farmExternalId": "llagar_bernueces",
-    "name": "Sangría de sidra Sidría",
-    "description": "Sangría de sidra embotellada y elaborada en el Llagar Bernueces como alternativa afrutada a su sidra tradicional.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Sidra"
-  },
-  {
-    "farmExternalId": "llagar_bernueces",
-    "name": "Sidra achampanada Sidru's",
-    "description": "Sidra de estilo achampanado producida en el Llagar Bernueces y vendida en la tienda del propio llagar.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
     "category": "Sidra"
   },
   {
@@ -2593,17 +2274,6 @@
     "sizeValue": 700,
     "sizeUnit": "ml",
     "image": "https://sidreriallagarherminio.es/wp-content/uploads/2022/08/estuche-zythos-2-botellas-1024x1024.jpeg",
-    "category": "Sidra"
-  },
-  {
-    "farmExternalId": "llagar_sidra_pamirandi",
-    "name": "Sidra natural Pamirandi",
-    "description": "Sidra natural tradicional producida en el pequeño llagar Pamirandi de Asiegu y servida en la sidrería familiar Casa Niembro.",
-    "price": 0,
-    "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
     "category": "Sidra"
   },
   {
@@ -3048,39 +2718,6 @@
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
-    "name": "Arándanos ecológicos congelados",
-    "description": "Arándanos congelados certificados como ecológicos en formato de un kilogramo.",
-    "price": 8.9,
-    "quantity": 1,
-    "sizeValue": 1,
-    "sizeUnit": "kg",
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "arandanos_y_manzanas_de_muno",
-    "name": "Arándanos deshidratados",
-    "description": "Arándanos deshidratados presentados en un práctico envase de 125 gramos.",
-    "price": 3.99,
-    "quantity": 1,
-    "sizeValue": 125,
-    "sizeUnit": "g",
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "arandanos_y_manzanas_de_muno",
-    "name": "Arándano en polvo",
-    "description": "Arándano finamente molido en polvo, presentado en un envase de 50 gramos.",
-    "price": 3.5,
-    "quantity": 1,
-    "sizeValue": 50,
-    "sizeUnit": "g",
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "arandanos_y_manzanas_de_muno",
     "name": "Mermelada extra de arándanos",
     "description": "Mermelada extra elaborada con un 67 % de arándanos y un 33 % de azúcar.",
     "price": 3.75,
@@ -3155,28 +2792,6 @@
     "sizeUnit": null,
     "image": "http://www.arandanoselcaleyu.com/wp-content/uploads/2023/06/IMG-20230612-WA0018.jpg",
     "category": "Frutos"
-  },
-  {
-    "farmExternalId": "arandanos_el_caleyu",
-    "name": "Mermelada casera de arándanos",
-    "description": "Mermelada casera elaborada con los propios arándanos ecológicos de la finca.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "arandanos_el_caleyu",
-    "name": "Miel ecológica",
-    "description": "Miel ecológica producida por las abejas criadas en la finca de arándanos de Cabrales.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Miel"
   },
   {
     "farmExternalId": "picaran",
@@ -3257,72 +2872,6 @@
   },
   {
     "farmExternalId": "los_arandanos",
-    "name": "Frambuesas ecológicas frescas",
-    "description": "Frambuesas frescas cultivadas de forma ecológica en la finca frutícola familiar de Taramundi.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
-    "name": "Fresas ecológicas frescas",
-    "description": "Fresas frescas ecológicas cultivadas por Los Arándanos y comercializadas mediante venta directa, mercados y tiendas.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
-    "name": "Moras ecológicas frescas",
-    "description": "Moras frescas cultivadas de forma ecológica y recolectadas a mano en la finca del occidente asturiano.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
-    "name": "Grosellas ecológicas frescas",
-    "description": "Grosellas frescas procedentes de la producción certificada de pequeños frutos ecológicos de la finca.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
-    "name": "Kiwi ecológico",
-    "description": "Kiwi ecológico cultivado en la finca familiar Los Arándanos de Taramundi.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
-    "name": "Manzanas ecológicas",
-    "description": "Manzanas cultivadas de forma ecológica en la finca frutícola diversificada del productor en Almallos.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
     "name": "Preparado 100 % ecológico de arándanos",
     "description": "Preparado de fruta elaborado en el obrador de la finca con un 100 % de arándanos ecológicos, sin edulcorantes añadidos ni gluten.",
     "price": 7.65,
@@ -3341,17 +2890,6 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://www.conasi.eu/img/cms/sellos-calidad-zumo-los-arandanos.PNG",
-    "category": "Frutos"
-  },
-  {
-    "farmExternalId": "los_arandanos",
-    "name": "Salsa artesana de frutos rojos",
-    "description": "Salsa artesana elaborada en el obrador con frutos rojos cultivados y recolectados a mano en la propia finca.",
-    "price": 0,
-    "quantity": 0,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "",
     "category": "Frutos"
   },
   {
