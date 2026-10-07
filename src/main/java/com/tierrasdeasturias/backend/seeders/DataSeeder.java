@@ -42,9 +42,9 @@ public class DataSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // if (farmRepository.count() > 0 || productRepository.count() > 1) {
-        //     return;
-        // }
+        if (farmRepository.count() > 0 || productRepository.count() > 0) {
+            return;
+        }
 
         productRepository.deleteAll();
         productCategoryRepository.deleteAll();

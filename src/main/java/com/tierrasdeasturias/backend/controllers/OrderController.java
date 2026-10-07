@@ -1,6 +1,8 @@
 package com.tierrasdeasturias.backend.controllers;
 
 import com.tierrasdeasturias.backend.dtos.CreateOrderRequestDto;
+import com.tierrasdeasturias.backend.dtos.OrderResponseDto;
+import com.tierrasdeasturias.backend.entities.CustomerOrder;
 import com.tierrasdeasturias.backend.services.OrderService;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +16,14 @@ public class OrderController {
     }
 
     @PostMapping
-    public String createOrder(@RequestBody CreateOrderRequestDto request) {
-        orderService.createOrder(request);
-        return "Order created";
+    public OrderResponseDto createOrder(@RequestBody CreateOrderRequestDto request) {
+        CustomerOrder order = orderService.createOrder(request);
+
+        return new OrderResponseDto(
+                order.getId(),
+                order.getOrderNumber(),
+                order.getStatus(),
+                order.getTotal()
+        );
     }
 }
