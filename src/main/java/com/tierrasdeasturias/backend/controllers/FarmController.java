@@ -5,6 +5,7 @@ import com.tierrasdeasturias.backend.services.FarmService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -19,7 +20,9 @@ public class FarmController {
     }
 
     @GetMapping
-    public List<FarmResponseDto> getAllFarms() {
-        return farmService.getAllFarms();
+    public List<FarmResponseDto> getAllFarms(
+            @RequestParam(required = false) String search
+    ) {
+        return farmService.getAllFarms(search);
     }
 }

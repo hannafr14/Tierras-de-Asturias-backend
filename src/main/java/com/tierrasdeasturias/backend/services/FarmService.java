@@ -16,9 +16,19 @@ public class FarmService {
         this.farmRepository = farmRepository;
     }
 
-    public List<FarmResponseDto> getAllFarms() {
-        return farmRepository.findAll()
-                .stream()
+    public List<FarmResponseDto> getAllFarms(String search) {
+        List<Farm> farms;
+
+        if (search == null || search.isBlank()) {
+            farms = farmRepository.findAll();
+        } else {
+            farms = farmRepository.findByNameContainingIgnoreCaseOrAddressContainingIgnoreCase(
+                    search,
+                    search
+            );
+        }
+
+        return farms.stream()
                 .map(this::mapToResponseDto)
                 .toList();
     }

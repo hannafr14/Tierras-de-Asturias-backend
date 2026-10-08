@@ -5,6 +5,7 @@ import com.tierrasdeasturias.backend.services.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -19,7 +20,9 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<ProductResponseDto> getAllProducts() {
-        return productService.getAllProducts();
+    public List<ProductResponseDto> getAllProducts(
+            @RequestParam(required = false) String search
+    ) {
+        return productService.getAllProducts(search);
     }
 }

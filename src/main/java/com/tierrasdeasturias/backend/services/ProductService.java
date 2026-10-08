@@ -16,9 +16,16 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<ProductResponseDto> getAllProducts() {
-        return productRepository.findAll()
-                .stream()
+    public List<ProductResponseDto> getAllProducts(String search) {
+        List<Product> products;
+
+        if (search == null || search.isBlank()) {
+            products = productRepository.findAll();
+        } else {
+            products = productRepository.findByNameContainingIgnoreCase(search);
+        }
+
+        return products.stream()
                 .map(this::mapToResponseDto)
                 .toList();
     }
