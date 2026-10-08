@@ -38,7 +38,7 @@ public class ProductControllerTest {
                 "Oviedo"
         );
 
-        when(productService.getAllProducts()).thenReturn(List.of(product));
+        when(productService.getAllProducts(null)).thenReturn(List.of(product));
 
         mockMvc.perform(get("/api/products"))
                 .andExpect(status().isOk())
@@ -52,5 +52,27 @@ public class ProductControllerTest {
                 .andExpect(jsonPath("$[0].farmId").value(10))
                 .andExpect(jsonPath("$[0].farmName").value("Finca La Vara"))
                 .andExpect(jsonPath("$[0].farmAddress").value("Oviedo"));
+    }
+
+    @Test
+    void getAllProductsFiltersBySearchQuery() throws Exception {
+        ProductResponseDto product = new ProductResponseDto(
+                1L,
+                "Queso Gamoneu",
+                "Queso artesano asturiano",
+                "https://example.com/queso.jpg",
+                5,
+                12.5,
+                "Quesos",
+                10L,
+                "Finca La Vara",
+                "Oviedo"
+        );
+
+        when(productService.getAllProducts("queso")).thenReturn(List.of(product));
+
+        mockMvc.perform(get("/api/products").param("search", "queso"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].name").value("Queso Gamoneu"));
     }
 }

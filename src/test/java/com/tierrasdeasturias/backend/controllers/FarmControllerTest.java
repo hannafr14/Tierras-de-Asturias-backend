@@ -36,7 +36,7 @@ public class FarmControllerTest {
                 List.of("Quesos", "Miel")
         );
 
-        when(farmService.getAllFarms()).thenReturn(List.of(farm));
+        when(farmService.getAllFarms(null)).thenReturn(List.of(farm));
 
         mockMvc.perform(get("/api/farms"))
                 .andExpect(status().isOk())
@@ -49,5 +49,25 @@ public class FarmControllerTest {
                 .andExpect(jsonPath("$[0].longitude").value(-5.84))
                 .andExpect(jsonPath("$[0].categories[0]").value("Quesos"))
                 .andExpect(jsonPath("$[0].categories[1]").value("Miel"));
+    }
+
+    @Test
+    void getAllFarmsFiltersBySearchQuery() throws Exception {
+        FarmResponseDto farm = new FarmResponseDto(
+                1L,
+                "Finca La Vara",
+                "Granja familiar asturiana",
+                "Oviedo",
+                "https://example.com/finca.jpg",
+                43.36,
+                -5.84,
+                List.of("Quesos", "Miel")
+        );
+
+        when(farmService.getAllFarms("vara")).thenReturn(List.of(farm));
+
+        mockMvc.perform(get("/api/farms").param("search", "vara"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].name").value("Finca La Vara"));
     }
 }
