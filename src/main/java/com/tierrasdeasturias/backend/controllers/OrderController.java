@@ -6,6 +6,8 @@ import com.tierrasdeasturias.backend.entities.CustomerOrder;
 import com.tierrasdeasturias.backend.services.OrderService;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
@@ -16,7 +18,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public OrderResponseDto createOrder(@RequestBody CreateOrderRequestDto request) {
+    public OrderResponseDto createOrder(@Valid @RequestBody CreateOrderRequestDto request) {
         CustomerOrder order = orderService.createOrder(request);
 
         return new OrderResponseDto(

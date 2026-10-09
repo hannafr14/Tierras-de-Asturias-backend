@@ -1,13 +1,35 @@
 package com.tierrasdeasturias.backend.dtos;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
 import java.util.List;
 
 public class CreateOrderRequestDto {
+    @Valid
+    @NotNull
     private DeliveryDto delivery;
+
+    @Valid
+    @NotEmpty
     private List<OrderItemRequestDto> items;
+
+    @NotNull
+    @Min(0)
     private Double subtotal;
+
+    @NotNull
+    @Min(0)
     private Double shipping;
+
+    @NotNull
+    @Min(0)
     private Double taxes;
+
+    @NotNull
+    @Min(0)
     private Double total;
 
     public DeliveryDto getDelivery() {

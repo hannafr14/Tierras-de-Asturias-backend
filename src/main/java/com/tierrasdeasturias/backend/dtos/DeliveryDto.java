@@ -1,12 +1,29 @@
 package com.tierrasdeasturias.backend.dtos;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
 public class DeliveryDto {
+    @NotBlank
     private String firstName;
+
+    @NotBlank
     private String lastName;
+
+    @NotBlank
     private String city;
+
+    @NotBlank
+    @Pattern(regexp = "\\d{5}")
     private String postalCode;
+
+    @NotBlank
     private String streetAddress;
+
     private String apartment;
+
+    @NotBlank
+    @Pattern(regexp = "\\+?\\d[\\d\\s]{8,}")
     private String phone;
 
     public String getFirstName() {

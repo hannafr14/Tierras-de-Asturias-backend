@@ -1,9 +1,22 @@
 package com.tierrasdeasturias.backend.dtos;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class OrderItemRequestDto {
+    @NotNull
     private Long productId;
+
+    @NotBlank
     private String name;
+
+    @NotNull
+    @Min(1)
     private Integer quantity;
+
+    @NotNull
+    @Min(0)
     private Double unitPrice;
 
     public Long getProductId() {
