@@ -8,6 +8,9 @@ import com.tierrasdeasturias.backend.repositories.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.tierrasdeasturias.backend.exceptions.DuplicateEmailException;
+import com.tierrasdeasturias.backend.exceptions.InvalidCredentialsException;
+
 @Service
 public class AuthService {
     private final UserRepository userRepository;
@@ -23,7 +26,7 @@ public class AuthService {
 
     public AuthResponseDto register(RegisterRequestDto request) {
         if (userRepository.existsByEmail(request.getEmail())) {
-            throw new IllegalArgumentException("Email is already registered");
+            throw new DuplicateEmailException("Email is already registered");
         }
 
         User user = new User();
@@ -39,10 +42,10 @@ public class AuthService {
 
     public AuthResponseDto login(LoginRequestDto request) {
         User user = userRepository.findByEmail(request.getEmail().trim().toLowerCase())
-                .orElseThrow(() -> new IllegalArgumentException("Invalid email or password"));
+                .orElseThrow(() -> new InvalidCredentialsException("Invalid email or password"));
 
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-            throw new IllegalArgumentException("Invalid email or password");
+            throw new InvalidCredentialsException("Invalid email or password");
         }
 
         return mapToResponseDto(user);
