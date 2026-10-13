@@ -25,7 +25,8 @@ public class OrderController {
                 order.getId(),
                 order.getOrderNumber(),
                 order.getStatus(),
-                order.getTotal()
+                order.getTotal(),
+                order.getOrderDate()
         );
     }
 }
