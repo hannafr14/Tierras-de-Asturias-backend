@@ -13,6 +13,8 @@ import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import com.tierrasdeasturias.backend.config.SecurityConfig;
+import org.springframework.context.annotation.Import;
 
 import java.util.List;
 import java.time.LocalDateTime;
@@ -27,6 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(OrderController.class)
+@Import(SecurityConfig.class)
 public class OrderControllerTest {
     @Autowired
     private MockMvc mockMvc;
