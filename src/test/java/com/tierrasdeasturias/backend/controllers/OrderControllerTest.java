@@ -15,6 +15,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
+import java.time.LocalDateTime;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
@@ -43,6 +44,7 @@ public class OrderControllerTest {
         order.setOrderNumber("ORD-1");
         order.setStatus("PENDING");
         order.setTotal(12.5);
+        order.setOrderDate(LocalDateTime.of(2026, 10, 12, 10, 30));
 
         when(orderService.createOrder(any(CreateOrderRequestDto.class))).thenReturn(order);
 
@@ -53,7 +55,8 @@ public class OrderControllerTest {
                 .andExpect(jsonPath("$.id").value(1))
                 .andExpect(jsonPath("$.orderNumber").value("ORD-1"))
                 .andExpect(jsonPath("$.status").value("PENDING"))
-                .andExpect(jsonPath("$.total").value(12.5));
+                .andExpect(jsonPath("$.total").value(12.5))
+                .andExpect(jsonPath("$.orderDate").value("2026-10-12T10:30:00"));
     }
 
     @Test
