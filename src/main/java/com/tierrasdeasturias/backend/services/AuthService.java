@@ -51,6 +51,14 @@ public class AuthService {
         return mapToResponseDto(user);
     }
 
+    public AuthResponseDto getUserByEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() ->
+                        new InvalidCredentialsException("Invalid email or password"));
+
+        return mapToResponseDto(user);
+    }
+
     private AuthResponseDto mapToResponseDto(User user) {
         return new AuthResponseDto(
                 user.getId(),
