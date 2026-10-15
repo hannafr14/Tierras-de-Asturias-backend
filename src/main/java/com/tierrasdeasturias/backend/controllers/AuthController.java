@@ -6,14 +6,56 @@ import com.tierrasdeasturias.backend.dtos.RegisterRequestDto;
 import com.tierrasdeasturias.backend.services.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.authentication.AuthenticationManager;
+import com.tierrasdeasturias.backend.exceptions.InvalidCredentialsException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy;
+import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
+import org.springframework.security.web.csrf.CsrfToken;
+import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
+import org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy;
+import org.springframework.security.web.csrf.CsrfAuthenticationStrategy;
+import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.core.Authentication;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
     private final AuthService authService;
+    private final AuthenticationManager authenticationManager;
+    private final HttpSessionSecurityContextRepository securityContextRepository =
+        new HttpSessionSecurityContextRepository();
 
-    public AuthController(AuthService authService) {
+    private final SessionAuthenticationStrategy sessionAuthenticationStrategy;
+
+    public AuthController(
+            AuthService authService,
+            AuthenticationManager authenticationManager,
+            CsrfTokenRepository csrfTokenRepository
+    ) {
         this.authService = authService;
+        this.authenticationManager = authenticationManager;
+        this.sessionAuthenticationStrategy =
+                new CompositeSessionAuthenticationStrategy(List.of(
+                        new ChangeSessionIdAuthenticationStrategy(),
+                        new CsrfAuthenticationStrategy(csrfTokenRepository)
+                ));
+    }
+
+    @GetMapping("/csrf")
+    public CsrfToken csrf(CsrfToken csrfToken) {
+        return csrfToken;
+    }
+
+    @GetMapping("/me")
+    public AuthResponseDto me(Authentication authentication) {
+        return authService.getUserByEmail(authentication.getName());
     }
 
     @PostMapping("/register")
@@ -22,7 +64,33 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public AuthResponseDto login(@Valid @RequestBody LoginRequestDto request) {
-        return authService.login(request);
+    public AuthResponseDto login(
+            @Valid @RequestBody LoginRequestDto loginRequest,
+            HttpServletRequest request,
+            HttpServletResponse response
+    ) {
+        try {
+            var authentication = authenticationManager.authenticate(
+                    UsernamePasswordAuthenticationToken.unauthenticated(
+                            loginRequest.getEmail(),
+                            loginRequest.getPassword()
+                    )
+            );
+
+            AuthResponseDto user = authService.getUserByEmail(authentication.getName());
+
+            sessionAuthenticationStrategy.onAuthentication(
+                    authentication, request, response
+            );
+
+            var context = SecurityContextHolder.createEmptyContext();
+            context.setAuthentication(authentication);
+            SecurityContextHolder.setContext(context);
+            securityContextRepository.saveContext(context, request, response);
+
+            return user;
+        } catch (AuthenticationException exception) {
+            throw new InvalidCredentialsException("Invalid email or password");
+        }
     }
 }
