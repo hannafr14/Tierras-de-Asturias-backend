@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
 @WebMvcTest(AuthController.class)
 @Import({SecurityConfig.class, GlobalExceptionHandler.class})
@@ -58,6 +59,7 @@ public class AuthControllerTest {
         when(authService.register(any(RegisterRequestDto.class))).thenReturn(response);
 
         mockMvc.perform(post("/api/auth/register")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(createValidRegisterRequest())))
                 .andExpect(status().isOk())
@@ -73,6 +75,7 @@ public class AuthControllerTest {
                 .thenThrow(new DuplicateEmailException("Email is already registered"));
 
         mockMvc.perform(post("/api/auth/register")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(createValidRegisterRequest())))
                 .andExpect(status().isConflict())
@@ -87,6 +90,7 @@ public class AuthControllerTest {
         request.setPassword("123");
 
         mockMvc.perform(post("/api/auth/register")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isBadRequest())

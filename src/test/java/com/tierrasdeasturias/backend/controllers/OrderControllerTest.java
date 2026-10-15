@@ -27,6 +27,7 @@ import static org.springframework.test.util.ReflectionTestUtils.setField;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
 @WebMvcTest(OrderController.class)
 @Import(SecurityConfig.class)
@@ -52,6 +53,7 @@ public class OrderControllerTest {
         when(orderService.createOrder(any(CreateOrderRequestDto.class))).thenReturn(order);
 
         mockMvc.perform(post("/api/orders")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(createValidOrderRequest())))
                 .andExpect(status().isOk())
@@ -69,6 +71,7 @@ public class OrderControllerTest {
         request.getDelivery().setPostalCode("33");
 
         mockMvc.perform(post("/api/orders")
+                        .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isBadRequest());
