@@ -241,6 +241,31 @@ public class AuthSessionTest {
                 .andExpect(jsonPath("$.password").doesNotExist());
     }
 
+    @Test
+    void loginWithoutRememberMeDoesNotRestoreExpiredSession() throws Exception {
+        CsrfState csrf = fetchCsrf(null);
+
+        MvcResult result = mockMvc.perform(loginRequest(csrf, EMAIL, PASSWORD))
+                .andExpect(status().isOk())
+                .andExpect(authenticated().withUsername(EMAIL))
+                .andExpect(cookie().maxAge("remember-me", 0))
+                .andReturn();
+
+        MockHttpSession session =
+                (MockHttpSession) result.getRequest().getSession(false);
+        assertNotNull(session);
+
+        mockMvc.perform(get("/api/auth/me").session(session))
+                .andExpect(status().isOk())
+                .andExpect(authenticated().withUsername(EMAIL));
+
+        session.invalidate();
+
+        mockMvc.perform(get("/api/auth/me"))
+                .andExpect(status().isUnauthorized())
+                .andExpect(unauthenticated());
+    }
+
     private CsrfState fetchCsrf(MockHttpSession session) throws Exception {
         MockHttpServletRequestBuilder request = get("/api/auth/csrf");
         if (session != null) {
