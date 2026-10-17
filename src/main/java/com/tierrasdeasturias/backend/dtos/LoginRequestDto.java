@@ -10,6 +10,7 @@ public class LoginRequestDto {
 
     @NotBlank
     private String password;
+    private boolean rememberMe;
 
     public String getEmail() {
         return email;
@@ -25,5 +26,13 @@ public class LoginRequestDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean isRememberMe() {
+        return rememberMe;
+    }
+
+    public void setRememberMe(boolean rememberMe) {
+        this.rememberMe = rememberMe;
     }
 }

@@ -13,17 +13,22 @@ import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
+import com.tierrasdeasturias.backend.services.JsonRememberMeServices;
 
 @Configuration
 public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(
             HttpSecurity http,
-            CsrfTokenRepository csrfTokenRepository
+            CsrfTokenRepository csrfTokenRepository,
+            JsonRememberMeServices rememberMeServices
     ) throws Exception {
         return http
                 .csrf(csrf -> csrf.csrfTokenRepository(csrfTokenRepository))
                 .cors(Customizer.withDefaults())
+                .rememberMe(remember -> remember
+                        .rememberMeServices(rememberMeServices)
+                )
                 .exceptionHandling(exceptions -> exceptions
                         .authenticationEntryPoint(
                                 new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)

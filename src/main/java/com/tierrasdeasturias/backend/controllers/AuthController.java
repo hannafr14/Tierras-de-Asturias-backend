@@ -23,12 +23,14 @@ import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.core.Authentication;
 
 import java.util.List;
+import com.tierrasdeasturias.backend.services.JsonRememberMeServices;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
     private final AuthService authService;
     private final AuthenticationManager authenticationManager;
+    private final JsonRememberMeServices rememberMeServices;
     private final HttpSessionSecurityContextRepository securityContextRepository =
         new HttpSessionSecurityContextRepository();
 
@@ -37,10 +39,12 @@ public class AuthController {
     public AuthController(
             AuthService authService,
             AuthenticationManager authenticationManager,
-            CsrfTokenRepository csrfTokenRepository
+            CsrfTokenRepository csrfTokenRepository,
+            JsonRememberMeServices rememberMeServices
     ) {
         this.authService = authService;
         this.authenticationManager = authenticationManager;
+        this.rememberMeServices = rememberMeServices;
         this.sessionAuthenticationStrategy =
                 new CompositeSessionAuthenticationStrategy(List.of(
                         new ChangeSessionIdAuthenticationStrategy(),
@@ -87,9 +91,17 @@ public class AuthController {
             context.setAuthentication(authentication);
             SecurityContextHolder.setContext(context);
             securityContextRepository.saveContext(context, request, response);
+            request.setAttribute("rememberMe", loginRequest.isRememberMe());
+
+            if (loginRequest.isRememberMe()) {
+                rememberMeServices.loginSuccess(request, response, authentication);
+            } else {
+                rememberMeServices.loginFail(request, response);
+            }
 
             return user;
         } catch (AuthenticationException exception) {
+            rememberMeServices.loginFail(request, response);
             throw new InvalidCredentialsException("Invalid email or password");
         }
     }
