@@ -40,9 +40,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
+
+import jakarta.servlet.http.Cookie;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.cookie;
+
 @WebMvcTest(AuthController.class)
 @Import({
         SecurityConfig.class,
+        RememberMeTestConfig.class,
         GlobalExceptionHandler.class,
         AuthService.class,
         CustomUserDetailsService.class
@@ -201,6 +207,38 @@ public class AuthSessionTest {
         mockMvc.perform(loginRequest(freshCsrf, EMAIL, PASSWORD))
                 .andExpect(status().isOk())
                 .andExpect(authenticated().withUsername(EMAIL));
+    }
+
+    @Test
+    void rememberMeRestoresAuthenticationWithoutSession() throws Exception {
+        CsrfState csrf = fetchCsrf(null);
+
+        LoginRequestDto request = new LoginRequestDto();
+        request.setEmail(EMAIL);
+        request.setPassword(PASSWORD);
+        request.setRememberMe(true);
+
+        MvcResult result = mockMvc.perform(
+                        loginRequest(csrf, EMAIL, PASSWORD)
+                                .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isOk())
+                .andExpect(cookie().httpOnly("remember-me", true))
+                .andExpect(cookie().maxAge("remember-me", 604800))
+                .andReturn();
+
+        Cookie rememberCookie = result.getResponse().getCookie("remember-me");
+        assertNotNull(rememberCookie);
+
+        MockHttpSession session =
+                (MockHttpSession) result.getRequest().getSession(false);
+        assertNotNull(session);
+        session.invalidate();
+
+        mockMvc.perform(get("/api/auth/me").cookie(rememberCookie))
+                .andExpect(status().isOk())
+                .andExpect(authenticated().withUsername(EMAIL))
+                .andExpect(jsonPath("$.email").value(EMAIL))
+                .andExpect(jsonPath("$.password").doesNotExist());
     }
 
     private CsrfState fetchCsrf(MockHttpSession session) throws Exception {

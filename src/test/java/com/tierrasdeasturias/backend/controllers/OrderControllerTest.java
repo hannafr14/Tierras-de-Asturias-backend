@@ -29,8 +29,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
+import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 @WebMvcTest(OrderController.class)
-@Import(SecurityConfig.class)
+@Import({SecurityConfig.class, RememberMeTestConfig.class})
 public class OrderControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -39,6 +42,9 @@ public class OrderControllerTest {
 
     @MockitoBean
     private OrderService orderService;
+
+    @MockitoBean
+    private UserDetailsService userDetailsService;
 
     @Test
     void createOrderReturnsCreatedOrder() throws Exception {

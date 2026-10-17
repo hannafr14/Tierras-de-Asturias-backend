@@ -25,8 +25,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
+import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 @WebMvcTest(AuthController.class)
-@Import({SecurityConfig.class, GlobalExceptionHandler.class})
+@Import({
+        SecurityConfig.class,
+        RememberMeTestConfig.class,
+        GlobalExceptionHandler.class
+})
 public class AuthControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -35,6 +42,9 @@ public class AuthControllerTest {
 
     @MockitoBean
     private AuthService authService;
+
+    @MockitoBean
+    private UserDetailsService userDetailsService;
 
     private RegisterRequestDto createValidRegisterRequest() {
         RegisterRequestDto request = new RegisterRequestDto();

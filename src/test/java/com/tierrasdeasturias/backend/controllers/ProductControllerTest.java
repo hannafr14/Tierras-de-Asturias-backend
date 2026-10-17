@@ -17,14 +17,20 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 @WebMvcTest(ProductController.class)
-@Import(SecurityConfig.class)
+@Import({SecurityConfig.class, RememberMeTestConfig.class})
 public class ProductControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
     @MockitoBean
     private ProductService productService;
+
+    @MockitoBean
+    private UserDetailsService userDetailsService;
 
     @Test
     void getAllProductsReturnsProducts() throws Exception {

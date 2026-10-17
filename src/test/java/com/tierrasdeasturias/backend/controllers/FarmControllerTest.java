@@ -17,14 +17,20 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 @WebMvcTest(FarmController.class)
-@Import(SecurityConfig.class)
+@Import({SecurityConfig.class, RememberMeTestConfig.class})
 public class FarmControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
     @MockitoBean
     private FarmService farmService;
+
+    @MockitoBean
+    private UserDetailsService userDetailsService;
 
     @Test
     void getAllFarmsReturnsFarms() throws Exception {
