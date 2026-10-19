@@ -7,6 +7,7 @@ import com.tierrasdeasturias.backend.services.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
+import java.security.Principal;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -18,8 +19,13 @@ public class OrderController {
     }
 
     @PostMapping
-    public OrderResponseDto createOrder(@Valid @RequestBody CreateOrderRequestDto request) {
-        CustomerOrder order = orderService.createOrder(request);
+    public OrderResponseDto createOrder(
+            @Valid @RequestBody CreateOrderRequestDto request,
+            Principal principal
+    ) {
+        CustomerOrder order = principal == null
+                ? orderService.createOrder(request)
+                : orderService.createOrder(request, principal.getName());
 
         return new OrderResponseDto(
                 order.getId(),

@@ -11,21 +11,41 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+import com.tierrasdeasturias.backend.repositories.UserRepository;
+import com.tierrasdeasturias.backend.exceptions.InvalidCredentialsException;
+
 @Service
 public class OrderService {
     private final CustomerOrderRepository customerOrderRepository;
     private final ProductRepository productRepository;
+    private final UserRepository userRepository;
 
     public OrderService(
             CustomerOrderRepository customerOrderRepository,
-            ProductRepository productRepository
+            ProductRepository productRepository,
+            UserRepository userRepository
     ) {
         this.customerOrderRepository = customerOrderRepository;
         this.productRepository = productRepository;
+        this.userRepository = userRepository;
     }
 
     public CustomerOrder createOrder(CreateOrderRequestDto request) {
+        return createOrder(request, null);
+    }
+
+    public CustomerOrder createOrder(
+            CreateOrderRequestDto request,
+            String userEmail
+    ) {
         CustomerOrder order = new CustomerOrder();
+
+        if (userEmail != null) {
+            var user = userRepository.findByEmail(userEmail)
+                    .orElseThrow(() ->
+                            new InvalidCredentialsException("Authenticated user not found"));
+            order.setUser(user);
+        }
 
         order.setOrderNumber(generateOrderNumber());
         order.setOrderDate(LocalDateTime.now());
