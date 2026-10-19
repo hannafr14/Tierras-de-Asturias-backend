@@ -14,6 +14,7 @@ import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import com.tierrasdeasturias.backend.services.JsonRememberMeServices;
+import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
 @Configuration
 public class SecurityConfig {
@@ -28,6 +29,17 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .rememberMe(remember -> remember
                         .rememberMeServices(rememberMeServices)
+                )
+                .logout(logout -> logout
+                        .logoutUrl("/api/auth/logout")
+                        .invalidateHttpSession(true)
+                        .clearAuthentication(true)
+                        .deleteCookies("JSESSIONID")
+                        .logoutSuccessHandler(
+                                new HttpStatusReturningLogoutSuccessHandler(
+                                        HttpStatus.NO_CONTENT
+                                )
+                        )
                 )
                 .exceptionHandling(exceptions -> exceptions
                         .authenticationEntryPoint(
