@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import com.tierrasdeasturias.backend.services.JsonRememberMeServices;
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
+import org.springframework.http.HttpMethod;
 
 @Configuration
 public class SecurityConfig {
@@ -47,13 +48,13 @@ public class SecurityConfig {
                         )
                 )
                 .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers(HttpMethod.POST, "/api/orders").permitAll()
                         .requestMatchers(
                                 "/api/auth/register",
                                 "/api/auth/login",
                                 "/api/auth/csrf",
                                 "/api/products/**",
                                 "/api/farms/**",
-                                "/api/orders/**",
                                 "/actuator/health"
                         ).permitAll()
                         .anyRequest().authenticated()

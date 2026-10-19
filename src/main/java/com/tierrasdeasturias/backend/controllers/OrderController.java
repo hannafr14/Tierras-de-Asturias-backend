@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 import java.security.Principal;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.web.PagedModel;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -34,5 +38,25 @@ public class OrderController {
                 order.getTotal(),
                 order.getOrderDate()
         );
+    }
+
+    @GetMapping("/mine")
+    public PagedModel<OrderResponseDto> getMyOrders(
+            Principal principal,
+            @RequestParam(name = "page", defaultValue = "0") int page
+    ) {
+        if (page < 0) {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "Page must not be negative"
+            );
+        }
+
+        var orders = orderService.getUserOrders(
+                principal.getName(),
+                PageRequest.of(page, 3)
+        );
+
+        return new PagedModel<>(orders);
     }
 }

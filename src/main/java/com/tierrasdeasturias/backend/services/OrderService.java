@@ -14,6 +14,10 @@ import java.time.LocalDateTime;
 import com.tierrasdeasturias.backend.repositories.UserRepository;
 import com.tierrasdeasturias.backend.exceptions.InvalidCredentialsException;
 
+import com.tierrasdeasturias.backend.dtos.OrderResponseDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 @Service
 public class OrderService {
     private final CustomerOrderRepository customerOrderRepository;
@@ -78,6 +82,21 @@ public class OrderService {
         }
 
         return customerOrderRepository.save(order);
+    }
+
+    public Page<OrderResponseDto> getUserOrders(
+            String userEmail,
+            Pageable pageable
+    ) {
+        return customerOrderRepository
+                .findByUser_EmailOrderByOrderDateDescIdDesc(userEmail, pageable)
+                .map(order -> new OrderResponseDto(
+                        order.getId(),
+                        order.getOrderNumber(),
+                        order.getStatus(),
+                        order.getTotal(),
+                        order.getOrderDate()
+                ));
     }
 
     private String generateOrderNumber() {
