@@ -45,6 +45,10 @@ import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
 import jakarta.servlet.http.Cookie;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.cookie;
 
+import org.junit.jupiter.params.provider.ValueSource;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+
 @WebMvcTest(AuthController.class)
 @Import({
         SecurityConfig.class,
@@ -264,6 +268,58 @@ public class AuthSessionTest {
         mockMvc.perform(get("/api/auth/me"))
                 .andExpect(status().isUnauthorized())
                 .andExpect(unauthenticated());
+    }
+
+    @ParameterizedTest
+    @ValueSource(booleans = {false, true})
+    void logoutEndsSessionAndRevokesRememberMe(boolean rememberMe) throws Exception {
+        CsrfState csrf = fetchCsrf(null);
+        LoginRequestDto request = new LoginRequestDto();
+        request.setEmail(EMAIL);
+        request.setPassword(PASSWORD);
+        request.setRememberMe(rememberMe);
+
+        MvcResult login = mockMvc.perform(loginRequest(csrf, EMAIL, PASSWORD)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        MockHttpSession session = (MockHttpSession) login.getRequest().getSession(false);
+        assertNotNull(session);
+        Cookie rememberCookie = login.getResponse().getCookie("remember-me");
+        CsrfState freshCsrf = fetchCsrf(session);
+
+        mockMvc.perform(post("/api/auth/logout").session(session)
+                        .header(freshCsrf.headerName(), freshCsrf.token()))
+                .andExpect(status().isNoContent())
+                .andExpect(cookie().maxAge("JSESSIONID", 0))
+                .andExpect(cookie().maxAge("remember-me", 0));
+
+        assertTrue(session.isInvalid());
+        mockMvc.perform(get("/api/auth/me"))
+                .andExpect(status().isUnauthorized());
+
+        if (rememberMe) {
+            assertNotNull(rememberCookie);
+            mockMvc.perform(get("/api/auth/me").cookie(rememberCookie))
+                    .andExpect(status().isUnauthorized());
+        }
+    }
+
+    @Test
+    void logoutWithoutCsrfDoesNotEndTheSession() throws Exception {
+        CsrfState csrf = fetchCsrf(null);
+        MvcResult login = mockMvc.perform(loginRequest(csrf, EMAIL, PASSWORD))
+                .andExpect(status().isOk()).andReturn();
+        MockHttpSession session = (MockHttpSession) login.getRequest().getSession(false);
+        assertNotNull(session);
+
+        mockMvc.perform(post("/api/auth/logout").session(session))
+                .andExpect(status().isForbidden());
+        assertFalse(session.isInvalid());
+        mockMvc.perform(get("/api/auth/me").session(session))
+                .andExpect(status().isOk())
+                .andExpect(authenticated().withUsername(EMAIL));
     }
 
     private CsrfState fetchCsrf(MockHttpSession session) throws Exception {
