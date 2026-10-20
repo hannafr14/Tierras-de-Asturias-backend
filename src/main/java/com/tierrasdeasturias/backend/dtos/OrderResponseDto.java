@@ -8,13 +8,22 @@ public class OrderResponseDto {
     private String status;
     private Double total;
     private LocalDateTime orderDate;
+    private int productCount;
 
-    public OrderResponseDto(Long id, String orderNumber, String status, Double total,LocalDateTime orderDate) {
+    public OrderResponseDto(
+            Long id,
+            String orderNumber,
+            String status,
+            Double total,
+            LocalDateTime orderDate,
+            int productCount
+    ) {
         this.id = id;
         this.orderNumber = orderNumber;
         this.status = status;
         this.total = total;
         this.orderDate = orderDate;
+        this.productCount = productCount;
     }
 
     public Long getId() {
@@ -35,5 +44,9 @@ public class OrderResponseDto {
 
     public LocalDateTime getOrderDate() {
         return orderDate;
+    }
+
+    public int getProductCount() {
+        return productCount;
     }
 }

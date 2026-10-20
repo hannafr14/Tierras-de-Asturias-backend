@@ -17,6 +17,7 @@ import com.tierrasdeasturias.backend.exceptions.InvalidCredentialsException;
 import com.tierrasdeasturias.backend.dtos.OrderResponseDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class OrderService {
@@ -84,6 +85,7 @@ public class OrderService {
         return customerOrderRepository.save(order);
     }
 
+    @Transactional(readOnly = true)
     public Page<OrderResponseDto> getUserOrders(
             String userEmail,
             Pageable pageable
@@ -95,7 +97,10 @@ public class OrderService {
                         order.getOrderNumber(),
                         order.getStatus(),
                         order.getTotal(),
-                        order.getOrderDate()
+                        order.getOrderDate(),
+                        order.getItems().stream()
+                                .mapToInt(item -> item.getQuantity())
+                                .sum()
                 ));
     }
 

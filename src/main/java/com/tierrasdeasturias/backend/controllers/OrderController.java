@@ -36,7 +36,10 @@ public class OrderController {
                 order.getOrderNumber(),
                 order.getStatus(),
                 order.getTotal(),
-                order.getOrderDate()
+                order.getOrderDate(),
+                order.getItems().stream()
+                        .mapToInt(item -> item.getQuantity())
+                        .sum()
         );
     }
 
