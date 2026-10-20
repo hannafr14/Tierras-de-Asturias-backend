@@ -39,6 +39,14 @@ import static org.mockito.Mockito.verifyNoInteractions;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+import com.tierrasdeasturias.backend.dtos.OrderDetailsResponseDto;
+import com.tierrasdeasturias.backend.dtos.OrderDeliveryResponseDto;
+import com.tierrasdeasturias.backend.dtos.OrderItemResponseDto;
+
 @WebMvcTest(OrderController.class)
 @Import({SecurityConfig.class, RememberMeTestConfig.class})
 public class OrderControllerTest {
@@ -173,6 +181,71 @@ public class OrderControllerTest {
                 .andExpect(status().isBadRequest());
 
         verifyNoInteractions(orderService);
+    }
+
+    @Test
+    void getMyOrderRejectsAnonymousUser() throws Exception {
+        mockMvc.perform(get("/api/orders/mine/19"))
+                .andExpect(status().isUnauthorized());
+
+        verifyNoInteractions(orderService);
+    }
+
+    @ParameterizedTest
+    @ValueSource(longs = {19L, 999999L})
+    void getMyOrderReturnsNotFoundForUnavailableOrder(Long id)
+            throws Exception {
+        when(orderService.getUserOrder(id, "maria@example.com"))
+                .thenThrow(new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Pedido no encontrado"
+                ));
+
+        mockMvc.perform(get("/api/orders/mine/{id}", id)
+                        .with(user("maria@example.com"))
+                        .param("email", "ana@example.com"))
+                .andExpect(status().isNotFound());
+
+        verify(orderService).getUserOrder(id, "maria@example.com");
+    }
+
+    @Test
+    void getMyOrderReturnsDetailsForAuthenticatedCustomer() throws Exception {
+        var item = new OrderItemResponseDto(
+                1L, "Queso", "/images/queso.jpg", 2, 12.5
+        );
+        var delivery = new OrderDeliveryResponseDto(
+                "Ana", "Garcia", "Oviedo", "33001",
+                "Calle Mayor 12", "Piso 2", "+34 600 000 000"
+        );
+        var order = new OrderDetailsResponseDto(
+                19L, "ORD-19", "PENDING",
+                LocalDateTime.of(2026, 10, 19, 15, 0),
+                25.0, 0.0, 4.34, 25.0,
+                List.of(item), delivery
+        );
+        when(orderService.getUserOrder(19L, "ana@example.com"))
+                .thenReturn(order);
+
+        mockMvc.perform(get("/api/orders/mine/19")
+                        .with(user("ana@example.com")))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(19))
+                .andExpect(jsonPath("$.orderNumber").value("ORD-19"))
+                .andExpect(jsonPath("$.status").value("PENDING"))
+                .andExpect(jsonPath("$.total").value(25.0))
+                .andExpect(jsonPath("$.items.length()").value(1))
+                .andExpect(jsonPath("$.items[0].productId").value(1))
+                .andExpect(jsonPath("$.items[0].name").value("Queso"))
+                .andExpect(jsonPath("$.items[0].quantity").value(2))
+                .andExpect(jsonPath("$.items[0].unitPrice").value(12.5))
+                .andExpect(jsonPath("$.delivery.firstName").value("Ana"))
+                .andExpect(jsonPath("$.delivery.streetAddress")
+                        .value("Calle Mayor 12"))
+                .andExpect(jsonPath("$.password").doesNotExist())
+                .andExpect(jsonPath("$.user").doesNotExist());
+
+        verify(orderService).getUserOrder(19L, "ana@example.com");
     }
 
     private CreateOrderRequestDto createValidOrderRequest() {

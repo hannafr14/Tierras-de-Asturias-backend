@@ -15,6 +15,7 @@ import com.tierrasdeasturias.backend.entities.User;
 import jakarta.persistence.EntityManager;
 import java.time.LocalDateTime;
 import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DataJpaTest(properties = {
         "spring.docker.compose.enabled=false",
@@ -74,6 +75,39 @@ class CustomerOrderRepositoryTest {
                         .map(CustomerOrder::getOrderNumber).toList());
     }
 
+    @Test
+    void findsOrderOnlyForItsOwner() {
+        var ana = saveUser("ana@example.com");
+        saveUser("maria@example.com");
+        var order = saveOrder(ana, "ORD-ANA");
+        entityManager.flush();
+        entityManager.clear();
+
+        var ownOrder = orderRepository
+                .findByIdAndUser_Email(order.getId(), "ana@example.com")
+                .orElseThrow();
+
+        assertEquals("ORD-ANA", ownOrder.getOrderNumber());
+        assertTrue(orderRepository
+                .findByIdAndUser_Email(order.getId(), "maria@example.com")
+                .isEmpty());
+    }
+
+    @Test
+    void doesNotFindGuestOrMissingOrderForCustomer() {
+        saveUser("ana@example.com");
+        var guestOrder = saveOrder(null, "ORD-GUEST");
+        entityManager.flush();
+        entityManager.clear();
+
+        assertTrue(orderRepository
+                .findByIdAndUser_Email(guestOrder.getId(), "ana@example.com")
+                .isEmpty());
+        assertTrue(orderRepository
+                .findByIdAndUser_Email(Long.MAX_VALUE, "ana@example.com")
+                .isEmpty());
+    }
+
     private User saveUser(String email) {
         var user = new User();
         user.setEmail(email);
@@ -82,7 +116,7 @@ class CustomerOrderRepositoryTest {
         return user;
     }
 
-    private void saveOrder(User owner, String number) {
+    private CustomerOrder saveOrder(User owner, String number) {
         var order = new CustomerOrder();
         order.setUser(owner);
         order.setOrderNumber(number);
@@ -90,5 +124,6 @@ class CustomerOrderRepositoryTest {
         order.setStatus("PENDING");
         order.setTotal(3.3);
         entityManager.persist(order);
+        return order;
     }
 }
