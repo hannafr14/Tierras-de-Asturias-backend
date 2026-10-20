@@ -31,6 +31,13 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 
 import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import com.tierrasdeasturias.backend.dtos.OrderResponseDto;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.user;
 
 @WebMvcTest(OrderController.class)
 @Import({SecurityConfig.class, RememberMeTestConfig.class})
@@ -83,6 +90,89 @@ public class OrderControllerTest {
                 .andExpect(status().isBadRequest());
 
         verify(orderService, never()).createOrder(any(CreateOrderRequestDto.class));
+    }
+
+    @Test
+    void getMyOrdersRejectsAnonymousUser() throws Exception {
+        mockMvc.perform(get("/api/orders/mine"))
+                .andExpect(status().isUnauthorized());
+
+        verifyNoInteractions(orderService);
+    }
+
+    @Test
+    void getMyOrdersUsesAuthenticatedEmail() throws Exception {
+        var pageable = PageRequest.of(0, 3);
+        var order = new OrderResponseDto(
+                18L, "ORD-18", "PENDING", 3.3,
+                LocalDateTime.of(2026, 10, 19, 14, 8), 3
+        );
+
+        when(orderService.getUserOrders("ana@example.com", pageable))
+                .thenReturn(new PageImpl<>(List.of(order), pageable, 1));
+
+        mockMvc.perform(get("/api/orders/mine")
+                        .with(user("ana@example.com"))
+                        .param("email", "other@example.com")
+                        .param("userId", "999"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.content.length()").value(1))
+                .andExpect(jsonPath("$.content[0].id").value(18))
+                .andExpect(jsonPath("$.content[0].orderNumber").value("ORD-18"))
+                .andExpect(jsonPath("$.content[0].status").value("PENDING"))
+                .andExpect(jsonPath("$.content[0].total").value(3.3))
+                .andExpect(jsonPath("$.content[0].productCount").value(3))
+                .andExpect(jsonPath("$.page.number").value(0))
+                .andExpect(jsonPath("$.page.size").value(3))
+                .andExpect(jsonPath("$.page.totalElements").value(1));
+
+        verify(orderService).getUserOrders("ana@example.com", pageable);
+    }
+
+    @Test
+    void getMyOrdersReturnsEmptyHistory() throws Exception {
+        var pageable = PageRequest.of(0, 3);
+        when(orderService.getUserOrders("ana@example.com", pageable))
+                .thenReturn(new PageImpl<>(List.of(), pageable, 0));
+
+        mockMvc.perform(get("/api/orders/mine")
+                        .with(user("ana@example.com")))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").isEmpty())
+                .andExpect(jsonPath("$.page.totalElements").value(0))
+                .andExpect(jsonPath("$.page.totalPages").value(0));
+    }
+
+    @Test
+    void getMyOrdersReturnsRequestedPage() throws Exception {
+        var pageable = PageRequest.of(1, 3);
+        var order = new OrderResponseDto(
+                19L, "ORD-19", "PENDING", 12.5,
+                LocalDateTime.of(2026, 10, 19, 15, 0), 2
+        );
+        when(orderService.getUserOrders("ana@example.com", pageable))
+                .thenReturn(new PageImpl<>(List.of(order), pageable, 4));
+
+        mockMvc.perform(get("/api/orders/mine")
+                        .with(user("ana@example.com"))
+                        .param("page", "1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.content[0].orderNumber").value("ORD-19"))
+                .andExpect(jsonPath("$.page.number").value(1))
+                .andExpect(jsonPath("$.page.totalElements").value(4))
+                .andExpect(jsonPath("$.page.totalPages").value(2));
+
+        verify(orderService).getUserOrders("ana@example.com", pageable);
+    }
+
+    @Test
+    void getMyOrdersRejectsNegativePage() throws Exception {
+        mockMvc.perform(get("/api/orders/mine")
+                        .with(user("ana@example.com"))
+                        .param("page", "-1"))
+                .andExpect(status().isBadRequest());
+
+        verifyNoInteractions(orderService);
     }
 
     private CreateOrderRequestDto createValidOrderRequest() {
