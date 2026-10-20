@@ -322,6 +322,44 @@ public class AuthSessionTest {
                 .andExpect(authenticated().withUsername(EMAIL));
     }
 
+    @Test
+    void meReturnsCurrentUserDespiteAnotherUsersQueryParameters() throws Exception {
+        String otherEmail = "maria@example.com";
+
+        User otherUser = new User();
+        setField(otherUser, "id", 2L);
+        otherUser.setFirstName("Maria");
+        otherUser.setLastName("Lopez");
+        otherUser.setEmail(otherEmail);
+        otherUser.setPassword(passwordEncoder.encode(PASSWORD));
+
+        when(userRepository.findByEmail(otherEmail))
+                .thenReturn(Optional.of(otherUser));
+
+        CsrfState csrf = fetchCsrf(null);
+
+        MvcResult login = mockMvc.perform(loginRequest(csrf, otherEmail, PASSWORD))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        MockHttpSession session =
+                (MockHttpSession) login.getRequest().getSession(false);
+        assertNotNull(session);
+
+        mockMvc.perform(get("/api/auth/me")
+                        .session(session)
+                        .param("userId", "1")
+                        .param("email", EMAIL))
+                .andExpect(status().isOk())
+                .andExpect(authenticated().withUsername(otherEmail))
+                .andExpect(jsonPath("$.id").value(2))
+                .andExpect(jsonPath("$.firstName").value("Maria"))
+                .andExpect(jsonPath("$.email").value(otherEmail))
+                .andExpect(jsonPath("$.password").doesNotExist());
+
+        verify(userRepository, never()).findByEmail(EMAIL);
+    }
+
     private CsrfState fetchCsrf(MockHttpSession session) throws Exception {
         MockHttpServletRequestBuilder request = get("/api/auth/csrf");
         if (session != null) {
