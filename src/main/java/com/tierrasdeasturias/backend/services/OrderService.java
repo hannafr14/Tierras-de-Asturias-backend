@@ -18,6 +18,11 @@ import com.tierrasdeasturias.backend.dtos.OrderResponseDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
+import com.tierrasdeasturias.backend.dtos.OrderDetailsResponseDto;
+import com.tierrasdeasturias.backend.dtos.OrderDeliveryResponseDto;
+import com.tierrasdeasturias.backend.dtos.OrderItemResponseDto;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class OrderService {
@@ -102,6 +107,49 @@ public class OrderService {
                                 .mapToInt(item -> item.getQuantity())
                                 .sum()
                 ));
+    }
+
+    @Transactional(readOnly = true)
+    public OrderDetailsResponseDto getUserOrder(Long id, String userEmail) {
+        var order = customerOrderRepository
+                .findByIdAndUser_Email(id, userEmail)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Pedido no encontrado"
+                ));
+
+        var items = order.getItems().stream()
+                .map(item -> new OrderItemResponseDto(
+                        item.getProduct().getId(),
+                        item.getProduct().getName(),
+                        item.getProduct().getImage(),
+                        item.getQuantity(),
+                        item.getUnitPrice()
+                ))
+                .toList();
+
+        var delivery = new OrderDeliveryResponseDto(
+                order.getFirstName(),
+                order.getLastName(),
+                order.getCity(),
+                order.getPostalCode(),
+                order.getStreetAddress(),
+                order.getApartment(),
+                order.getPhone()
+        );
+
+        return new OrderDetailsResponseDto(
+                order.getId(),
+                order.getOrderNumber(),
+                order.getStatus(),
+                order.getOrderDate(),
+                order.getSubtotal(),
+                order.getShipping(),
+                order.getTaxes(),
+                order.getTotal(),
+                items,
+                delivery
+        );
     }
 
     private String generateOrderNumber() {

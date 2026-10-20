@@ -12,6 +12,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.web.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
+import com.tierrasdeasturias.backend.dtos.OrderDetailsResponseDto;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -61,5 +62,13 @@ public class OrderController {
         );
 
         return new PagedModel<>(orders);
+    }
+
+    @GetMapping("/mine/{id}")
+    public OrderDetailsResponseDto getMyOrder(
+            @PathVariable("id") Long id,
+            Principal principal
+    ) {
+        return orderService.getUserOrder(id, principal.getName());
     }
 }
