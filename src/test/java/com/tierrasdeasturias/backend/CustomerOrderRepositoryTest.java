@@ -108,6 +108,50 @@ class CustomerOrderRepositoryTest {
                 .isEmpty());
     }
 
+    @Test
+    void paginatesCustomerOrdersWithStableSorting() {
+        var ana = saveUser("ana@example.com");
+        var maria = saveUser("maria@example.com");
+
+        var oldest = saveOrder(ana, "ORD-1");
+        oldest.setOrderDate(LocalDateTime.of(2026, 10, 18, 12, 0));
+
+        var newest = saveOrder(ana, "ORD-2");
+        newest.setOrderDate(LocalDateTime.of(2026, 10, 20, 12, 0));
+
+        saveOrder(ana, "ORD-3");
+        saveOrder(ana, "ORD-4");
+        saveOrder(maria, "ORD-MARIA");
+        saveOrder(null, "ORD-GUEST");
+        entityManager.flush();
+        entityManager.clear();
+
+        var firstPage = orderRepository
+                .findByUser_EmailOrderByOrderDateDescIdDesc(
+                        "ana@example.com", PageRequest.of(0, 3)
+                );
+        var secondPage = orderRepository
+                .findByUser_EmailOrderByOrderDateDescIdDesc(
+                        "ana@example.com", PageRequest.of(1, 3)
+                );
+
+        assertEquals(4, firstPage.getTotalElements());
+        assertEquals(4, secondPage.getTotalElements());
+        assertEquals(2, firstPage.getTotalPages());
+        assertEquals(2, secondPage.getTotalPages());
+        assertEquals(0, firstPage.getNumber());
+        assertEquals(1, secondPage.getNumber());
+        assertTrue(firstPage.isFirst());
+        assertTrue(secondPage.isLast());
+
+        assertEquals(List.of("ORD-2", "ORD-4", "ORD-3"),
+                firstPage.getContent().stream()
+                        .map(CustomerOrder::getOrderNumber).toList());
+        assertEquals(List.of("ORD-1"),
+                secondPage.getContent().stream()
+                        .map(CustomerOrder::getOrderNumber).toList());
+    }
+
     private User saveUser(String email) {
         var user = new User();
         user.setEmail(email);
