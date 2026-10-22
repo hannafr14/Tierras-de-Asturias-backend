@@ -20,6 +20,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+
 @WebMvcTest(ProductController.class)
 @Import({SecurityConfig.class, RememberMeTestConfig.class})
 public class ProductControllerTest {
@@ -83,5 +86,47 @@ public class ProductControllerTest {
         mockMvc.perform(get("/api/products").param("search", "queso"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("Queso Gamoneu"));
+    }
+
+    @Test
+    void getProductByIdReturnsProduct() throws Exception {
+        ProductResponseDto product = new ProductResponseDto(
+                1L,
+                "Queso Gamoneu",
+                "Queso artesano asturiano",
+                "https://example.com/queso.jpg",
+                5,
+                12.5,
+                "Quesos",
+                10L,
+                "Finca La Vara",
+                "Oviedo"
+        );
+
+        when(productService.getProductById(1L)).thenReturn(product);
+
+        mockMvc.perform(get("/api/products/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1))
+                .andExpect(jsonPath("$.name").value("Queso Gamoneu"))
+                .andExpect(jsonPath("$.description")
+                        .value("Queso artesano asturiano"))
+                .andExpect(jsonPath("$.price").value(12.5))
+                .andExpect(jsonPath("$.image")
+                        .value("https://example.com/queso.jpg"))
+                .andExpect(jsonPath("$.farmId").value(10))
+                .andExpect(jsonPath("$.farmName").value("Finca La Vara"));
+    }
+
+    @Test
+    void getProductByIdReturnsNotFound() throws Exception {
+        when(productService.getProductById(999L))
+                .thenThrow(new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Producto no encontrado"
+                ));
+
+        mockMvc.perform(get("/api/products/999"))
+                .andExpect(status().isNotFound());
     }
 }
