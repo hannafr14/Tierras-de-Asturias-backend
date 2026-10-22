@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
+
 @Service
 public class ProductService {
 
@@ -28,6 +32,17 @@ public class ProductService {
         return products.stream()
                 .map(this::mapToResponseDto)
                 .toList();
+    }
+
+    @Transactional(readOnly = true)
+    public ProductResponseDto getProductById(Long id) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Producto no encontrado"
+                ));
+
+        return mapToResponseDto(product);
     }
 
     private ProductResponseDto mapToResponseDto(Product product) {
