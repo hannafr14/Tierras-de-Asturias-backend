@@ -10,6 +10,8 @@ public record ProductResponseDto(
         String category,
         Long farmId,
         String farmName,
-        String farmAddress
+        String farmAddress,
+        Double sizeValue,
+        String sizeUnit
 ) {
 }

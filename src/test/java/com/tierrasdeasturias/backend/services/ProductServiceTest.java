@@ -33,6 +33,8 @@ class ProductServiceTest {
         when(product.getImage()).thenReturn("queso.jpg");
         when(product.getQuantity()).thenReturn(5);
         when(product.getPrice()).thenReturn(12.5);
+        when(product.getSizeValue()).thenReturn(500.0);
+        when(product.getSizeUnit()).thenReturn("g");
         when(product.getCategory()).thenReturn(category);
         when(category.getName()).thenReturn("Quesos");
         when(product.getFarm()).thenReturn(farm);
@@ -42,7 +44,8 @@ class ProductServiceTest {
 
         var expected = new ProductResponseDto(
                 1L, "Queso Gamoneu", "Queso artesano", "queso.jpg",
-                5, 12.5, "Quesos", 10L, "Finca La Vara", "Oviedo"
+                5, 12.5, "Quesos", 10L, "Finca La Vara", "Oviedo",
+                500.0, "g"
         );
 
         assertEquals(expected, service.getProductById(1L));

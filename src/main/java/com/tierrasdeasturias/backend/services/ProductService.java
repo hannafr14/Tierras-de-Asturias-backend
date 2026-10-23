@@ -56,7 +56,9 @@ public class ProductService {
                 product.getCategory().getName(),
                 product.getFarm().getId(),
                 product.getFarm().getName(),
-                product.getFarm().getAddress()
+                product.getFarm().getAddress(),
+                product.getSizeValue(),
+                product.getSizeUnit()
         );
     }
 }

@@ -47,7 +47,9 @@ public class ProductControllerTest {
                 "Quesos",
                 10L,
                 "Finca La Vara",
-                "Oviedo"
+                "Oviedo",
+                500.0,
+                "g"
         );
 
         when(productService.getAllProducts(null)).thenReturn(List.of(product));
@@ -78,7 +80,9 @@ public class ProductControllerTest {
                 "Quesos",
                 10L,
                 "Finca La Vara",
-                "Oviedo"
+                "Oviedo",
+                500.0,
+                "g"
         );
 
         when(productService.getAllProducts("queso")).thenReturn(List.of(product));
@@ -100,7 +104,9 @@ public class ProductControllerTest {
                 "Quesos",
                 10L,
                 "Finca La Vara",
-                "Oviedo"
+                "Oviedo",
+                500.0,
+                "g"
         );
 
         when(productService.getProductById(1L)).thenReturn(product);
@@ -115,7 +121,9 @@ public class ProductControllerTest {
                 .andExpect(jsonPath("$.image")
                         .value("https://example.com/queso.jpg"))
                 .andExpect(jsonPath("$.farmId").value(10))
-                .andExpect(jsonPath("$.farmName").value("Finca La Vara"));
+                .andExpect(jsonPath("$.farmName").value("Finca La Vara"))
+                .andExpect(jsonPath("$.sizeValue").value(500.0))
+                .andExpect(jsonPath("$.sizeUnit").value("g"));
     }
 
     @Test

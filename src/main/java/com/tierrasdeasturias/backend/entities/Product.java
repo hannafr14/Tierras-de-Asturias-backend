@@ -17,6 +17,8 @@ public class Product {
     private String image;
     private Integer quantity;
     private Double price;
+    private Double sizeValue;
+    private String sizeUnit;
 
     @ManyToOne
     @JoinColumn(name = "product_category_id")
@@ -50,6 +52,14 @@ public class Product {
         return price;
     }
 
+    public Double getSizeValue() {
+        return sizeValue;
+    }
+
+    public String getSizeUnit() {
+        return sizeUnit;
+    }
+
     public ProductCategory getCategory() {
         return category;
     }
@@ -76,6 +86,14 @@ public class Product {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public void setSizeValue(Double sizeValue) {
+        this.sizeValue = sizeValue;
+    }
+
+    public void setSizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
     }
 
     public void setCategory(ProductCategory category) {
