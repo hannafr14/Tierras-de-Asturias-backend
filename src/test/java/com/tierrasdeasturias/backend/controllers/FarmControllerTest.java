@@ -19,6 +19,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.tierrasdeasturias.backend.config.RememberMeTestConfig;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 @WebMvcTest(FarmController.class)
 @Import({SecurityConfig.class, RememberMeTestConfig.class})
@@ -78,5 +80,39 @@ public class FarmControllerTest {
         mockMvc.perform(get("/api/farms").param("search", "vara"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("Finca La Vara"));
+    }
+
+    @Test
+    void getFarmByIdReturnsFarm() throws Exception {
+        FarmResponseDto farm = new FarmResponseDto(
+                1L, "Finca La Vara", "Granja familiar",
+                "Oviedo", "finca.jpg", 43.36, -5.84,
+                List.of("Quesos")
+        );
+
+        when(farmService.getFarmById(1L)).thenReturn(farm);
+
+        mockMvc.perform(get("/api/farms/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(1))
+                .andExpect(jsonPath("$.name").value("Finca La Vara"))
+                .andExpect(jsonPath("$.description").value("Granja familiar"))
+                .andExpect(jsonPath("$.address").value("Oviedo"))
+                .andExpect(jsonPath("$.image").value("finca.jpg"))
+                .andExpect(jsonPath("$.latitude").value(43.36))
+                .andExpect(jsonPath("$.longitude").value(-5.84))
+                .andExpect(jsonPath("$.categories[0]").value("Quesos"));
+    }
+
+    @Test
+    void getFarmByIdReturnsNotFound() throws Exception {
+        when(farmService.getFarmById(999L))
+                .thenThrow(new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Granja no encontrada"
+                ));
+
+        mockMvc.perform(get("/api/farms/999"))
+                .andExpect(status().isNotFound());
     }
 }
