@@ -2,6 +2,8 @@ package com.tierrasdeasturias.backend.controllers;
 
 import com.tierrasdeasturias.backend.dtos.FarmResponseDto;
 import com.tierrasdeasturias.backend.services.FarmService;
+import com.tierrasdeasturias.backend.dtos.ProductResponseDto;
+import com.tierrasdeasturias.backend.services.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,9 +17,11 @@ import java.util.List;
 public class FarmController {
 
     private final FarmService farmService;
+    private final ProductService productService;
 
-    public FarmController(FarmService farmService) {
+    public FarmController(FarmService farmService, ProductService productService) {
         this.farmService = farmService;
+        this.productService = productService;
     }
 
     @GetMapping
@@ -30,5 +34,11 @@ public class FarmController {
     @GetMapping("/{id}")
     public FarmResponseDto getFarmById(@PathVariable Long id) {
         return farmService.getFarmById(id);
+    }
+
+    @GetMapping("/{id}/products")
+    public List<ProductResponseDto> getFarmProducts(@PathVariable Long id) {
+        farmService.getFarmById(id);
+        return productService.getProductsByFarmId(id);
     }
 }

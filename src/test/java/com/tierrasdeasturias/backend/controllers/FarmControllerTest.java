@@ -1,7 +1,9 @@
 package com.tierrasdeasturias.backend.controllers;
 
 import com.tierrasdeasturias.backend.dtos.FarmResponseDto;
+import com.tierrasdeasturias.backend.dtos.ProductResponseDto;
 import com.tierrasdeasturias.backend.services.FarmService;
+import com.tierrasdeasturias.backend.services.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.Import;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -30,6 +33,9 @@ public class FarmControllerTest {
 
     @MockitoBean
     private FarmService farmService;
+
+    @MockitoBean
+    private ProductService productService;
 
     @MockitoBean
     private UserDetailsService userDetailsService;
@@ -114,5 +120,53 @@ public class FarmControllerTest {
 
         mockMvc.perform(get("/api/farms/999"))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void getFarmProductsReturnsProducts() throws Exception {
+        when(farmService.getFarmById(1L)).thenReturn(farm());
+        when(productService.getProductsByFarmId(1L)).thenReturn(List.of(
+                new ProductResponseDto(
+                        2L, "Queso", "Artesano", "queso.jpg",
+                        5, 12.5, "Quesos", 1L, "Finca La Vara",
+                        "Oviedo", 500.0, "g"
+                )
+        ));
+
+        mockMvc.perform(get("/api/farms/1/products"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(1))
+                .andExpect(jsonPath("$[0].id").value(2))
+                .andExpect(jsonPath("$[0].farmId").value(1))
+                .andExpect(jsonPath("$[0].sizeValue").value(500.0));
+    }
+
+    @Test
+    void getFarmProductsReturnsEmptyList() throws Exception {
+        when(farmService.getFarmById(1L)).thenReturn(farm());
+        when(productService.getProductsByFarmId(1L)).thenReturn(List.of());
+
+        mockMvc.perform(get("/api/farms/1/products"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.length()").value(0));
+    }
+
+    @Test
+    void getFarmProductsReturnsNotFound() throws Exception {
+        when(farmService.getFarmById(999L)).thenThrow(
+                new ResponseStatusException(HttpStatus.NOT_FOUND)
+        );
+
+        mockMvc.perform(get("/api/farms/999/products"))
+                .andExpect(status().isNotFound());
+
+        verifyNoInteractions(productService);
+    }
+
+    private FarmResponseDto farm() {
+        return new FarmResponseDto(
+                1L, "Finca La Vara", "Granja familiar",
+                "Oviedo", "finca.jpg", 43.36, -5.84, List.of("Quesos")
+        );
     }
 }

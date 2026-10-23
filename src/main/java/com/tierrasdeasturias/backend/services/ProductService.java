@@ -45,6 +45,14 @@ public class ProductService {
         return mapToResponseDto(product);
     }
 
+    @Transactional(readOnly = true)
+    public List<ProductResponseDto> getProductsByFarmId(Long farmId) {
+        return productRepository.findByFarm_IdOrderByNameAscIdAsc(farmId)
+                .stream()
+                .map(this::mapToResponseDto)
+                .toList();
+    }
+
     private ProductResponseDto mapToResponseDto(Product product) {
         return new ProductResponseDto(
                 product.getId(),
