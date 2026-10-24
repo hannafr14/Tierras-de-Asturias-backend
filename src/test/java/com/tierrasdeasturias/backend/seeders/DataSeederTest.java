@@ -11,7 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.test.util.ReflectionTestUtils;
 import java.util.List;
+import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -62,13 +64,33 @@ class DataSeederTest {
                 .findFirst().orElseThrow();
 
         assertEquals("https://lasaregana.es/img/logo-1679657612.jpg", saregana.getImage());
-        assertEquals("https://lasaregana.es/img/cms/quienes-somos/quienes_somos_4.jpg",
+        assertEquals("https://lasaregana.es/img/cms/banner_saregana_3.jpg",
                 saregana.getBannerImage());
         assertEquals("https://queseriapicurriellu.com/wp-content/uploads/2020/05/PicuurrieluR.png",
                 picurriellu.getImage());
         assertEquals("https://queseriapicurriellu.com/wp-content/uploads/2020/05/Centro-de-elaboracio%CC%81nPhoto.jpg",
                 picurriellu.getBannerImage());
-        assertEquals(66L, savedFarms.stream().filter(farm -> farm.getBannerImage() == null).count());
+        Map<String, String> localFarmSlugs = Map.of(
+                "Queser\u00eda Rey Silo", "queseria-rey-silo",
+                "Queser\u00eda Ca Llechi", "queseria-ca-llechi",
+                "La Solana de Allande", "la-solana-de-allande",
+                "Llagar Sidra Crespo", "llagar-sidra-crespo-sales",
+                "Finca El Ribeiro", "finca-el-ribeiro"
+        );
+        for (Map.Entry<String, String> entry : localFarmSlugs.entrySet()) {
+            Farm farm = savedFarms.stream()
+                    .filter(saved -> saved.getName().equals(entry.getKey()))
+                    .findFirst().orElseThrow();
+            String basePath = "/images/farms/" + entry.getValue();
+            String bannerExtension = entry.getValue().equals("la-solana-de-allande") ? "png" : "jpg";
+            assertEquals(basePath + "/logo.png", farm.getImage());
+            assertEquals(basePath + "/banner." + bannerExtension, farm.getBannerImage());
+        }
+
+        Farm laPeral = savedFarms.stream()
+                .filter(farm -> farm.getName().equals("Queser\u00eda La Peral"))
+                .findFirst().orElseThrow();
+        assertNull(laPeral.getBannerImage());
     }
 
     @Test

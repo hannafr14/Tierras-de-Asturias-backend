@@ -7,7 +7,7 @@
     "address": "Miyares, Asturias",
     "fullAddress": "Miyares, 33518 Sariego, Asturias",
     "image": "https://lasaregana.es/img/logo-1679657612.jpg",
-    "bannerImage": "https://lasaregana.es/img/cms/quienes-somos/quienes_somos_4.jpg",
+    "bannerImage": "https://lasaregana.es/img/cms/banner_saregana_3.jpg",
     "latitude": 43.41855,
     "longitude": -5.586095,
     "categories": [
@@ -23,7 +23,8 @@
     "description": "Quesería artesana de Pravia que elabora quesos tradicionales con leche cruda de vaca, afinados con cuidado en bodega subterránea.",
     "address": "Pravia, Asturias",
     "fullAddress": "Plg. Salcedo 2, 33120 Pravia, Asturias",
-    "image": "https://www.reysilo.es/uploads/el_laboratorio_quesero/rey_silo_quesos_gastronomia_008.jpg",
+    "image": "/images/farms/queseria-rey-silo/logo.png",
+    "bannerImage": "/images/farms/queseria-rey-silo/banner.jpg",
     "latitude": 43.4905568,
     "longitude": -6.1081776,
     "categories": [
@@ -266,7 +267,8 @@
     "description": "Pequeña quesería artesana de Piloña que produce lotes limitados de quesos de vaca y de oveja en temporada, incluida una línea inspirada en la tradición del Casín.",
     "address": "Piloña, Asturias",
     "fullAddress": "Moruxones, 1, Pintueles, 33534 Piloña, Asturias",
-    "image": "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/481285158_652590797299368_6654270596508639851_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=q-pP2ZGjVrAQ7kNvwHfloum&_nc_oc=AdrbxLAkBvUs2ww6sUTNvE_mMuGunlwpZwp2_dEpAeIkqlH6InYJeHB6EgjMgK8XoWhsIAZq4slTFv4Ceqxrs2BR&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=ZGJymCeMyvXWXdOURvv3Hw&_nc_ss=7b289&oh=00_AQIIBmwlaraoFk5_IMR5nCjdJAL-bKqJLD2KxCVg4zy5CQ&oe=6AAC7D22",
+    "image": "/images/farms/queseria-ca-llechi/logo.png",
+    "bannerImage": "/images/farms/queseria-ca-llechi/banner.jpg",
     "latitude": 43.3743963,
     "longitude": -5.363487,
     "categories": [
@@ -420,7 +422,8 @@
     "description": "Proyecto familiar en Allande que elabora miel artesana y ecológica con colmenas locales de los valles del suroccidente asturiano, junto a setas shiitake.",
     "address": "Allande, Asturias",
     "fullAddress": "Fresnedo Nº1, C.P. 33880 Allande, Asturias",
-    "image": "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/473726569_10161802652942798_7608761431741798986_n.jpg?stp=dst-jpg_tt6&cstp=mx1440x1440&ctp=s1440x1440&_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_vJSx1kV9NcQ7kNvwEm_SHZ&_nc_oc=AdquIe5cFA0Nr50K2nuw4sGJTdLqgmdl6NWzRSsh_QfmwhAH0Yry7cL5lv71G-1ocu3L3vv1RE7FgELcl2V-BvvA&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=Vi2zasDtvgQMD_wElkq4Bw&_nc_ss=7b289&oh=00_AQI6mFv25EFNzzJsvvR6VRkhaOwtSVK8uDwJE72cxRrG6Q&oe=6AAD7FC3",
+    "image": "/images/farms/la-solana-de-allande/logo.png",
+    "bannerImage": "/images/farms/la-solana-de-allande/banner.png",
     "latitude": 43.2255289,
     "longitude": -6.6139804,
     "categories": [
@@ -532,7 +535,8 @@
     "description": "Llagar de Sales, Colunga, que elabora Sidra Crespo y Sidra Sueve, con visitas gratuitas sobre el proceso de elaboración y degustación desde toneles de madera.",
     "address": "Sales, Colunga, Asturias",
     "fullAddress": "33320 Sales, Colunga, Asturias",
-    "image": "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/309168112_469587905197125_7602224329617903542_n.jpg?stp=dst-jpg_tt6&cstp=mx1508x956&ctp=s1508x956&_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=PWGmVYVRxagQ7kNvwEDX_hE&_nc_oc=AdqZ9hfRRSpwM5kXBHcFW2ugrQV2nST6hudgC-lWNUGunf1mVbru4fjT4MOH2Iig1gq7hSJA2LqdooSwaowRFkVE&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=n5DdywyPwp0yIbhxdNnpkQ&_nc_ss=7b289&oh=00_AQJRsy60HcoTvjTU39wgUaQfXiPBrW-D1noMb7anJ6tsGQ&oe=6AAD5B9C",
+    "image": "/images/farms/llagar-sidra-crespo-sales/logo.png",
+    "bannerImage": "/images/farms/llagar-sidra-crespo-sales/banner.jpg",
     "latitude": 43.488472,
     "longitude": -5.282038,
     "categories": [
@@ -686,7 +690,8 @@
     "description": "Finca agroecológica familiar que produce arándanos, manzana de mesa, aguacate, faba, mermeladas y zumos, con visitas guiadas y tienda online de productos asturianos.",
     "address": "San Martín de Luiña, Asturias",
     "fullAddress": "San Cosme, 87, 33150 San Martín de Luiña, Asturias",
-    "image": "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/488481473_1205524878246448_7736767441240875023_n.jpg?stp=dst-jpg_tt6&cstp=mx851x638&ctp=s851x638&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=94dPm07WhQ0Q7kNvwHZzFq4&_nc_oc=AdpqOWXgvpQo219sV31h0dRk-_L0HDjauT7XbwpxsW9dZree6aAXff9KdNxRcsl92Uqu0onN4seINkaFdgN7ikku&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=AW9Sf-H7kA63OhtNf8gB1A&_nc_ss=7b289&oh=00_AQKtmEfgPkP7vm94yCGnxX8qx_DvlxiBCbtW_UiEHypiow&oe=6AB0DA9E",
+    "image": "/images/farms/finca-el-ribeiro/logo.png",
+    "bannerImage": "/images/farms/finca-el-ribeiro/banner.jpg",
     "latitude": 43.544794,
     "longitude": -6.235781,
     "categories": [
