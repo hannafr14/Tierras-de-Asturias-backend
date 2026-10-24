@@ -84,6 +84,7 @@ public class DataSeeder implements CommandLineRunner {
             farm.setDescription(farmSeed.description());
             farm.setAddress(farmSeed.address());
             farm.setImage(farmSeed.image());
+            farm.setBannerImage(farmSeed.bannerImage());
             farm.setLatitude(farmSeed.latitude());
             farm.setLongitude(farmSeed.longitude());
 
@@ -190,6 +191,7 @@ public class DataSeeder implements CommandLineRunner {
             String address,
             String fullAddress,
             String image,
+            String bannerImage,
             Double latitude,
             Double longitude,
             List<String> categories

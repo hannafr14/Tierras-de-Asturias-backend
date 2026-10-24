@@ -6,7 +6,8 @@
     "description": "Empresa familiar de Miyares, en Sariego, que elabora yogures, mantequilla y quesos con leche de su propia ganadería. Combina recetas tradicionales con la incorporación de vacas Jersey, cuya leche destaca por su calidad. Su actividad mantiene el vínculo entre la ganadería y la elaboración de productos lácteos en Asturias.",
     "address": "Miyares, Asturias",
     "fullAddress": "Miyares, 33518 Sariego, Asturias",
-    "image": "https://lasaregana.es/img/cms/quienes-somos/quienes_somos_4.jpg",
+    "image": "https://lasaregana.es/img/logo-1679657612.jpg",
+    "bannerImage": "https://lasaregana.es/img/cms/quienes-somos/quienes_somos_4.jpg",
     "latitude": 43.41855,
     "longitude": -5.586095,
     "categories": [
@@ -78,7 +79,8 @@
     "description": "Quesería familiar situada en el concejo de Llanes, al pie de la Sierra del Cuera. Tres generaciones han mantenido la tradición quesera heredada de sus abuelos. Elabora quesos artesanos con leche de su propia ganadería y ofrece visitas para conocer sus instalaciones y el proceso de elaboración.",
     "address": "Llanes, Asturias",
     "fullAddress": "Pié de la Sierra, S/N, 33500 Llanes, Asturias",
-    "image": "https://queseriapicurriellu.com/wp-content/uploads/2020/05/Centro-de-elaboracio%CC%81nPhoto.jpg",
+    "image": "https://queseriapicurriellu.com/wp-content/uploads/2020/05/PicuurrieluR.png",
+    "bannerImage": "https://queseriapicurriellu.com/wp-content/uploads/2020/05/Centro-de-elaboracio%CC%81nPhoto.jpg",
     "latitude": 43.4051858,
     "longitude": -4.6620506,
     "categories": [
