@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Import;
 import java.util.List;
 
 import static org.mockito.Mockito.when;
+import static org.hamcrest.Matchers.nullValue;
 import static org.mockito.Mockito.verifyNoInteractions;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -48,6 +49,7 @@ public class FarmControllerTest {
                 "Granja familiar asturiana",
                 "Oviedo",
                 "https://example.com/finca.jpg",
+                "https://example.com/finca-banner.jpg",
                 43.36,
                 -5.84,
                 List.of("Quesos", "Miel")
@@ -62,6 +64,7 @@ public class FarmControllerTest {
                 .andExpect(jsonPath("$[0].description").value("Granja familiar asturiana"))
                 .andExpect(jsonPath("$[0].address").value("Oviedo"))
                 .andExpect(jsonPath("$[0].image").value("https://example.com/finca.jpg"))
+                .andExpect(jsonPath("$[0].bannerImage").value("https://example.com/finca-banner.jpg"))
                 .andExpect(jsonPath("$[0].latitude").value(43.36))
                 .andExpect(jsonPath("$[0].longitude").value(-5.84))
                 .andExpect(jsonPath("$[0].categories[0]").value("Quesos"))
@@ -76,6 +79,7 @@ public class FarmControllerTest {
                 "Granja familiar asturiana",
                 "Oviedo",
                 "https://example.com/finca.jpg",
+                null,
                 43.36,
                 -5.84,
                 List.of("Quesos", "Miel")
@@ -85,14 +89,15 @@ public class FarmControllerTest {
 
         mockMvc.perform(get("/api/farms").param("search", "vara"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].name").value("Finca La Vara"));
+                .andExpect(jsonPath("$[0].name").value("Finca La Vara"))
+                .andExpect(jsonPath("$[0].bannerImage").value(nullValue()));
     }
 
     @Test
     void getFarmByIdReturnsFarm() throws Exception {
         FarmResponseDto farm = new FarmResponseDto(
                 1L, "Finca La Vara", "Granja familiar",
-                "Oviedo", "finca.jpg", 43.36, -5.84,
+                "Oviedo", "finca.jpg", "finca-banner.jpg", 43.36, -5.84,
                 List.of("Quesos")
         );
 
@@ -105,6 +110,7 @@ public class FarmControllerTest {
                 .andExpect(jsonPath("$.description").value("Granja familiar"))
                 .andExpect(jsonPath("$.address").value("Oviedo"))
                 .andExpect(jsonPath("$.image").value("finca.jpg"))
+                .andExpect(jsonPath("$.bannerImage").value("finca-banner.jpg"))
                 .andExpect(jsonPath("$.latitude").value(43.36))
                 .andExpect(jsonPath("$.longitude").value(-5.84))
                 .andExpect(jsonPath("$.categories[0]").value("Quesos"));
@@ -166,7 +172,7 @@ public class FarmControllerTest {
     private FarmResponseDto farm() {
         return new FarmResponseDto(
                 1L, "Finca La Vara", "Granja familiar",
-                "Oviedo", "finca.jpg", 43.36, -5.84, List.of("Quesos")
+                "Oviedo", "finca.jpg", null, 43.36, -5.84, List.of("Quesos")
         );
     }
 }

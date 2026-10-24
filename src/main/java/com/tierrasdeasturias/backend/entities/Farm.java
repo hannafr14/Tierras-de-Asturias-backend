@@ -18,6 +18,8 @@ public class Farm {
     private String address;
     @Column(length = 1000)
     private String image;
+    @Column(length = 1000)
+    private String bannerImage;
 
     private Double latitude;
     private Double longitude;
@@ -50,6 +52,10 @@ public class Farm {
         return image;
     }
 
+    public String getBannerImage() {
+        return bannerImage;
+    }
+
     public Double getLatitude() {
         return latitude;
     }
@@ -76,6 +82,10 @@ public class Farm {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public void setBannerImage(String bannerImage) {
+        this.bannerImage = bannerImage;
     }
 
     public void setLatitude(Double latitude) {

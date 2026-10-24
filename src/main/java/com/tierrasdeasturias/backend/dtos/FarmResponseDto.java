@@ -8,6 +8,7 @@ public record FarmResponseDto(
         String description,
         String address,
         String image,
+        String bannerImage,
         Double latitude,
         Double longitude,
         List<String> categories

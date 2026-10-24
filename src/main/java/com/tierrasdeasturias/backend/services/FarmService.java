@@ -59,6 +59,7 @@ public class FarmService {
                 farm.getDescription(),
                 farm.getAddress(),
                 farm.getImage(),
+                farm.getBannerImage(),
                 farm.getLatitude(),
                 farm.getLongitude(),
                 categories
