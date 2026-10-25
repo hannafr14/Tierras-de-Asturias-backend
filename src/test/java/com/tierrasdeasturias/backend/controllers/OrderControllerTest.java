@@ -2,6 +2,7 @@ package com.tierrasdeasturias.backend.controllers;
 
 import tools.jackson.databind.ObjectMapper;
 import tools.jackson.databind.json.JsonMapper;
+import tools.jackson.databind.node.ObjectNode;
 import com.tierrasdeasturias.backend.dtos.CreateOrderRequestDto;
 import com.tierrasdeasturias.backend.dtos.DeliveryDto;
 import com.tierrasdeasturias.backend.dtos.OrderItemRequestDto;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.time.LocalDateTime;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -41,6 +43,8 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 import com.tierrasdeasturias.backend.dtos.OrderDetailsResponseDto;
@@ -246,6 +250,112 @@ public class OrderControllerTest {
                 .andExpect(jsonPath("$.user").doesNotExist());
 
         verify(orderService).getUserOrder(19L, "ana@example.com");
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "600000000, +34600000000",
+            "+34 600 000 000, +34600000000",
+            "600-000-000, +34600000000",
+            "912345678, +34912345678"
+    })
+    void createOrderNormalizesPhoneFromRawJson(String phone, String expected) throws Exception {
+        var body = objectMapper.valueToTree(createValidOrderRequest());
+        ((ObjectNode) body.get("delivery")).put("phone", phone);
+        var order = new CustomerOrder();
+        setField(order, "id", 1L);
+        order.setOrderNumber("ORD-1");
+        order.setStatus("PENDING");
+        order.setTotal(12.5);
+        order.setOrderDate(LocalDateTime.of(2026, 10, 12, 10, 30));
+        when(orderService.createOrder(any(CreateOrderRequestDto.class))).thenReturn(order);
+
+        mockMvc.perform(post("/api/orders").with(csrf())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(body)))
+                .andExpect(status().isOk());
+
+        verify(orderService).createOrder(argThat(request ->
+                expected.equals(request.getDelivery().getPhone())));
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    @ValueSource(strings = {
+            " ", "123", "60000000", "6000000000", "500000000",
+            "+33600000000", "0034600000000", "34600000000", "++34600000000",
+            "600+000000", "60000000a", "6        1", "600000000\n", "600\t000000"
+    })
+    void createOrderRejectsInvalidPhoneWithoutCallingService(String phone) throws Exception {
+        var body = objectMapper.valueToTree(createValidOrderRequest());
+        ((ObjectNode) body.get("delivery")).put("phone", phone);
+
+        mockMvc.perform(post("/api/orders").with(csrf())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(body)))
+                .andExpect(status().isBadRequest());
+
+        verifyNoInteractions(orderService);
+    }
+
+    @ParameterizedTest
+    @CsvSource({"city, 100", "streetAddress, 200", "apartment, 100"})
+    void createOrderRejectsOversizedAddressFields(String field, int limit) throws Exception {
+        var body = objectMapper.valueToTree(createValidOrderRequest());
+        ((ObjectNode) body.get("delivery")).put(field, "x".repeat(limit + 1));
+
+        mockMvc.perform(post("/api/orders").with(csrf())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(body)))
+                .andExpect(status().isBadRequest());
+
+        verifyNoInteractions(orderService);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"city", "streetAddress", "postalCode"})
+    void createOrderRejectsBlankAddressFields(String field) throws Exception {
+        var body = objectMapper.valueToTree(createValidOrderRequest());
+        ((ObjectNode) body.get("delivery")).put(field, " \u00a0\uFEFF ");
+
+        mockMvc.perform(post("/api/orders").with(csrf())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(body)))
+                .andExpect(status().isBadRequest());
+
+        verifyNoInteractions(orderService);
+    }
+
+    @Test
+    void createOrderAcceptsAndTrimsAddressWithoutChangingItsMeaning() throws Exception {
+        var body = objectMapper.valueToTree(createValidOrderRequest());
+        var delivery = (ObjectNode) body.get("delivery");
+        delivery.put("firstName", " Ana ");
+        delivery.put("lastName", " Garcia ");
+        delivery.put("city", " " + "x".repeat(100) + " ");
+        delivery.put("postalCode", " 00301 ");
+        delivery.put("streetAddress", " Calle Pe\u00f1a, 12-B / s/n ");
+        delivery.put("apartment", "   ");
+        var order = new CustomerOrder();
+        setField(order, "id", 1L);
+        order.setOrderNumber("ORD-1");
+        order.setStatus("PENDING");
+        order.setTotal(12.5);
+        order.setOrderDate(LocalDateTime.of(2026, 10, 12, 10, 30));
+        when(orderService.createOrder(any(CreateOrderRequestDto.class))).thenReturn(order);
+
+        mockMvc.perform(post("/api/orders").with(csrf())
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(body)))
+                .andExpect(status().isOk());
+
+        verify(orderService).createOrder(argThat(request ->
+                "Ana".equals(request.getDelivery().getFirstName())
+                        && "Garcia".equals(request.getDelivery().getLastName())
+                        && "x".repeat(100).equals(request.getDelivery().getCity())
+                        && "00301".equals(request.getDelivery().getPostalCode())
+                        && "Calle Pe\u00f1a, 12-B / s/n".equals(request.getDelivery().getStreetAddress())
+                        && "".equals(request.getDelivery().getApartment())));
     }
 
     private CreateOrderRequestDto createValidOrderRequest() {

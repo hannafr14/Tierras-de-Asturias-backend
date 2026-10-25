@@ -2,6 +2,7 @@ package com.tierrasdeasturias.backend.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 public class DeliveryDto {
     @NotBlank
@@ -11,19 +12,23 @@ public class DeliveryDto {
     private String lastName;
 
     @NotBlank
+    @Size(max = 100)
     private String city;
 
     @NotBlank
-    @Pattern(regexp = "\\d{5}")
+    @Pattern(regexp = "[0-9]{5}")
     private String postalCode;
 
     @NotBlank
+    @Size(max = 200)
     private String streetAddress;
 
+    @Size(max = 100)
     private String apartment;
 
     @NotBlank
-    @Pattern(regexp = "\\+?\\d[\\d\\s]{8,}")
+    @Pattern(regexp = "\\+34[6789][0-9]{8}",
+            message = "Introduce un tel\u00e9fono espa\u00f1ol v\u00e1lido: 9 d\u00edgitos, con +34 opcional.")
     private String phone;
 
     public String getFirstName() {
@@ -55,30 +60,42 @@ public class DeliveryDto {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstName = trim(firstName);
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastName = trim(lastName);
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.city = trim(city);
     }
 
     public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+        this.postalCode = trim(postalCode);
     }
 
     public void setStreetAddress(String streetAddress) {
-        this.streetAddress = streetAddress;
+        this.streetAddress = trim(streetAddress);
     }
 
     public void setApartment(String apartment) {
-        this.apartment = apartment;
+        this.apartment = trim(apartment);
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        if (phone == null) {
+            this.phone = null;
+            return;
+        }
+
+        String compact = phone.replaceAll("[\\p{Zs}-]", "");
+        String national = compact.startsWith("+34") ? compact.substring(3) : compact;
+        this.phone = national.matches("[6789][0-9]{8}") ? "+34" + national : compact;
+    }
+
+    private static String trim(String value) {
+        return value == null ? null
+                : value.replaceAll("^[\\s\\p{Z}\\uFEFF]+|[\\s\\p{Z}\\uFEFF]+$", "");
     }
 }
