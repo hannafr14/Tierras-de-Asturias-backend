@@ -28,7 +28,7 @@ public class DeliveryDto {
 
     @NotBlank
     @Pattern(regexp = "\\+34[6789][0-9]{8}",
-            message = "Introduce un tel\u00e9fono espa\u00f1ol v\u00e1lido: 9 d\u00edgitos, con +34 opcional.")
+            message = "Introduce un tel\u00e9fono espa\u00f1ol de 9 d\u00edgitos que empiece por 6, 7, 8 o 9. El prefijo +34 es opcional.")
     private String phone;
 
     public String getFirstName() {

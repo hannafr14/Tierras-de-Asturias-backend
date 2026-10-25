@@ -283,7 +283,7 @@ public class OrderControllerTest {
     @NullAndEmptySource
     @ValueSource(strings = {
             " ", "123", "60000000", "6000000000", "500000000",
-            "+33600000000", "0034600000000", "34600000000", "++34600000000",
+            "+33600000000", "+34576575757", "0034600000000", "34600000000", "++34600000000",
             "600+000000", "60000000a", "6        1", "600000000\n", "600\t000000"
     })
     void createOrderRejectsInvalidPhoneWithoutCallingService(String phone) throws Exception {
