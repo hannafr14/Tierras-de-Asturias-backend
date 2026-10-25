@@ -2,7 +2,10 @@ package com.tierrasdeasturias.backend.services;
 
 import com.tierrasdeasturias.backend.dtos.CreateOrderRequestDto;
 import com.tierrasdeasturias.backend.dtos.DeliveryDto;
+import com.tierrasdeasturias.backend.dtos.OrderDeliveryResponseDto;
+import com.tierrasdeasturias.backend.dtos.OrderDetailsResponseDto;
 import com.tierrasdeasturias.backend.dtos.OrderItemRequestDto;
+import com.tierrasdeasturias.backend.dtos.OrderItemResponseDto;
 import com.tierrasdeasturias.backend.entities.CustomerOrder;
 import com.tierrasdeasturias.backend.entities.OrderItem;
 import com.tierrasdeasturias.backend.entities.Product;
@@ -13,9 +16,13 @@ import com.tierrasdeasturias.backend.repositories.ProductRepository;
 import com.tierrasdeasturias.backend.repositories.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.mockito.ArgumentCaptor;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -30,8 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 
 class OrderServiceTest {
@@ -178,6 +187,91 @@ class OrderServiceTest {
         verify(orderRepository).findByUser_EmailOrderByOrderDateDescIdDesc(
                 "ana@example.com", pageable
         );
+    }
+
+    @Test
+    void getUserOrderReturnsFullDetailsWithStoredItemPrices() {
+        var orderDate = LocalDateTime.of(2026, 10, 20, 10, 30);
+        var order = spy(new CustomerOrder());
+        when(order.getId()).thenReturn(18L);
+        order.setOrderNumber("ORD-18");
+        order.setStatus("PENDING");
+        order.setOrderDate(orderDate);
+        order.setSubtotal(29.0);
+        order.setShipping(3.0);
+        order.setTaxes(4.0);
+        order.setTotal(36.0);
+        order.setFirstName("Ana");
+        order.setLastName("Garcia");
+        order.setCity("Oviedo");
+        order.setPostalCode("33001");
+        order.setStreetAddress("Calle Mayor 12");
+        order.setApartment("2A");
+        order.setPhone("+34612345678");
+
+        var firstProduct = spy(new Product());
+        when(firstProduct.getId()).thenReturn(1L);
+        firstProduct.setName("Queso");
+        firstProduct.setImage("queso.jpg");
+        firstProduct.setPrice(99.0);
+        var firstItem = new OrderItem();
+        firstItem.setOrder(order);
+        firstItem.setProduct(firstProduct);
+        firstItem.setQuantity(2);
+        firstItem.setUnitPrice(12.5);
+
+        var secondProduct = spy(new Product());
+        when(secondProduct.getId()).thenReturn(2L);
+        secondProduct.setName("Yogur");
+        secondProduct.setImage("yogur.jpg");
+        secondProduct.setPrice(8.0);
+        var secondItem = new OrderItem();
+        secondItem.setOrder(order);
+        secondItem.setProduct(secondProduct);
+        secondItem.setQuantity(1);
+        secondItem.setUnitPrice(4.0);
+        order.getItems().addAll(List.of(firstItem, secondItem));
+
+        when(orderRepository.findByIdAndUser_Email(18L, "ana@example.com"))
+                .thenReturn(Optional.of(order));
+
+        var result = service.getUserOrder(18L, "ana@example.com");
+
+        var expected = new OrderDetailsResponseDto(
+                18L, "ORD-18", "PENDING", orderDate,
+                29.0, 3.0, 4.0, 36.0,
+                List.of(
+                        new OrderItemResponseDto(1L, "Queso", "queso.jpg", 2, 12.5),
+                        new OrderItemResponseDto(2L, "Yogur", "yogur.jpg", 1, 4.0)
+                ),
+                new OrderDeliveryResponseDto(
+                        "Ana", "Garcia", "Oviedo", "33001",
+                        "Calle Mayor 12", "2A", "+34612345678"
+                )
+        );
+        assertEquals(expected, result);
+        verify(orderRepository).findByIdAndUser_Email(18L, "ana@example.com");
+        verifyNoMoreInteractions(orderRepository);
+        verifyNoInteractions(productRepository, userRepository);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "999, ana@example.com",
+            "18, other@example.com"
+    })
+    void getUserOrderThrowsNotFoundWhenOwnerScopedLookupIsEmpty(Long id, String email) {
+        when(orderRepository.findByIdAndUser_Email(id, email))
+                .thenReturn(Optional.empty());
+
+        var exception = assertThrows(ResponseStatusException.class,
+                () -> service.getUserOrder(id, email));
+
+        assertEquals(HttpStatus.NOT_FOUND, exception.getStatusCode());
+        assertEquals("Pedido no encontrado", exception.getReason());
+        verify(orderRepository).findByIdAndUser_Email(id, email);
+        verifyNoMoreInteractions(orderRepository);
+        verifyNoInteractions(productRepository, userRepository);
     }
 
     private CreateOrderRequestDto validOrderRequest() {
