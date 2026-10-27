@@ -1,0 +1,133 @@
+{
+  "checkedOn": "2026-10-27",
+  "currency": "EUR",
+  "policy": "Public reference prices for an educational demo, not producer quotes or a commercial stock feed. Match the named producer and selling unit. Existing positive prices and inventory are unchanged. New products use the existing seed convention quantity=1, not a verified physical inventory count. Delivery is excluded. Promotional prices can expire.",
+  "changes": [
+    {
+      "operation": "update",
+      "farmExternalId": "bodega_vina_cuedo",
+      "name": "Vino blanco Oro D'Ibias",
+      "previousPrice": 0,
+      "price": 13,
+      "unit": "One 750 ml bottle",
+      "sourceType": "retailer",
+      "source": "https://aldeastur.com/tienda/producto/vino-blanco-oro-dibias/",
+      "imageSource": "https://aldeastur.com/wp-content/uploads/822-Vino-Blanco-Verdin-Oro-de-Ibias.jpg",
+      "imageFile": "/images/products/bodega-vina-cuedo/oro-dibias-750ml.jpg",
+      "note": "Fill the previously unspecified bottle size and replace the image with a matching bottle photo. Preserve the existing name, description, category, quantity and ID."
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "queseria_temia",
+      "name": "Queso Don Gonzalo Temia",
+      "price": 8.9,
+      "unit": "One approximately 300 g cheese",
+      "sourceType": "retailer",
+      "source": "https://laqueseriagijon.com/products/queso-don-gonzalo-temia",
+      "imageSource": "https://cdn.shopify.com/s/files/1/0954/6648/8181/files/rn-image_picker_lib_temp_022d949d-2f6f-4523-9e79-63acc0c2a1d0.jpg?v=1782905140",
+      "imageFile": "/images/products/queseria-temia/don-gonzalo-300g.jpg"
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "queseria_ca_sanchu",
+      "name": "Afuega'l Pitu DOP Atroncado Blanco Ca Sanchu",
+      "price": 7.5,
+      "unit": "One approximately 300 g cheese",
+      "sourceType": "retailer",
+      "source": "https://www.quesosasturianos.com/es/quesos-vaca/afuega-l-pitu-dop-atroncado-blanco-ca-sanchu",
+      "imageSource": "https://www.quesosasturianos.com/3820-large_default/afuega-l-pitu-dop-atroncado-blanco-ca-sanchu.jpg",
+      "imageFile": "/images/products/queseria-ca-sanchu/atroncado-blanco-300g.jpg"
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "queseria_ca_sanchu",
+      "name": "Afuega'l Pitu DOP Atroncado Rojo Ca Sanchu",
+      "price": 7.9,
+      "unit": "One approximately 300 g cheese",
+      "sourceType": "retailer",
+      "source": "https://www.quesosasturianos.com/es/quesos-vaca/afuega-l-pitu-dop-atroncado-rojo-ca-sanchu",
+      "imageSource": "https://www.quesosasturianos.com/3824-large_default/afuega-l-pitu-dop-atroncado-rojo-ca-sanchu.jpg",
+      "imageFile": "/images/products/queseria-ca-sanchu/atroncado-rojo-300g.jpg"
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "reinastur",
+      "name": "Miel ecológica de castaño ReinAstur",
+      "price": 7,
+      "unit": "One 500 g jar; selected Shopify variant, not the cheaper 360 g jar",
+      "sourceType": "producer",
+      "source": "https://www.reinastur.com/products/miel-ecologica-de-castano-rica-en-hierro-y-minerales",
+      "imageSource": "https://cdn.shopify.com/s/files/1/0994/7329/3696/files/reinasturproductoresdemieldecastanobote500gr.webp?v=1783261062",
+      "imageFile": "/images/products/reinastur/castano-500g.webp"
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "reinastur",
+      "name": "Miel ecológica de eucalipto ReinAstur",
+      "price": 7,
+      "unit": "One 500 g jar; selected Shopify variant, not the cheaper 360 g jar",
+      "sourceType": "producer",
+      "source": "https://www.reinastur.com/products/miel-ecologica-eucalipto-frescor-de-la-costa",
+      "imageSource": "https://cdn.shopify.com/s/files/1/0994/7329/3696/files/Tarro_de_500_gramos_de_miel_ecologica_de_Eucalipto_Reinastur_con_precinto_negro_y_dorado_sobre_fondo_blanco.webp?v=1783242797",
+      "imageFile": "/images/products/reinastur/eucalipto-500g.webp"
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "miel_la_boalesa",
+      "name": "Miel La Boalesa 440 g",
+      "price": 6.95,
+      "unit": "One 440 g jar",
+      "sourceType": "retailer",
+      "source": "https://www.supermasymasonline.com/miel-la-boalesa-440g/0002420.html",
+      "imageSource": "https://www.supermasymasonline.com/dw/image/v2/BGBS_PRD/on/demandware.static/-/Sites-masymas-master/default/dwedc7d146/images/master/0002420/0002420_1.jpg?sw=500&sh=500",
+      "imageFile": "/images/products/miel-la-boalesa/miel-440g.jpg",
+      "note": "Advertised promotional price. Manufacturer is BOAL APICOLA SL. Do not apply this price to the separate 750 g producer listing."
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "llagar_bernueces",
+      "name": "Zumo de manzana sin alcohol Sidradulce Bernueces",
+      "price": 3.29,
+      "unit": "One 750 ml bottle of alcohol-free apple juice",
+      "sourceType": "retailer",
+      "source": "https://www.supermasymasonline.com/zumo-de-manzana-sin-alcohol-sidradulce-bernueces-75cl/0056506.html",
+      "imageSource": "https://www.supermasymasonline.com/dw/image/v2/BGBS_PRD/on/demandware.static/-/Sites-masymas-master/default/dw2acadf12/images/master/0056506/0056506_1.jpg?sw=500&sh=500",
+      "imageFile": "/images/products/llagar-bernueces/sidradulce-750ml.jpg",
+      "note": "Categorised as Zumos, not alcoholic Sidra. This is not the producer's natural alcoholic cider."
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "quesos_taramundi",
+      "name": "Queso Taramundi con nueces y avellanas",
+      "price": 13.75,
+      "unit": "One approximately 550 g vacuum-packed cheese",
+      "sourceType": "retailer",
+      "source": "https://www.pimientayperejil.com/tienda/quesos/vaca/queso-taramundi-con-nueces-y-avellanas/",
+      "imageSource": "https://www.pimientayperejil.com/wp-content/uploads/2024/03/Taramundi-Nueces-y-Avellanas.jpg",
+      "imageFile": "/images/products/quesos-taramundi/nueces-avellanas-550g.jpg",
+      "note": "Separate named variant. The unspecified original cow cheese remains unpriced. No conversion from price/kg or another seller's different weight."
+    },
+    {
+      "operation": "insert",
+      "farmExternalId": "queseria_demues",
+      "name": "Gamonéu DOP Demués - cuña de 300 g",
+      "price": 10.35,
+      "unit": "One approximately 300 g wedge",
+      "sourceType": "retailer",
+      "source": "https://www.quesosasturianos.com/es/quesos-asturianos/gamoneu-demues-cuna",
+      "imageSource": "https://www.quesosasturianos.com/4125-large_default/gamoneu-demues-cuna.jpg",
+      "imageFile": "/images/products/queseria-demues/gamoneu-cuna-300g.jpg",
+      "note": "Live page advertises 10% off 11.50 EUR, giving 10.35 EUR. Use the visible title and technical sheet (300 g); JSON-LD inconsistently reports 350 g. Added as a separate wedge, not a price for the existing unspecified whole-cheese entry."
+    }
+  ],
+  "unresolvedFarms": [
+    { "farmExternalId": "la_penona", "source": "https://despensadeasturias.com/quesos/queso-afuega-l-pitu-blanco-la-penona-65.html", "reason": "Found 7.90 EUR for a 360-420 g piece, not the existing 300 g product; do not copy or proportionally convert the price. No matching current price confirmed for the other variants." },
+    { "farmExternalId": "miel_el_caxiellu", "source": "https://mercadoartesanoyecologico.com/project/miel-el-caxiellu/", "reason": "Producer and honey verified, no public selling-unit price found." },
+    { "farmExternalId": "el_tio_angel_miel_de_asturias", "source": "https://fuentesdelnarcea.com/productor_local/el-tio-angel-miel-de-asturias/", "reason": "Producer verified, no public selling-unit price found. Do not substitute honey from another producer in the same region." },
+    { "farmExternalId": "miel_fuentes_del_narcea", "source": "https://www.ayto-cnarcea.es/miel", "reason": "Producer in Monco verified, no matching public price found. Regional Fuentes del Narcea honey from Casa Martin or Eria de Valles is not this brand." },
+    { "farmExternalId": "finca_casomera", "source": "https://gentle-git-guidance.lovable.app/", "reason": "Producer site says the 2026 blueberry season has ended. Shop lists seasonal 3 kg / 36 EUR and 8 kg / 96 EUR formats, but current availability is not confirmed; keep existing products hidden." },
+    { "farmExternalId": "arandanos_el_caleyu", "source": "https://www.arandanoselcaleyu.com/", "reason": "Seasonal producer and fruit verified, no public selling-unit price found." },
+    { "farmExternalId": "picaran", "source": "https://picaran.es/", "reason": "Berries and jams verified, no public selling-unit prices found." },
+    { "farmExternalId": "llagar_sidra_pamirandi", "source": "https://lapaneradeasturias.com/empresas/sidra-pamirandi/", "reason": "Natural cider verified, no bottle price found. Published tour/meal prices are not bottle prices." }
+  ]
+}

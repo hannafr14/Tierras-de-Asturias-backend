@@ -1,0 +1,17 @@
+{
+  "checkedOn": "2026-10-27",
+  "farmExternalId": "llagar_sidra_pamirandi",
+  "name": "Sidra natural Pamirandi",
+  "price": 3,
+  "currency": "EUR",
+  "sourceType": "restaurant-menu-reference",
+  "priceSource": "https://es.restaurantguru.com/Sidreria-Casa-Niembro-Spain/menu",
+  "menuItem": "Sidre Pamirandi",
+  "menuSection": "BEBIDAS; owner menu displayed as uploaded one year ago",
+  "producerSource": "https://www.rutalquesuylasidra.com/sidreria-casa-niembro/",
+  "policy": "The user explicitly approved using the restaurant menu's 3 EUR price for an educational demonstration. This is not a verified current retail bottle price, wholesale quote or live availability feed. The source does not specify serving volume, so sizeValue and sizeUnit remain null. No bottle or case volume is inferred. New quantity=1 follows the existing demo seed convention, not a physical inventory claim.",
+  "imageFile": "/images/products/llagar-sidra-pamirandi/sidra-natural.jpg",
+  "imageSource": "https://www.rutalquesuylasidra.com/wp-content/uploads/sites/8/2017/02/Sidra.jpg",
+  "imageNote": "Unmodified cider-serving photograph from the producer's gallery. It shows an unlabelled bottle and glass, not a verified pack-specific photograph.",
+  "supersedes": "The Pamirandi unresolved entry in farm-products-sources-2026-10-27.json is retained as the earlier research result; this later addition uses an explicitly approved demo reference price instead of a confirmed retail offer."
+}

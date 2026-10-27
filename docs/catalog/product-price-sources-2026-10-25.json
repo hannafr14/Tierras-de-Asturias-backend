@@ -1,0 +1,545 @@
+{
+  "checkedOn": "2026-10-25",
+  "currency": "EUR",
+  "policy": "Only previously zero prices were filled. These are publicly advertised producer/retailer reference prices, not contractual producer quotes. Preserve existing stock, product identity, categories and all positive prices. A missing published price remains zero and requires a separate availability decision before real sales.",
+  "prices": [
+    {
+      "farmExternalId": "queseria_rey_silo",
+      "name": "Rey Silo Blanco",
+      "previousPrice": 0,
+      "price": 12.2,
+      "currency": "EUR",
+      "source": "https://www.quesosasturianos.com/es/quesos-vaca/rey-silo-blanco",
+      "unit": "One whole cheese, approximately 255 g",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "queseria_rey_silo",
+      "name": "Rey Silo Rojo",
+      "previousPrice": 0,
+      "price": 12.2,
+      "currency": "EUR",
+      "source": "https://www.quesosasturianos.com/es/quesos-vaca/rey-silo-rojo",
+      "unit": "One whole cheese, approximately 255 g",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "queseria_el_cabriteru",
+      "name": "El Cabriteru Queso Azul 100% leche cruda de cabra. Pequeño",
+      "previousPrice": 0,
+      "price": 18,
+      "currency": "EUR",
+      "source": "https://queseriaelcabriteru.com/producto/el-cabriteru-queso-azul-cabra-pequeno/",
+      "unit": "One small goat cheese, approximately 500-600 g",
+      "sourceType": "producer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "queseria_la_collada",
+      "name": "Queso Artesano de Vaca",
+      "previousPrice": 0,
+      "price": 9.5,
+      "currency": "EUR",
+      "source": "https://carniceriagranvia.com/tienda/inicio/38-queso-artesano-de-vaca-la-collada-400-gr-comprar-online.html",
+      "unit": "One cheese, approximately 400 g; listed out of stock",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "queseria_ovin",
+      "name": "Queso de Cabra Ovín",
+      "previousPrice": 0,
+      "price": 14.95,
+      "currency": "EUR",
+      "source": "https://gaianatural.es/producto/queso-cabra-semicurado-ovin/",
+      "unit": "One semicurado goat cheese, approximately 500 g; not the price per kilogram",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso Pata Cabra 1913",
+      "previousPrice": 0,
+      "price": 68.3,
+      "currency": "EUR",
+      "source": "https://www.quesosasturianos.com/es/quesos-cabra/pieza-pata-de-cabra-alejandro-casielles-1913",
+      "unit": "One whole cheese, approximately 2 kg",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso Viejo Cabra Seleccion Caramelo 1913",
+      "previousPrice": 0,
+      "price": 19.95,
+      "currency": "EUR",
+      "source": "https://panycebollaoviedo.com/producto/queso-viejo-de-cabra-seleccion-caramelo-alejandro-casielles/",
+      "unit": "One goat Caramelo cheese, approximately 450 g",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso Viejo Vaca-Cabra Seleccion Caramelo 1913",
+      "previousPrice": 0,
+      "price": 16.95,
+      "currency": "EUR",
+      "source": "https://panycebollaoviedo.com/producto/queso-viejo-de-vaca-y-cabra-seleccion-caramelo-alejandro-casielles/",
+      "unit": "One cow/goat Caramelo cheese, approximately 450 g",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "queseria_collera",
+      "name": "Queso Vidiago mini de vaca",
+      "previousPrice": 0,
+      "price": 5.8,
+      "currency": "EUR",
+      "source": "https://www.quesosaquilino.com/quesos/queso-vidiago.asp",
+      "unit": "One mini cow cheese, approximately 300 g; not the 1300 g bar",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "llagar_alonso",
+      "name": "Sidra natural Alonso – 12 botellas",
+      "previousPrice": 0,
+      "price": 39,
+      "currency": "EUR",
+      "source": "https://www.market.correos.es/product/alonso-sidra-natural-tradicional-12-x-70-cl",
+      "unit": "One case of 12 bottles of 700 ml",
+      "sourceType": "producer-marketplace",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "llagar_alonso",
+      "name": "Sidra natural Alonso – 6 botellas",
+      "previousPrice": 0,
+      "price": 21,
+      "currency": "EUR",
+      "source": "https://www.market.correos.es/product/alonso-sidra-natural-tradicional-6-x-70-cl",
+      "unit": "One case of 6 bottles of 700 ml",
+      "sourceType": "producer-marketplace",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "arandanos_la_pena",
+      "name": "Zumo natural de arándanos",
+      "previousPrice": 0,
+      "price": 8.5,
+      "currency": "EUR",
+      "source": "https://lacalabaza.es/comprar/zumo-arandano-eco-500ml-la-pena/345208.html",
+      "unit": "One 500 ml bottle",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "los_arandanos",
+      "name": "Zumo ecológico de arándanos",
+      "previousPrice": 0,
+      "price": 13.6,
+      "currency": "EUR",
+      "source": "https://ecoastur.es/aceites-bebidas/zumos-y-refrescos/zumo-concentrado-arandanos.html",
+      "unit": "One 535 ml bottle; live page price differs from the older search-engine snapshot",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "bodega_martinez_parrondo",
+      "name": "Martínez Parrondo Tinto",
+      "previousPrice": 0,
+      "price": 17.9,
+      "currency": "EUR",
+      "source": "https://laqueseriagijon.com/products/vino-tinto-asturiano-martinez-parrondo",
+      "unit": "One 750 ml bottle",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    },
+    {
+      "farmExternalId": "bodega_martinez_parrondo",
+      "name": "Martínez Parrondo Albarín Blanco",
+      "previousPrice": 0,
+      "price": 17.9,
+      "currency": "EUR",
+      "source": "https://laqueseriagijon.com/products/vino-blanco-asturiano-martinez-parrondo",
+      "unit": "One 750 ml bottle; the generic listing does not guarantee a specific vintage",
+      "sourceType": "retailer",
+      "checkedOn": "2026-10-25"
+    }
+  ],
+  "unresolvedPrices": [
+    {
+      "farmExternalId": "queseria_rey_silo",
+      "name": "Besos del Rey Silo",
+      "sizeValue": 40,
+      "sizeUnit": "g",
+      "reason": "Published offers found only for different portion/pack sizes or weights; no matching whole-product price confirmed."
+    },
+    {
+      "farmExternalId": "queseria_rey_silo",
+      "name": "Máximo Rey Silo",
+      "sizeValue": 1.6,
+      "sizeUnit": "kg",
+      "reason": "Published offers found only for different portion/pack sizes or weights; no matching whole-product price confirmed."
+    },
+    {
+      "farmExternalId": "queseria_rey_silo",
+      "name": "Máximo Rey Silo con Magaya",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Published offers found only for different portion/pack sizes or weights; no matching whole-product price confirmed."
+    },
+    {
+      "farmExternalId": "queseria_rey_silo",
+      "name": "Rey Silo Azul Mamá Marisa",
+      "sizeValue": 8,
+      "sizeUnit": "kg",
+      "reason": "Published offers found only for different portion/pack sizes or weights; no matching whole-product price confirmed."
+    },
+    {
+      "farmExternalId": "queseria_picurriellu",
+      "name": "Quesu Fresco de cabra",
+      "sizeValue": 250,
+      "sizeUnit": "g",
+      "reason": "No public price confirmed for the exact 250 g fresh goat cheese."
+    },
+    {
+      "farmExternalId": "quesos_taramundi",
+      "name": "Queso de vaca de Taramundi",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Retail offers found for mixed-milk or nut cheeses, not this plain cow-milk product."
+    },
+    {
+      "farmExternalId": "la_penona",
+      "name": "Afuega'l Pitu Curado Blanco",
+      "sizeValue": 300,
+      "sizeUnit": "g",
+      "reason": "Retail listings have different weights from the 300 g / 500 g seed products."
+    },
+    {
+      "farmExternalId": "la_penona",
+      "name": "Afuega'l Pitu Curado Rojo",
+      "sizeValue": 300,
+      "sizeUnit": "g",
+      "reason": "Retail listings have different weights from the 300 g / 500 g seed products."
+    },
+    {
+      "farmExternalId": "la_penona",
+      "name": "Afuega'l Pitu Fresco",
+      "sizeValue": 500,
+      "sizeUnit": "g",
+      "reason": "Retail listings have different weights from the 300 g / 500 g seed products."
+    },
+    {
+      "farmExternalId": "la_penona",
+      "name": "Requesón artesano El Peñon",
+      "sizeValue": 500,
+      "sizeUnit": "g",
+      "reason": "Retail listings have different weights from the 300 g / 500 g seed products."
+    },
+    {
+      "farmExternalId": "queseria_demues",
+      "name": "Queso Gamonéu DOP",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Retail offers are for portions, while the seed product does not identify a portion."
+    },
+    {
+      "farmExternalId": "queseria_la_collada",
+      "name": "Queso Los Beyos IGP",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Milk/variety/pack could not be unambiguously matched to an offer."
+    },
+    {
+      "farmExternalId": "queseria_la_collada",
+      "name": "Queso de Autor La Collada",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Milk/variety/pack could not be unambiguously matched to an offer."
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso de Cabra Mini Maduro",
+      "sizeValue": 0.4,
+      "sizeUnit": "kg",
+      "reason": "No offer confirmed for the exact cheese variety and seed weight."
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso de Cabra Madurado",
+      "sizeValue": 3,
+      "sizeUnit": "kg",
+      "reason": "No offer confirmed for the exact cheese variety and seed weight."
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso de Mezcla Mini Madurado",
+      "sizeValue": 0.4,
+      "sizeUnit": "kg",
+      "reason": "No offer confirmed for the exact cheese variety and seed weight."
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso de Mezcla Madurado",
+      "sizeValue": 3,
+      "sizeUnit": "kg",
+      "reason": "No offer confirmed for the exact cheese variety and seed weight."
+    },
+    {
+      "farmExternalId": "alejandro_casielles_1913",
+      "name": "Queso de Cabra Anejo",
+      "sizeValue": 9,
+      "sizeUnit": "kg",
+      "reason": "No offer confirmed for the exact cheese variety and seed weight."
+    },
+    {
+      "farmExternalId": "queseria_collera",
+      "name": "Queso Vidiago de cabra",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No offer confirmed for the exact variety/format; do not reuse the mini cow-cheese price."
+    },
+    {
+      "farmExternalId": "queseria_collera",
+      "name": "Queso Vidiago mediano de vaca",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No offer confirmed for the exact variety/format; do not reuse the mini cow-cheese price."
+    },
+    {
+      "farmExternalId": "queseria_collera",
+      "name": "Queso Vidiago ahumau",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No offer confirmed for the exact variety/format; do not reuse the mini cow-cheese price."
+    },
+    {
+      "farmExternalId": "queseria_collera",
+      "name": "Queso Collera de oveja",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No offer confirmed for the exact variety/format; do not reuse the mini cow-cheese price."
+    },
+    {
+      "farmExternalId": "queseria_collera",
+      "name": "Postre asturiano Quesdul",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No offer confirmed for the exact variety/format; do not reuse the mini cow-cheese price."
+    },
+    {
+      "farmExternalId": "miel_el_caxiellu",
+      "name": "Miel ecológica asturiana cruda",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public retail price and matching pack confirmed."
+    },
+    {
+      "farmExternalId": "la_solana_de_allande",
+      "name": "Miel ecológica certificada",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Organic, monodose or event product; standard multifloral honey prices are not interchangeable."
+    },
+    {
+      "farmExternalId": "la_solana_de_allande",
+      "name": "Miel artesanal monodosis",
+      "sizeValue": 34,
+      "sizeUnit": "g",
+      "reason": "Organic, monodose or event product; standard multifloral honey prices are not interchangeable."
+    },
+    {
+      "farmExternalId": "la_solana_de_allande",
+      "name": "Detalle de miel artesanal para eventos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Organic, monodose or event product; standard multifloral honey prices are not interchangeable."
+    },
+    {
+      "farmExternalId": "el_tio_angel_miel_de_asturias",
+      "name": "Miel de bosque de Asturias",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and matching pack confirmed; contact the producer."
+    },
+    {
+      "farmExternalId": "el_tio_angel_miel_de_asturias",
+      "name": "Polen de abeja",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and matching pack confirmed; contact the producer."
+    },
+    {
+      "farmExternalId": "el_tio_angel_miel_de_asturias",
+      "name": "Detalle de miel para eventos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and matching pack confirmed; contact the producer."
+    },
+    {
+      "farmExternalId": "miel_fuentes_del_narcea",
+      "name": "Miel artesana de montaña",
+      "sizeValue": 1,
+      "sizeUnit": "kg",
+      "reason": "No public price confirmed for the exact 1 kg honey / 200 g pollen."
+    },
+    {
+      "farmExternalId": "miel_fuentes_del_narcea",
+      "name": "Polen de abeja",
+      "sizeValue": 200,
+      "sizeUnit": "g",
+      "reason": "No public price confirmed for the exact 1 kg honey / 200 g pollen."
+    },
+    {
+      "farmExternalId": "llagar_sidra_menendez",
+      "name": "Sidra natural Val d'Ornon DOP",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Producer sells cases; seed product is one bottle. Do not assign a case price."
+    },
+    {
+      "farmExternalId": "llagar_sidra_menendez",
+      "name": "Sidra natural Llagar de Quintana",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Producer sells cases; seed product is one bottle. Do not assign a case price."
+    },
+    {
+      "farmExternalId": "llagar_alonso",
+      "name": "Estuche de sidra natural Alonso",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Gift pack content differs from the ordinary 6/12-bottle cases."
+    },
+    {
+      "farmExternalId": "llagar_alonso",
+      "name": "Sidra natural Alonso – estuche de 3 botellas",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Gift pack content differs from the ordinary 6/12-bottle cases."
+    },
+    {
+      "farmExternalId": "finca_casomera",
+      "name": "Arándanos frescos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Seasonal produce; producer has no current published offer."
+    },
+    {
+      "farmExternalId": "finca_casomera",
+      "name": "Manzanas DOP de cultivo sostenible",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Seasonal produce; producer has no current published offer."
+    },
+    {
+      "farmExternalId": "arandanos_la_pena",
+      "name": "Arándanos ecológicos frescos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No published matching fresh/frozen/jam offer confirmed."
+    },
+    {
+      "farmExternalId": "arandanos_la_pena",
+      "name": "Arándanos ecológicos congelados",
+      "sizeValue": 3,
+      "sizeUnit": "kg",
+      "reason": "No published matching fresh/frozen/jam offer confirmed."
+    },
+    {
+      "farmExternalId": "arandanos_la_pena",
+      "name": "Mermelada extra de arándanos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No published matching fresh/frozen/jam offer confirmed."
+    },
+    {
+      "farmExternalId": "arandanos_el_caleyu",
+      "name": "Arándanos ecológicos frescos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Seasonal produce with no current pack/price confirmed."
+    },
+    {
+      "farmExternalId": "picaran",
+      "name": "Arándanos ecológicos frescos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and pack confirmed for these products."
+    },
+    {
+      "farmExternalId": "picaran",
+      "name": "Frambuesas ecológicas frescas",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and pack confirmed for these products."
+    },
+    {
+      "farmExternalId": "picaran",
+      "name": "Moras ecológicas frescas",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and pack confirmed for these products."
+    },
+    {
+      "farmExternalId": "picaran",
+      "name": "Grosellas ecológicas frescas",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and pack confirmed for these products."
+    },
+    {
+      "farmExternalId": "picaran",
+      "name": "Mermelada de frambuesa",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and pack confirmed for these products."
+    },
+    {
+      "farmExternalId": "picaran",
+      "name": "Mermelada de arándano",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public price and pack confirmed for these products."
+    },
+    {
+      "farmExternalId": "los_arandanos",
+      "name": "Arándanos ecológicos frescos",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Fresh berries have no current published pack price."
+    },
+    {
+      "farmExternalId": "bodega_martinez_parrondo",
+      "name": "Martínez Parrondo Blanco Premium",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "Premium wine is different from the standard white wine."
+    },
+    {
+      "farmExternalId": "bodega_la_verdea",
+      "name": "Verdea Edición Limitada 620 Albarín Blanco",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "The exact 620 limited-edition bottles have no public price confirmed."
+    },
+    {
+      "farmExternalId": "bodega_la_verdea",
+      "name": "Verdea Edición Limitada 620 Carrasquín",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "The exact 620 limited-edition bottles have no public price confirmed."
+    },
+    {
+      "farmExternalId": "bodega_vina_cuedo",
+      "name": "Vino blanco Oro D'Ibias",
+      "sizeValue": null,
+      "sizeUnit": null,
+      "reason": "No public retail price confirmed for Oro D'Ibias."
+    }
+  ]
+}

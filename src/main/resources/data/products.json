@@ -91,7 +91,7 @@
     "farmExternalId": "queseria_rey_silo",
     "name": "Rey Silo Blanco",
     "description": "Queso artesano de leche cruda y entera de vaca madurado de forma natural entre 25 y 30 días en la cava subterránea de la quesería, con textura cremosa y notas lácticas y mantecosas.",
-    "price": 0,
+    "price": 12.2,
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
@@ -102,7 +102,7 @@
     "farmExternalId": "queseria_rey_silo",
     "name": "Rey Silo Rojo",
     "description": "Queso artesano de leche cruda de vaca basado en Rey Silo Blanco y amasado con pimentón de Murcia secado al sol, con pasta color salmón y un ligero retrogusto picante.",
-    "price": 0,
+    "price": 12.2,
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
@@ -129,7 +129,7 @@
     "sizeValue": 1.6,
     "sizeUnit": "kg",
     "image": "https://www.reysilo.es/uploads/fotos/59q7uLk2rmMYCSrrBmg9YX3xqxS9pcSA.jpg",
-    "category": "Leche"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "queseria_rey_silo",
@@ -304,7 +304,7 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://queseriaelcabriteru.com/wp-content/uploads/2025/10/queso-azul-mezcla-de-leche-de-oveja-y-leche-de-cabra-El-Cabriteru-cuna-523x600.jpg",
+    "image": "/images/products/queseria-el-cabriteru/el-cabriteru-queso-azul-de-leche-cruda-de-oveja-y-cabra-cuna.jpg",
     "category": "Quesos"
   },
   {
@@ -315,14 +315,14 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://queseriaelcabriteru.com/wp-content/uploads/2025/10/queso-azul-leche-de-cabra-El-Cabriteru-cuna-1-514x600.jpg",
+    "image": "/images/products/queseria-el-cabriteru/el-cabriteru-queso-azul-100-leche-cruda-de-cabra-cuna.jpg",
     "category": "Quesos"
   },
   {
     "farmExternalId": "queseria_el_cabriteru",
     "name": "El Cabriteru Queso Azul 100% leche cruda de cabra. Pequeño",
     "description": "Queso azul artesano de formato pequeño elaborado con leche cruda 100% de cabra por El Cabriteru.",
-    "price": 0,
+    "price": 18,
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
@@ -481,7 +481,7 @@
     "sizeValue": 350,
     "sizeUnit": "g",
     "image": "https://queseriavegadeario.misquesosasturianos.com/tienda/24-large_default/gamoneu-del-valle-vega-de-ario-cuna-350-gramos.jpg",
-    "category": "Leche"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "vega_de_ario",
@@ -690,7 +690,7 @@
     "sizeValue": 500,
     "sizeUnit": "g",
     "image": "https://image.jimcdn.com/app/cms/image/transf/dimension=259x10000:format=png/path/sb2876473d5dc7d2e/image/i7be41e442127fdc6/version/1385640687/image.png",
-    "category": "Leche"
+    "category": "Quesos"
   },
   {
     "farmExternalId": "leche_leche",
@@ -854,7 +854,7 @@
     "quantity": 1,
     "sizeValue": 0.5,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto08-scaled.jpg",
+    "image": "/images/products/rebollin/queso-fresco-rebollin.jpg",
     "category": "Quesos"
   },
   {
@@ -865,7 +865,7 @@
     "quantity": 1,
     "sizeValue": 0.35,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto03-scaled.jpg",
+    "image": "/images/products/rebollin/queso-afuega-l-pitu-rojo.jpg",
     "category": "Quesos"
   },
   {
@@ -876,7 +876,7 @@
     "quantity": 1,
     "sizeValue": 0.35,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto06-scaled.jpg",
+    "image": "/images/products/rebollin/queso-dop-afuega-l-pitu-blanco.jpg",
     "category": "Quesos"
   },
   {
@@ -887,7 +887,7 @@
     "quantity": 1,
     "sizeValue": 0.5,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto37-scaled.jpg",
+    "image": "/images/products/rebollin/queso-fusion-de-sidra.jpg",
     "category": "Quesos"
   },
   {
@@ -898,7 +898,7 @@
     "quantity": 1,
     "sizeValue": 0.45,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto32-scaled.jpg",
+    "image": "/images/products/rebollin/queso-semicurado-como-una-cabra.jpg",
     "category": "Quesos"
   },
   {
@@ -909,7 +909,7 @@
     "quantity": 1,
     "sizeValue": 0.35,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto34-scaled.jpg",
+    "image": "/images/products/rebollin/queso-de-cabra-artesano.jpg",
     "category": "Quesos"
   },
   {
@@ -920,7 +920,7 @@
     "quantity": 1,
     "sizeValue": 0.45,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/Sin-Lactosa-scaled.jpg",
+    "image": "/images/products/rebollin/queso-de-vaca-sin-lactosa.jpg",
     "category": "Quesos"
   },
   {
@@ -931,7 +931,7 @@
     "quantity": 1,
     "sizeValue": 0.5,
     "sizeUnit": "kg",
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto28-scaled.jpg",
+    "image": "/images/products/rebollin/queso-de-vaca-pasterizada-pequeno.jpg",
     "category": "Quesos"
   },
   {
@@ -942,7 +942,7 @@
     "quantity": 3,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto13-scaled.jpg",
+    "image": "/images/products/rebollin/pack-3-quesos-rebollin.jpg",
     "category": "Quesos"
   },
   {
@@ -953,7 +953,7 @@
     "quantity": 6,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://www.rebollin.es/wp-content/uploads/2020/03/FJ_Foto12-scaled.jpg",
+    "image": "/images/products/rebollin/pack-lote-6-quesos-rebollin.jpg",
     "category": "Quesos"
   },
   {
@@ -964,7 +964,7 @@
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://scontent-mad2-1.cdninstagram.com/v/t51.2885-19/107958172_312088446593881_1438469852971538329_n.jpg?stp=dst-jpg_s100x100_tt6&_nc_cat=109&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=z3ZFJG-WXyIQ7kNvwGI8uZz&_nc_oc=Ado7Yast04ZMvMU5TdCDsiSUyo_EGGwefs4ie2k2TlbaZ9o4dEBhM7ygOY6mck8aUDg&_nc_zt=24&_nc_ht=scontent-mad2-1.cdninstagram.com&_nc_ss=7fa02&oh=00_AQDjpkiU6482L6f30vO8KWit7HTbfd-y3Dobu1dQEWLolg&oe=6A55EF69",
+    "image": "/images/products/queseria-la-collada/queso-los-beyos-igp.jpg",
     "category": "Quesos"
   },
   {
@@ -982,11 +982,11 @@
     "farmExternalId": "queseria_la_collada",
     "name": "Queso Artesano de Vaca",
     "description": "Queso artesano de leche de vaca de Quesería La Collada, elaborado en su pequeña quesería de Amieva.",
-    "price": 0,
+    "price": 9.5,
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-1/305292459_507813894677962_3304182232253769531_n.jpg?stp=dst-jpg_tt6&cstp=mx540x540&ctp=s540x540&_nc_cat=102&ccb=1-7&_nc_sid=3ab345&_nc_ohc=_TYiiVcZ9hUQ7kNvwHTuOZz&_nc_oc=Adoet1vmj7DmXVKbC1vaugvCah4giD6MuPkXNQNBIBBkWTOgBvafO-GB7KFqfdCM_hc&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=Ih244lLuwjOVjolfSkNm4A&_nc_ss=7f20f&oh=00_AQCtoYRLXPmm7l2gcfZe-mK7Z_DLwtv_Vb-Gsm9Avb6KYQ&oe=6A55ED9B",
+    "image": "/images/products/queseria-la-collada/queso-artesano-de-vaca.jpg",
     "category": "Quesos"
   },
   {
@@ -1041,7 +1041,7 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2020/09/queso-fresco-sin-sal-queseria-la-borbolla.jpg",
+    "image": "/images/products/queseria-la-borbolla/queso-fresco-sin-sal.jpg",
     "category": "Quesos"
   },
   {
@@ -1052,7 +1052,7 @@
     "quantity": 7,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2020/09/inboka_quesos087006.jpg",
+    "image": "/images/products/queseria-la-borbolla/pack-culto-al-afuega-l-pitu.jpg",
     "category": "Quesos"
   },
   {
@@ -1063,7 +1063,7 @@
     "quantity": 6,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2020/09/afuega-l-pitu-oferta-pack-degustacion.jpg",
+    "image": "/images/products/queseria-la-borbolla/pack-festin-gastronomico.jpg",
     "category": "Quesos"
   },
   {
@@ -1074,7 +1074,7 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2020/10/comprar-queso-fresco-queseria-la-borbolla.jpg",
+    "image": "/images/products/queseria-la-borbolla/queso-fresco.jpg",
     "category": "Quesos"
   },
   {
@@ -1085,7 +1085,7 @@
     "quantity": 1,
     "sizeValue": 350,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2019/08/afuega-l-pitu-atroncau-blanco-queseria-la-borbolla-origen-protegido.jpg",
+    "image": "/images/products/queseria-la-borbolla/afuega-l-pitu-atroncau-blancu-dop.jpg",
     "category": "Quesos"
   },
   {
@@ -1096,7 +1096,7 @@
     "quantity": 6,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2019/07/afuega-l-pitu-oferta-pack-promocional-quesos-curados.jpg",
+    "image": "/images/products/queseria-la-borbolla/pack-cata-entre-amigos.jpg",
     "category": "Quesos"
   },
   {
@@ -1107,7 +1107,7 @@
     "quantity": 1,
     "sizeValue": 550,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2019/07/barrena-de-mariluz-queseria-la-borbolla.jpg",
+    "image": "/images/products/queseria-la-borbolla/barrena-de-mariluz.jpg",
     "category": "Leche"
   },
   {
@@ -1118,7 +1118,7 @@
     "quantity": 1,
     "sizeValue": 450,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2019/07/afuega-l-pitu-trapu-roxu-la-borbolla-denomiacion-de-origen-protegido.jpg",
+    "image": "/images/products/queseria-la-borbolla/afuega-l-pitu-trapu-roxu-dop.jpg",
     "category": "Quesos"
   },
   {
@@ -1129,7 +1129,7 @@
     "quantity": 1,
     "sizeValue": 450,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2019/08/afuega-l-pitu-trapu-blanco-queso-tradicional-asturiano-gourmet-la-borbolla.jpg",
+    "image": "/images/products/queseria-la-borbolla/afuega-l-pitu-trapu-blancu-dop.jpg",
     "category": "Quesos"
   },
   {
@@ -1140,7 +1140,7 @@
     "quantity": 1,
     "sizeValue": 350,
     "sizeUnit": "g",
-    "image": "https://queserialaborbolla.es/wp-content/uploads/2019/07/afuegal-pitu-roxu-la-borbolla-queso-artesano.jpg",
+    "image": "/images/products/queseria-la-borbolla/afuega-l-pitu-atroncau-roxu-dop.jpg",
     "category": "Quesos"
   },
   {
@@ -1191,7 +1191,7 @@
     "farmExternalId": "queseria_ovin",
     "name": "Queso de Cabra Ovín",
     "description": "Queso artesano de cabra Ovín, una de las cuatro variedades declaradas por la quesería y elaborada con leche seleccionada de los valles asturianos.",
-    "price": 0,
+    "price": 14.95,
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
@@ -1235,7 +1235,7 @@
     "farmExternalId": "alejandro_casielles_1913",
     "name": "Queso Pata Cabra 1913",
     "description": "Queso artesano de leche pasteurizada de cabra, cuajo animal y fermentos lacticos, madurado unos dos meses y con corteza natural de color marron claro.",
-    "price": 0,
+    "price": 68.3,
     "quantity": 1,
     "sizeValue": 2,
     "sizeUnit": "kg",
@@ -1290,7 +1290,7 @@
     "farmExternalId": "alejandro_casielles_1913",
     "name": "Queso Viejo Cabra Seleccion Caramelo 1913",
     "description": "Queso viejo de cabra seleccion elaborado artesanalmente con leche pasteurizada de cabra y afinado durante seis meses, con presentacion tipo caramelo.",
-    "price": 0,
+    "price": 19.95,
     "quantity": 1,
     "sizeValue": 450,
     "sizeUnit": "g",
@@ -1301,7 +1301,7 @@
     "farmExternalId": "alejandro_casielles_1913",
     "name": "Queso Viejo Vaca-Cabra Seleccion Caramelo 1913",
     "description": "Queso viejo seleccion de mezcla elaborado con 70% de leche de vaca y 30% de leche pasteurizada de cabra, afinado seis meses y presentado en formato tipo caramelo.",
-    "price": 0,
+    "price": 16.95,
     "quantity": 1,
     "sizeValue": 450,
     "sizeUnit": "g",
@@ -1389,7 +1389,7 @@
     "farmExternalId": "queseria_collera",
     "name": "Queso Vidiago mini de vaca",
     "description": "Queso Vidiago semicurado de leche de vaca en formato pequeño, apropiado para aperitivos y tablas de quesos.",
-    "price": 0,
+    "price": 5.8,
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
@@ -1526,7 +1526,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://i.etsystatic.com/33192658/r/il/b9f3f1/6904331763/il_800x800.6904331763_pbke.jpg",
-    "category": "Miel"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "eria_de_valles",
@@ -1756,7 +1756,7 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://sondelugo.com/316-thickbox_default/tarro-de-miel-de-castano-500-gr-el-pais-del-abeyeiro.jpg",
+    "image": "/images/products/miel-outurelos/miel-cruda-de-castano.webp",
     "category": "Miel"
   },
   {
@@ -1767,7 +1767,7 @@
     "quantity": 1,
     "sizeValue": 1,
     "sizeUnit": "kg",
-    "image": "https://sondelugo.com/342-thickbox_default/miel-de-brezo-primavera-el-pais-del-abeyeiro.jpg",
+    "image": "/images/products/miel-outurelos/miel-cruda-de-brezo-de-otono.webp",
     "category": "Miel"
   },
   {
@@ -1778,7 +1778,7 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://sondelugo.com/346-thickbox_default/miel-de-brezo-primavera-500g-el-pais-del-abeyeiro.jpg",
+    "image": "/images/products/miel-outurelos/miel-cruda-de-brezo-de-primavera.jpg",
     "category": "Miel"
   },
   {
@@ -1789,7 +1789,7 @@
     "quantity": 1,
     "sizeValue": 280,
     "sizeUnit": "g",
-    "image": "https://sondelugo.com/343-thickbox_default/miel-de-brezo-primavera-280g-el-pais-del-abeyeiro.jpg",
+    "image": "/images/products/miel-outurelos/miel-cruda-de-brezo-en-tarro-pequeno.webp",
     "category": "Miel"
   },
   {
@@ -1932,7 +1932,7 @@
     "quantity": 1,
     "sizeValue": 1,
     "sizeUnit": "kg",
-    "image": "https://mielcasaelcampo.com/wp-content/uploads/2022/08/bote-miel-300x300.jpg",
+    "image": "/images/products/miel-casa-el-campo/miel-milflores.jpg",
     "category": "Miel"
   },
   {
@@ -1943,7 +1943,7 @@
     "quantity": 1,
     "sizeValue": 250,
     "sizeUnit": "g",
-    "image": "https://mielcasaelcampo.com/wp-content/uploads/2022/08/bote-miel-300x300.jpg",
+    "image": "/images/products/miel-casa-el-campo/miel-milflores-pequena.jpg",
     "category": "Miel"
   },
   {
@@ -1954,7 +1954,7 @@
     "quantity": 1,
     "sizeValue": 150,
     "sizeUnit": "g",
-    "image": "https://mielcasaelcampo.com/wp-content/uploads/2022/02/WhatsApp-Image-2022-01-12-at-11.05.29.jpeg",
+    "image": "/images/products/miel-casa-el-campo/miel-en-panal.jpg",
     "category": "Miel"
   },
   {
@@ -1965,7 +1965,7 @@
     "quantity": 1,
     "sizeValue": 125,
     "sizeUnit": "g",
-    "image": "https://mielcasaelcampo.com/wp-content/uploads/2022/02/WhatsApp-Image-2021-12-14-at-14.27.01.jpeg",
+    "image": "/images/products/miel-casa-el-campo/polen-de-flores.jpg",
     "category": "Miel"
   },
   {
@@ -1976,7 +1976,7 @@
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://mielcasaelcampo.com/wp-content/uploads/2022/08/20220816_132924-300x300.jpg",
+    "image": "/images/products/miel-casa-el-campo/lote-regalo-miel-casa-el-campo.jpg",
     "category": "Miel"
   },
   {
@@ -2362,7 +2362,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://sidracastanon.com/wp-content/uploads/2024/12/1-ROXMUT-2-XIZZ-scaled-e1733325727374.jpg",
-    "category": "Sidra"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "llagar_castanon",
@@ -2379,7 +2379,7 @@
     "farmExternalId": "llagar_alonso",
     "name": "Sidra natural Alonso – 12 botellas",
     "description": "Caja de doce botellas de sidra natural tradicional Alonso, elaborada artesanalmente en Ciañu mediante la fermentación de manzanas asturianas.",
-    "price": 0,
+    "price": 39,
     "quantity": 12,
     "sizeValue": 700,
     "sizeUnit": "ml",
@@ -2390,7 +2390,7 @@
     "farmExternalId": "llagar_alonso",
     "name": "Sidra natural Alonso – 6 botellas",
     "description": "Caja de seis botellas de sidra natural tradicional Alonso, sin filtrar y elaborada exclusivamente con manzanas en Langreo.",
-    "price": 0,
+    "price": 21,
     "quantity": 6,
     "sizeValue": 700,
     "sizeUnit": "ml",
@@ -2504,7 +2504,7 @@
     "quantity": 6,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://cdn.website-editor.net/s/0ac59f7977354c8fa1197435905a4a3a/dms3rep/multi/Viuda+de+Angel%C3%B3n_Producto_Dic_2022_LR_002.jpg",
+    "image": "/images/products/sidra-viuda-de-angelon/product-227.jpg",
     "category": "Sidra"
   },
   {
@@ -2559,8 +2559,8 @@
     "quantity": 1,
     "sizeValue": 1,
     "sizeUnit": "kg",
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2023/10/dsc3191-1.webp",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/faba-asturiana-igp-1-kg.jpg",
+    "category": "Legumbres"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2570,8 +2570,8 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "g",
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2023/10/faba-fabes-asturiana-igp-mfrh-original-scaled-2048x2048.jpg",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/faba-asturiana-igp-500-g.jpg",
+    "category": "Legumbres"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2581,8 +2581,8 @@
     "quantity": 1,
     "sizeValue": 1,
     "sizeUnit": "kg",
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2025/02/alubia-blanca-categoria-segunda-300x300.jpeg",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/alubia-blanca-de-segunda-categoria-1-kg.jpg",
+    "category": "Legumbres"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2592,7 +2592,7 @@
     "quantity": 1,
     "sizeValue": 3,
     "sizeUnit": "kg",
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2023/11/aguacate-en-el-arbol-cultivado-de-asturias-300x300.webp",
+    "image": "/images/products/finca-el-ribeiro/aguacates-ecologicos-hass-3-kg.jpg",
     "category": "Frutos"
   },
   {
@@ -2603,7 +2603,7 @@
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2023/10/arandanos-ecologicos-05-kg-producto-asturiano.webp",
+    "image": "/images/products/finca-el-ribeiro/arandanos-ecologicos-frescos.jpg",
     "category": "Frutos"
   },
   {
@@ -2614,8 +2614,8 @@
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "ml",
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2024/04/dsd8448-editar.jpg",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/zumo-artesanal-de-arandanos.jpg",
+    "category": "Zumos"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2625,8 +2625,8 @@
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2023/10/mermelada-de-arandanos-de-finca-el-ribeiro.webp",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/mermelada-artesana-de-arandanos.jpg",
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2636,8 +2636,8 @@
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2024/01/mermelada-de-arandanos-ecologica-asturiana-mfrh-original-scaled-2048x2048.jpg",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/mermelada-ecologica-de-arandanos.jpg",
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2647,8 +2647,8 @@
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2023/10/mermelada-de-manzanas-de-finca-el-ribeiro.webp",
-    "category": "Frutos"
+    "image": "/images/products/finca-el-ribeiro/mermelada-artesana-de-manzana.jpg",
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "finca_el_ribeiro",
@@ -2658,8 +2658,8 @@
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://fincaelribeiro.es/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-06-at-16.04.03-300x300.jpeg",
-    "category": "Miel"
+    "image": "/images/products/finca-el-ribeiro/caja-gourmet-de-productos-asturianos.jpg",
+    "category": "Regalos"
   },
   {
     "farmExternalId": "arandanos_la_pena",
@@ -2687,12 +2687,12 @@
     "farmExternalId": "arandanos_la_pena",
     "name": "Zumo natural de arándanos",
     "description": "Zumo sin aditivos obtenido mediante prensado y filtrado de arándanos; cada botella de 500 ml se elabora con unos 700 gramos de fruta.",
-    "price": 0,
+    "price": 8.5,
     "quantity": 1,
     "sizeValue": 500,
     "sizeUnit": "ml",
     "image": "https://www.arandanosecologicos.com/wp-content/uploads/2024/10/Diseno-sin-titulo-3.png",
-    "category": "Frutos"
+    "category": "Zumos"
   },
   {
     "farmExternalId": "arandanos_la_pena",
@@ -2703,7 +2703,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://www.arandanosecologicos.com/wp-content/uploads/2024/05/Offerings_3.jpg-1.jpg",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
@@ -2725,7 +2725,7 @@
     "sizeValue": 275,
     "sizeUnit": "g",
     "image": "https://arandanosmanzanas.es/wp-content/uploads/2021/01/extra-arandano-1-e1610694710744.jpg",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
@@ -2736,7 +2736,7 @@
     "sizeValue": 275,
     "sizeUnit": "g",
     "image": "https://arandanosmanzanas.es/wp-content/uploads/2021/04/IMG-20210425-WA0004-e1619411873455.jpg",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
@@ -2747,7 +2747,7 @@
     "sizeValue": 275,
     "sizeUnit": "g",
     "image": "https://arandanosmanzanas.es/wp-content/uploads/2021/01/arandanos-sin-azucar.png",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
@@ -2758,7 +2758,7 @@
     "sizeValue": 500,
     "sizeUnit": "ml",
     "image": "https://arandanosmanzanas.es/wp-content/uploads/2021/01/IMG-20201109-WA0001-1.jpg",
-    "category": "Frutos"
+    "category": "Zumos"
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
@@ -2769,7 +2769,7 @@
     "sizeValue": 500,
     "sizeUnit": "ml",
     "image": "https://arandanosmanzanas.es/wp-content/uploads/2021/01/IMG-20201109-WA0001-1.jpg",
-    "category": "Frutos"
+    "category": "Zumos"
   },
   {
     "farmExternalId": "arandanos_y_manzanas_de_muno",
@@ -2780,7 +2780,7 @@
     "sizeValue": 4,
     "sizeUnit": "kg",
     "image": "https://arandanosmanzanas.es/wp-content/uploads/2021/02/IMG_20210124_080937-300x271.jpg",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "arandanos_el_caleyu",
@@ -2846,7 +2846,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://picaran.es/wp-content/uploads/2023/06/mermelada-frambuesa-350x263.jpeg",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "picaran",
@@ -2857,7 +2857,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://picaran.es/wp-content/uploads/2023/06/mermelada-arandanos-350x263.jpeg",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "los_arandanos",
@@ -2867,7 +2867,7 @@
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://copaeastur.org/fotos/0133F.jpg",
+    "image": "/images/products/los-arandanos/arandanos-ecologicos-frescos.webp",
     "category": "Frutos"
   },
   {
@@ -2885,12 +2885,12 @@
     "farmExternalId": "los_arandanos",
     "name": "Zumo ecológico de arándanos",
     "description": "Zumo artesano ecológico de arándanos elaborado en el obrador situado en la propia finca del productor.",
-    "price": 0,
+    "price": 13.6,
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://www.conasi.eu/img/cms/sellos-calidad-zumo-los-arandanos.PNG",
-    "category": "Frutos"
+    "image": "/images/products/los-arandanos/zumo-ecologico-de-arandanos.webp",
+    "category": "Zumos"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2901,7 +2901,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://fincaelcabillon.org/wp-content/uploads/70701065-150x150.jpg",
-    "category": "Frutos"
+    "category": "Verduras"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2912,7 +2912,7 @@
     "sizeValue": 1,
     "sizeUnit": "kg",
     "image": "https://fincaelcabillon.org/wp-content/uploads/60005-150x150.jpg",
-    "category": "Frutos"
+    "category": "Verduras"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2923,7 +2923,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://fincaelcabillon.org/wp-content/uploads/70701069-150x150.jpg",
-    "category": "Frutos"
+    "category": "Despensa"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2945,7 +2945,7 @@
     "sizeValue": 250,
     "sizeUnit": "g",
     "image": "https://fincaelcabillon.org/wp-content/uploads/70701064-150x150.jpg",
-    "category": "Frutos"
+    "category": "Despensa"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2956,7 +2956,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://fincaelcabillon.org/wp-content/uploads/700024-150x150.jpg",
-    "category": "Frutos"
+    "category": "Despensa"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2967,7 +2967,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://fincaelcabillon.org/wp-content/uploads/8437015910970-150x150.jpg",
-    "category": "Frutos"
+    "category": "Mermeladas"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2978,7 +2978,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://fincaelcabillon.org/wp-content/uploads/10001-1-150x150.jpg",
-    "category": "Verduras"
+    "category": "Legumbres"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -2989,7 +2989,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://fincaelcabillon.org/wp-content/uploads/10008-150x150.jpg",
-    "category": "Vinos"
+    "category": "Legumbres"
   },
   {
     "farmExternalId": "finca_el_cabillon",
@@ -3000,7 +3000,7 @@
     "sizeValue": 1,
     "sizeUnit": "kg",
     "image": "https://fincaelcabillon.org/wp-content/uploads/10011-150x150.jpg",
-    "category": "Frutos"
+    "category": "Legumbres"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3011,7 +3011,7 @@
     "sizeValue": 220,
     "sizeUnit": "ml",
     "image": "https://olesgourmet.com/web/wp-content/uploads/2022/11/Foto-sin-fondo-i-pdf.jpg",
-    "category": "Frutos"
+    "category": "Zumos"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3022,7 +3022,7 @@
     "sizeValue": 750,
     "sizeUnit": "ml",
     "image": "https://olesgourmet.com/web/wp-content/uploads/2021/11/Botella-de-zumo-sin-fondo-2-pdf.jpg",
-    "category": "Frutos"
+    "category": "Zumos"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3033,7 +3033,7 @@
     "sizeValue": 220,
     "sizeUnit": "ml",
     "image": "https://olesgourmet.com/web/wp-content/uploads/2022/11/IMG_4603-scaled-e1668685796150-300x300.jpg",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3044,7 +3044,7 @@
     "sizeValue": 2100,
     "sizeUnit": "g",
     "image": "https://olesgourmet.com/web/wp-content/uploads/2021/04/IMG_20221111_120505-scaled-e1669027694677-300x300.jpg",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3055,7 +3055,7 @@
     "sizeValue": null,
     "sizeUnit": null,
     "image": "https://olesgourmet.com/web/wp-content/uploads/2022/11/IMG_20221111_121113-scaled-e1668685559386-300x300.jpg",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3066,7 +3066,7 @@
     "sizeValue": 1000,
     "sizeUnit": "g",
     "image": "https://olesgourmet.com/web/wp-content/uploads/2020/04/FOTO-6-Brick-2-botes-300x300.jpg",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "oles_gourmet",
@@ -3077,7 +3077,7 @@
     "sizeValue": 3000,
     "sizeUnit": "g",
     "image": "https://olesgourmet.com/web/wp-content/uploads/2021/01/IMG_20210112_1420252-300x300.jpg",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "berries_nature_park",
@@ -3088,7 +3088,7 @@
     "sizeValue": 230,
     "sizeUnit": "g",
     "image": "https://berriesnaturepark.com/wp-content/uploads/2021/10/3-tarros-mermelada-ecologica-berries-nature-park-transparente.png",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "berries_nature_park",
@@ -3099,7 +3099,7 @@
     "sizeValue": 230,
     "sizeUnit": "g",
     "image": "https://berriesnaturepark.com/wp-content/uploads/2021/10/10-tarros-mermelada-ecologica-berries-nature-park-transparente-1.png",
-    "category": "Frutos"
+    "category": "Regalos"
   },
   {
     "farmExternalId": "berries_nature_park",
@@ -3215,7 +3215,7 @@
     "farmExternalId": "bodega_martinez_parrondo",
     "name": "Martínez Parrondo Tinto",
     "description": "Vino tinto DOP Cangas elaborado con uvas autóctonas Carrasquín y Albarín Tinto procedentes de los viñedos propios de viticultura heroica de la bodega.",
-    "price": 0,
+    "price": 17.9,
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
@@ -3226,7 +3226,7 @@
     "farmExternalId": "bodega_martinez_parrondo",
     "name": "Martínez Parrondo Albarín Blanco",
     "description": "Vino blanco DOP Cangas fresco y afrutado, elaborado con la variedad autóctona Albarín Blanco; la cosecha 2024 tuvo una producción aproximada de 5.000 botellas.",
-    "price": 0,
+    "price": 17.9,
     "quantity": 0,
     "sizeValue": null,
     "sizeUnit": null,
@@ -3384,7 +3384,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/17-1.png",
+    "image": "/images/products/bodega-monasterio-de-corias/finca-la-zorrina.png",
     "category": "Vinos"
   },
   {
@@ -3395,7 +3395,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/23-1.png",
+    "image": "/images/products/bodega-monasterio-de-corias/tsana-rosado.png",
     "category": "Vinos"
   },
   {
@@ -3406,7 +3406,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/Productos-Monasterio-de-Corias-PNG-Trasnparencia-6.png",
+    "image": "/images/products/bodega-monasterio-de-corias/guilfa-blanco-carbayu.png",
     "category": "Vinos"
   },
   {
@@ -3417,7 +3417,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/Productos-Monasterio-de-Corias-PNG-Trasnparencia-7.png",
+    "image": "/images/products/bodega-monasterio-de-corias/vina-grandiella.png",
     "category": "Vinos"
   },
   {
@@ -3428,7 +3428,7 @@
     "quantity": 1,
     "sizeValue": 700,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/16.png",
+    "image": "/images/products/bodega-monasterio-de-corias/aguardiente-reserva-5-anos.png",
     "category": "Vinos"
   },
   {
@@ -3439,7 +3439,7 @@
     "quantity": 1,
     "sizeValue": 700,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/4.png",
+    "image": "/images/products/bodega-monasterio-de-corias/licor-arandanos.png",
     "category": "Vinos"
   },
   {
@@ -3450,7 +3450,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/2.png",
+    "image": "/images/products/bodega-monasterio-de-corias/vermut-blanco.png",
     "category": "Vinos"
   },
   {
@@ -3461,7 +3461,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/1-1.png",
+    "image": "/images/products/bodega-monasterio-de-corias/vermut-barrica.png",
     "category": "Vinos"
   },
   {
@@ -3472,7 +3472,7 @@
     "quantity": 1,
     "sizeValue": 750,
     "sizeUnit": "ml",
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/Productos-Monasterio-de-Corias-PNG-Trasnparencia-1.png",
+    "image": "/images/products/bodega-monasterio-de-corias/vermut-manzana.png",
     "category": "Vinos"
   },
   {
@@ -3483,7 +3483,7 @@
     "quantity": 1,
     "sizeValue": null,
     "sizeUnit": null,
-    "image": "https://monasteriodecorias.es/wp-content/uploads/2024/05/14.svg",
+    "image": "/images/products/bodega-monasterio-de-corias/gelatina-vino-tinto.png",
     "category": "Vinos"
   },
   {
@@ -3512,11 +3512,11 @@
     "farmExternalId": "bodega_vina_cuedo",
     "name": "Vino blanco Oro D'Ibias",
     "description": "Vino blanco monovarietal elaborado en Viña Cuedo con uva Blanco Verdín de viñedo propio y vendimiada a mano, con aromas frescos de fruta y flores, acidez equilibrada y final largo.",
-    "price": 0,
+    "price": 13,
     "quantity": 1,
-    "sizeValue": null,
-    "sizeUnit": null,
-    "image": "https://www.bodegavc.es/wp-content/uploads/2019/06/botella-presentacion-1.jpg",
+    "sizeValue": 750,
+    "sizeUnit": "ml",
+    "image": "/images/products/bodega-vina-cuedo/oro-dibias-750ml.jpg",
     "category": "Vinos"
   },
   {
@@ -3705,5 +3705,115 @@
     "sizeUnit": "ml",
     "image": "https://escolinas.com/wp-content/uploads/2026/04/carrasquin.png",
     "category": "Vinos"
+  },
+  {
+    "farmExternalId": "queseria_temia",
+    "name": "Queso Don Gonzalo Temia",
+    "description": "Queso de leche pasteurizada de vaca de Quesería Temia, en Grado, con cobertura de tomillo y hierbas aromáticas. Pieza de aproximadamente 300 g.",
+    "price": 8.9,
+    "quantity": 1,
+    "sizeValue": 300,
+    "sizeUnit": "g",
+    "image": "/images/products/queseria-temia/don-gonzalo-300g.jpg",
+    "category": "Quesos"
+  },
+  {
+    "farmExternalId": "queseria_ca_sanchu",
+    "name": "Afuega'l Pitu DOP Atroncado Blanco Ca Sanchu",
+    "description": "Afuega'l Pitu DOP de Ca Sanchu, elaborado en Grado con leche pasteurizada de vaca. Pieza blanca troncocónica de aproximadamente 300 g.",
+    "price": 7.5,
+    "quantity": 1,
+    "sizeValue": 300,
+    "sizeUnit": "g",
+    "image": "/images/products/queseria-ca-sanchu/atroncado-blanco-300g.jpg",
+    "category": "Quesos"
+  },
+  {
+    "farmExternalId": "queseria_ca_sanchu",
+    "name": "Afuega'l Pitu DOP Atroncado Rojo Ca Sanchu",
+    "description": "Afuega'l Pitu DOP de Ca Sanchu, de leche pasteurizada de vaca y pimentón. Pieza troncocónica de sabor intenso, de aproximadamente 300 g.",
+    "price": 7.9,
+    "quantity": 1,
+    "sizeValue": 300,
+    "sizeUnit": "g",
+    "image": "/images/products/queseria-ca-sanchu/atroncado-rojo-300g.jpg",
+    "category": "Quesos"
+  },
+  {
+    "farmExternalId": "reinastur",
+    "name": "Miel ecológica de castaño ReinAstur",
+    "description": "Miel de castaño de las colmenas de ReinAstur en Asturias. Producción ecológica, en tarro de 500 g.",
+    "price": 7,
+    "quantity": 1,
+    "sizeValue": 500,
+    "sizeUnit": "g",
+    "image": "/images/products/reinastur/castano-500g.webp",
+    "category": "Miel"
+  },
+  {
+    "farmExternalId": "reinastur",
+    "name": "Miel ecológica de eucalipto ReinAstur",
+    "description": "Miel de eucalipto de producción ecológica de ReinAstur, recolectada y envasada por el productor. Tarro de 500 g.",
+    "price": 7,
+    "quantity": 1,
+    "sizeValue": 500,
+    "sizeUnit": "g",
+    "image": "/images/products/reinastur/eucalipto-500g.webp",
+    "category": "Miel"
+  },
+  {
+    "farmExternalId": "miel_la_boalesa",
+    "name": "Miel La Boalesa 440 g",
+    "description": "Miel de La Boalesa, elaborada por Boal Apícola en Asturias. Tarro de 440 g.",
+    "price": 6.95,
+    "quantity": 1,
+    "sizeValue": 440,
+    "sizeUnit": "g",
+    "image": "/images/products/miel-la-boalesa/miel-440g.jpg",
+    "category": "Miel"
+  },
+  {
+    "farmExternalId": "llagar_bernueces",
+    "name": "Zumo de manzana sin alcohol Sidradulce Bernueces",
+    "description": "Sidradulce Bernueces: zumo de manzana sin alcohol, presentado en botella de 750 ml.",
+    "price": 3.29,
+    "quantity": 1,
+    "sizeValue": 750,
+    "sizeUnit": "ml",
+    "image": "/images/products/llagar-bernueces/sidradulce-750ml.jpg",
+    "category": "Zumos"
+  },
+  {
+    "farmExternalId": "quesos_taramundi",
+    "name": "Queso Taramundi con nueces y avellanas",
+    "description": "Queso de Taramundi de leche pasteurizada de vaca con nueces y avellanas. Pieza envasada al vacío de aproximadamente 550 g. Contiene leche y frutos secos.",
+    "price": 13.75,
+    "quantity": 1,
+    "sizeValue": 550,
+    "sizeUnit": "g",
+    "image": "/images/products/quesos-taramundi/nueces-avellanas-550g.jpg",
+    "category": "Quesos"
+  },
+  {
+    "farmExternalId": "queseria_demues",
+    "name": "Gamonéu DOP Demués - cuña de 300 g",
+    "description": "Cuña de Gamonéu DOP de Quesería Demués, elaborado con leche cruda de vaca, oveja y cabra, ahumado y madurado en cueva. Peso aproximado: 300 g.",
+    "price": 10.35,
+    "quantity": 1,
+    "sizeValue": 300,
+    "sizeUnit": "g",
+    "image": "/images/products/queseria-demues/gamoneu-cuna-300g.jpg",
+    "category": "Quesos"
+  },
+  {
+    "farmExternalId": "llagar_sidra_pamirandi",
+    "name": "Sidra natural Pamirandi",
+    "description": "Sidra natural de producción propia de Casa Niembro, en Asiegu (Cabrales), vinculada al llagar Pamirandi y a la tradición sidrera local.",
+    "price": 3,
+    "quantity": 1,
+    "sizeValue": null,
+    "sizeUnit": null,
+    "image": "/images/products/llagar-sidra-pamirandi/sidra-natural.jpg",
+    "category": "Sidra"
   }
 ]
