@@ -22,9 +22,27 @@ flowchart LR
 | `seeders` | Initial loading and optional size updates |
 | `exceptions` | Application errors and handled responses |
 
+## Planned Data Model
+
+The following diagram is the author's original target model for the complete application, including future development. It is preserved in full; it does not claim that every entity is implemented in the current PMV.
+
+![Planned data model for Tierras de Asturias](../images/planned-data-model.png)
+
+[Open the full-size planned diagram](../images/planned-data-model.png).
+
+| Area | Planned model | Current PMV |
+|---|---|---|
+| Payments | Separate `PAYMENT` entity | No payment processing or payment table |
+| Customer profile | Separate `USER_PROFILE` entity | First and last names are stored in `users`; delivery details belong to each order |
+| Roles | Separate `ROLE` entity | Spring Security currently assigns the `CUSTOMER` authority in code |
+| Order lines | Conceptual many-to-many product/order relationship | `order_items` stores the product, quantity and unit price |
+| Guest checkout | User/order relationship shown in the target model | `customer_orders.user_id` may be null for guest orders |
+
+The implemented database and domain classes are documented separately below. Planned entities do not need to be removed from this target design.
+
 ## Relational Model
 
-The diagram summarizes relationships. It is not a complete DDL with every type and constraint.
+This diagram summarizes the implemented database relationships. It is not a complete DDL with every type and constraint.
 
 ```mermaid
 erDiagram
@@ -85,6 +103,113 @@ erDiagram
 `customer_orders.user_id` is nullable for guest orders: each order has zero or one user. `persistent_logins.username` uses the authentication identifier, but `schema.sql` does not declare a foreign key to `users`.
 
 Farm and product categories are independent tables. A producer's category does not automatically determine the category of every product it sells.
+
+## Domain Class Diagram
+
+This UML diagram shows the seven implemented JPA entity classes, their attributes, selected public methods, and associations. It is a domain-model view, not an inventory of every controller, service, DTO or framework class.
+
+```mermaid
+classDiagram
+    direction LR
+    class User {
+        -Long id
+        -String firstName
+        -String lastName
+        -String email
+        -String password
+        +getId() Long
+        +getEmail() String
+    }
+    class CustomerOrder {
+        -Long id
+        -String orderNumber
+        -LocalDateTime orderDate
+        -String status
+        -Double subtotal
+        -Double shipping
+        -Double taxes
+        -Double total
+        -String firstName
+        -String lastName
+        -String city
+        -String postalCode
+        -String streetAddress
+        -String apartment
+        -String phone
+        -User user
+        -List~OrderItem~ items
+        +getItems() List~OrderItem~
+        +getUser() User
+        +getTotal() Double
+    }
+    class OrderItem {
+        -Long id
+        -CustomerOrder order
+        -Product product
+        -Integer quantity
+        -Double unitPrice
+        +getProduct() Product
+        +getQuantity() Integer
+        +getUnitPrice() Double
+    }
+    class Product {
+        -Long id
+        -String name
+        -String description
+        -String image
+        -Integer quantity
+        -Double price
+        -Double sizeValue
+        -String sizeUnit
+        -ProductCategory category
+        -Farm farm
+        +getPrice() Double
+        +getFarm() Farm
+        +getCategory() ProductCategory
+    }
+    class Farm {
+        -Long id
+        -String name
+        -String description
+        -String address
+        -String image
+        -String bannerImage
+        -Double latitude
+        -Double longitude
+        -Set~FarmCategory~ categories
+        +getName() String
+        +getCategories() Set~FarmCategory~
+    }
+    class ProductCategory {
+        -Long id
+        -String name
+        -String description
+        -Set~Product~ products
+        +getName() String
+        +getProducts() Set~Product~
+    }
+    class FarmCategory {
+        -Long id
+        -String name
+        -String description
+        -Set~Farm~ farms
+        +getName() String
+        +getFarms() Set~Farm~
+    }
+
+    CustomerOrder "0..*" --> "0..1" User : user
+    CustomerOrder "0..1" *-- "0..*" OrderItem : items
+    OrderItem "0..*" --> "0..1" Product : product
+    Product "0..*" --> "0..1" Farm : farm
+    ProductCategory "0..1" -- "0..*" Product : category / products
+    Farm "0..*" -- "0..*" FarmCategory : categories / farms
+```
+
+`-` marks private fields and `+` marks public methods. `Set~T~` and `List~T~` represent Java generic collections.
+
+The optional `0..1` ends reflect nullable references in the current JPA mappings, including guest orders. The order/items composition represents cascading persistence and orphan removal. The order-creation DTO separately requires at least one item and the service resolves its product from the database.
+
+`persistent_logins` is managed by Spring Security's JDBC token repository, not a project JPA entity. `PAYMENT`, `USER_PROFILE` and `ROLE` remain part of the planned model above, not implemented entity classes. The `User.password` field contains a password hash, not a plain-text password.
 
 ## Initial Data
 

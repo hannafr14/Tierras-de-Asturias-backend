@@ -21,6 +21,14 @@ Academic project under development. This is not a production-ready e-commerce pl
 
 These are the project links supplied by the author. Access may require permission. Their inclusion does not confirm feature completion or Jira statuses.
 
+## Technical Diagrams
+
+- [Planned data model](docs/wiki/Architecture-and-Data.md#planned-data-model): the original full-project design, including future payments, profiles and roles.
+- [Implemented database ER diagram](docs/wiki/Architecture-and-Data.md#relational-model): the current PMV database.
+- [Domain class diagram](docs/wiki/Architecture-and-Data.md#domain-class-diagram): implemented Java entities, attributes, selected methods and associations.
+
+The planned model describes the development roadmap; it is not evidence that every planned feature already exists.
+
 ## Technology
 
 Versions declared in [pom.xml](pom.xml): Java 21, Spring Boot 4.1.1, Spring MVC, Spring Security, Spring Data JPA, Jakarta Validation, and MySQL. Docker Compose uses MySQL `8.4`.
