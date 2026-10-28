@@ -1,0 +1,116 @@
+---
+title: Tierras de Asturias - Implemented Domain Classes
+config:
+  theme: base
+  htmlLabels: false
+  themeVariables:
+    primaryColor: '#f0f7f2'
+    primaryTextColor: '#172033'
+    primaryBorderColor: '#50705a'
+    lineColor: '#526377'
+    secondaryColor: '#edf3fb'
+    tertiaryColor: '#fff5df'
+    fontFamily: Arial
+    fontSize: 16px
+---
+classDiagram
+    direction LR
+
+    class User {
+        -Long id
+        -String firstName
+        -String lastName
+        -String email
+        -String password
+        +getId() Long
+        +getEmail() String
+    }
+
+    class CustomerOrder {
+        -Long id
+        -String orderNumber
+        -LocalDateTime orderDate
+        -String status
+        -Double subtotal
+        -Double shipping
+        -Double taxes
+        -Double total
+        -String firstName
+        -String lastName
+        -String city
+        -String postalCode
+        -String streetAddress
+        -String apartment
+        -String phone
+        -User user
+        -List~OrderItem~ items
+        +getItems() List~OrderItem~
+        +getUser() User
+        +getTotal() Double
+    }
+
+    class OrderItem {
+        -Long id
+        -CustomerOrder order
+        -Product product
+        -Integer quantity
+        -Double unitPrice
+        +getProduct() Product
+        +getQuantity() Integer
+        +getUnitPrice() Double
+    }
+
+    class Product {
+        -Long id
+        -String name
+        -String description
+        -String image
+        -Integer quantity
+        -Double price
+        -Double sizeValue
+        -String sizeUnit
+        -ProductCategory category
+        -Farm farm
+        +getPrice() Double
+        +getFarm() Farm
+        +getCategory() ProductCategory
+    }
+
+    class Farm {
+        -Long id
+        -String name
+        -String description
+        -String address
+        -String image
+        -String bannerImage
+        -Double latitude
+        -Double longitude
+        -Set~FarmCategory~ categories
+        +getName() String
+        +getCategories() Set~FarmCategory~
+    }
+
+    class ProductCategory {
+        -Long id
+        -String name
+        -String description
+        -Set~Product~ products
+        +getName() String
+        +getProducts() Set~Product~
+    }
+
+    class FarmCategory {
+        -Long id
+        -String name
+        -String description
+        -Set~Farm~ farms
+        +getName() String
+        +getFarms() Set~Farm~
+    }
+
+    CustomerOrder "0..*" --> "0..1" User : user
+    CustomerOrder "0..1" *-- "0..*" OrderItem : items
+    OrderItem "0..*" --> "0..1" Product : product
+    Product "0..*" --> "0..1" Farm : farm
+    ProductCategory "0..1" -- "0..*" Product : category / products
+    Farm "0..*" -- "0..*" FarmCategory : categories / farms

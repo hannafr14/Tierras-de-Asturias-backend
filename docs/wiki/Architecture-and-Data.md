@@ -108,6 +108,15 @@ Farm and product categories are independent tables. A producer's category does n
 
 This UML diagram shows the seven implemented JPA entity classes, their attributes, selected public methods, and associations. It is a domain-model view, not an inventory of every controller, service, DTO or framework class.
 
+[![Implemented domain class diagram](../images/class-diagram.png)](../images/class-diagram.png)
+
+[Full-size PNG](../images/class-diagram.png) | [Scalable SVG](../images/class-diagram.svg) | [Editable Mermaid source](../diagrams/class-diagram.mmd)
+
+The exports were prepared on 2026-10-28 after checking the fields and methods in `src/main/java/com/tierrasdeasturias/backend/entities/`. Names and Java types follow the source code; only selected getters are shown to keep the diagram readable. The `.mmd` source can be edited and rendered with [Mermaid](https://mermaid.js.org/syntax/classDiagram.html).
+
+<details>
+<summary>Alternative Mermaid rendering</summary>
+
 ```mermaid
 classDiagram
     direction LR
@@ -204,6 +213,8 @@ classDiagram
     ProductCategory "0..1" -- "0..*" Product : category / products
     Farm "0..*" -- "0..*" FarmCategory : categories / farms
 ```
+
+</details>
 
 `-` marks private fields and `+` marks public methods. `Set~T~` and `List~T~` represent Java generic collections.
 

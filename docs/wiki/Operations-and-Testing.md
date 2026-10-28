@@ -66,7 +66,26 @@ Reports and artifacts:
 | `target/site/jacoco/index.html` | JaCoCo coverage |
 | `target/backend-0.0.1-SNAPSHOT.jar` | Packaged application after `package` |
 
-No coverage percentage or successful full-suite run is claimed without a recent, verifiable report.
+### Supplied Test Results
+
+The following screenshots were supplied on 2026-10-28. They are evidence of the results displayed, not a fresh Maven run performed while writing this page. Open an image to view it at full resolution.
+
+The VS Code test summary shows **196 passing tests out of 196**. The visible groups include application context, repository, controller, session, DTO, seeder, and service tests.
+
+[![Backend test summary showing 196 passing tests](../images/backend-tests.png)](../images/backend-tests.png)
+
+### Supplied Coverage Report
+
+The supplied JaCoCo screenshot records these overall results:
+
+| Metric | Coverage |
+|---|---:|
+| Instructions | 88% |
+| Branches | 67% |
+
+[![Backend JaCoCo report showing 88 percent instruction and 67 percent branch coverage](../images/backend-coverage.png)](../images/backend-coverage.png)
+
+Instruction coverage is not line coverage. The screenshots do not establish that the test summary and coverage report come from the same run. After code changes, rerun the Maven command above and check the generated reports before claiming current results.
 
 ## Troubleshooting
 
